@@ -87,7 +87,7 @@ body {
     min-height: 100vh;
     background: 
         linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
-        url('/images/frontcover.jpg') center/cover;
+        url('../../images/frontcover.jpg') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -193,7 +193,7 @@ body {
     height: 200px;
     background: 
         linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)),
-        url('/images/innovate-143.jpg') center/cover;
+        url('../../images/innovate-143.jpg') center/cover;
     border-radius: 10px;
     margin-bottom: 3rem;
 }
