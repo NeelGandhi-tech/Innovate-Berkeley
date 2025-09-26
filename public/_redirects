@@ -1,0 +1,7 @@
+# Netlify redirects for SPA routing
+/about /about.html 200
+/challenge /challenge.html 200
+/conference /index.html 200
+
+# Fallback for any other routes
+/* /index.html 200

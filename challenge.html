@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge - Innovate @ Berkeley</title>
+    <link rel="icon" type="image/png" href="/images/small_logo.png">
+    <link rel="stylesheet" href="/css/challenge.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="/images/small_logo.png" alt="Innovate Logo">
+                innovate
+            </div>
+            <ul class="nav-links">
+                <li><a href="/about.html">ABOUT</a></li>
+                <li><a href="/index.html">CONFERENCE</a></li>
+                <li><a href="/challenge.html" class="active">CHALLENGE</a></li>
+            </ul>
+            <a href="#register" class="register-btn">REGISTER</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-badge fade-in">CHALLENGE YOURSELF</div>
+            <h1 class="hero-title fade-in">Compete at <span class="innovate-text">Innovate</span></h1>
+            <p class="hero-subtitle fade-in">REGISTER NOW FOR THE COMPETITION</p>
+            <a href="#register" class="hero-cta fade-in">REGISTER NOW</a>
+        </div>
+    </section>
+
+    <!-- Challenge Details Section -->
+    <section class="challenge-details-section">
+        <div class="challenge-container">
+            <div class="challenge-main fade-in">
+                <h1>Innovate@Berkeley Pitch Challenge</h1>
+                <p class="challenge-description">
+                    Grab your friends and create your own startup for a chance to win up to $500!
+                    Put your heads together, craft a pitch deck, and submit it. It's that easy. Once all
+                    of the applications are submitted, our team of judges will select the top 6 teams
+                    and those teams will have the opportunity to present live at the conference.
+                    After all 6 presentations, the judges will pick the top 3 teams to win a cash prize
+                    of $1000, $500, and $250.
+                </p>
+                <div class="challenge-image"></div>
+            </div>
+            <div class="timeline-section fade-in">
+                <h2>Timeline</h2>
+                <div class="timeline-item">
+                    <div class="timeline-date">November 9, 2025</div>
+                    <div class="timeline-description">Application Due</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">November 10, 2025</div>
+                    <div class="timeline-description">Top 6 Announced</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">November 12, 2025</div>
+                    <div class="timeline-description">Live Presentations</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Rules Section -->
+    <section class="rules-section">
+        <div class="rules-container">
+            <h2 class="rules-title">Challenge Rules</h2>
+            <div class="rules-grid">
+                <div class="rule-card fade-in">
+                    <h3>Eligibility</h3>
+                    <ul>
+                        <li>The challenge is open to all college students. Participants must register with their school email address</li>
+                        <li>Only startups that have raised less than $1 million are eligible</li>
+                    </ul>
+                </div>
+                <div class="rule-card fade-in">
+                    <h3>Team Requirements</h3>
+                    <ul>
+                        <li>Teams can consist of 1 - 5 people</li>
+                        <li>Every person can only be a part of one team</li>
+                        <li>Teams that compete must be willing to travel to UC Berkeley on Nov 12 if they proceed to finals</li>
+                    </ul>
+                </div>
+                <div class="rule-card fade-in">
+                    <h3>Presentation & Prizes</h3>
+                    <ul>
+                        <li>The pitch deck should be between 10-14 slides</li>
+                        <li>All people enrolled in the challenge are automatically enrolled for the conference</li>
+                        <li>Equal shares of the prize money will be paid immediately to all members of the team</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>innovate</h3>
+                <h4>ABOUT</h4>
+                <p>Innovate@Berkeley is the largest startup expo at Berkeley and is the ultimate hub for entrepreneurship. Speakers, startup booths, and challenges make for an exciting program of events that involves the entire startup community.</p>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <ul class="social-links">
+                    <li><a href="mailto:innovate@aez.berkeley.edu">innovate@aez.berkeley.edu</a></li>
+                    <li><a href="https://facebook.com/berkeleyinnovate">@berkeleyinnovate</a></li>
+                    <li><a href="https://instagram.com/berkeleyinnovate">@berkeleyinnovate</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Innovate at Berkeley. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navbar
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.background = 'rgba(26, 26, 46, 0.8)';
+            } else {
+                navbar.style.background = 'rgba(26, 26, 46, 0.3)';
+            }
+        });
+
+        // Trigger animations on page load
+        window.addEventListener('load', () => {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.animationPlayState = 'running';
+                }, index * 100);
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe cards for animation
+        document.querySelectorAll('.rule-card, .challenge-main, .timeline-section').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
