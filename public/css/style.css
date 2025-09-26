@@ -45,6 +45,11 @@ body {
     margin-right: 0.5rem;
 }
 
+.logo-icon {
+    font-size: 1.8rem;
+    margin-right: 0.5rem;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
