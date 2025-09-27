@@ -169,49 +169,49 @@
             <h2>Past Speakers and Panelists</h2>
             <div class="speakers-grid">
                 <div class="speaker-card">
-                    <div class="speaker-avatar past"></div>
+                    <div class="speaker-avatar past" style="background-image: url('images/Past Speakers/Nikhil.jpeg')"></div>
                     <div class="speaker-info">
                         <h3>Nikhil Arora</h3>
                         <p>Back to the Roots</p>
                     </div>
                 </div>
                 <div class="speaker-card">
-                    <div class="speaker-avatar past"></div>
+                    <div class="speaker-avatar past" style="background-image: url('images/Past Speakers/Alagu Periyannan.jpeg')"></div>
                     <div class="speaker-info">
                         <h3>Alagu Periyannan</h3>
                         <p>BlueJeans</p>
                     </div>
                 </div>
                 <div class="speaker-card">
-                    <div class="speaker-avatar past"></div>
+                    <div class="speaker-avatar past" style="background-image: url('images/Past Speakers/Marcus Ryu.jpeg')"></div>
                     <div class="speaker-info">
                         <h3>Marcus Ryu</h3>
                         <p>Battery Ventures</p>
                     </div>
                 </div>
                 <div class="speaker-card">
-                    <div class="speaker-avatar past"></div>
+                    <div class="speaker-avatar past" style="background-image: url('images/Past Speakers/Vinay Iyengar.jpeg')"></div>
                     <div class="speaker-info">
                         <h3>Vinay Iyengar</h3>
                         <p>Two Sigma Ventures</p>
                     </div>
                 </div>
                 <div class="speaker-card">
-                    <div class="speaker-avatar past"></div>
+                    <div class="speaker-avatar past" style="background-image: url('images/Past Speakers/Grace Ma.jpeg')"></div>
                     <div class="speaker-info">
                         <h3>Grace Ma</h3>
                         <p>Bessemer Venture Partners</p>
                     </div>
                 </div>
                 <div class="speaker-card">
-                    <div class="speaker-avatar past"></div>
+                    <div class="speaker-avatar past" style="background-image: url('images/Past Speakers/Connor Love.jpeg')"></div>
                     <div class="speaker-info">
                         <h3>Connor Love</h3>
                         <p>Lightspeed Venture Partners</p>
                     </div>
                 </div>
                 <div class="speaker-card">
-                    <div class="speaker-avatar past"></div>
+                    <div class="speaker-avatar past" style="background-image: url('images/Past Speakers/Akash Malhotra.png')"></div>
                     <div class="speaker-info">
                         <h3>Akash Malhotra</h3>
                         <p>The House Fund</p>
@@ -447,6 +447,67 @@
         
         // Start typing animation after page load
         setTimeout(typeText, 1000);
+
+        // Optimized gallery loading performance with lazy loading
+        const galleryImages = document.querySelectorAll('.gallery-item img');
+        
+        // Use Intersection Observer for lazy loading with better performance
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    
+                    // Add loading class for better UX
+                    img.classList.add('loading');
+                    
+                    if (img.complete && img.naturalHeight !== 0) {
+                        // Image already loaded
+                        img.classList.remove('loading');
+                        img.classList.add('loaded');
+                    } else {
+                        // Wait for image to load
+                        img.addEventListener('load', () => {
+                            img.classList.remove('loading');
+                            img.classList.add('loaded');
+                        }, { once: true });
+                        
+                        img.addEventListener('error', () => {
+                            img.classList.remove('loading');
+                            img.classList.add('error');
+                        }, { once: true });
+                    }
+                    
+                    imageObserver.unobserve(img);
+                }
+            });
+        }, { 
+            rootMargin: '100px 0px',
+            threshold: 0.01 
+        });
+        
+        // Only observe images that are not already loaded
+        galleryImages.forEach(img => {
+            if (!img.complete || img.naturalHeight === 0) {
+                imageObserver.observe(img);
+            } else {
+                img.classList.add('loaded');
+            }
+        });
+
+        // Animate speaker cards
+        const speakerObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('animate');
+                    }, index * 100);
+                }
+            });
+        }, { threshold: 0.2, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.speaker-card').forEach(el => {
+            speakerObserver.observe(el);
+        });
     </script>
 </body>
 </html>
