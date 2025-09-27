@@ -15,9 +15,9 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-app.get('/challenge', (req, res) => {
-    res.render('challenge');
-});
+// app.get('/challenge', (req, res) => {
+//     res.render('challenge');
+// });
 
 app.get('/about', (req, res) => {
     res.render('about');

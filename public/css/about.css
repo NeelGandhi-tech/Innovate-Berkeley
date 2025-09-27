@@ -216,19 +216,33 @@ body {
     display: flex;
     align-items: flex-end;
     padding: 2rem;
-    transition: background-image 0.5s ease;
+    transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    opacity: 1;
+    transform: translateX(0) rotateY(0);
+    background-size: cover;
+    background-position: center;
+    transform-style: preserve-3d;
+}
+
+.carousel-slide.transitioning {
+    opacity: 0.2;
+    transform: translateX(-100px) rotateY(-15deg);
 }
 
 .carousel-slide.slide-2 {
     background-image: 
         linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
         url('../../images/Carousel2.jpeg');
+    background-size: cover;
+    background-position: center;
 }
 
 .carousel-slide.slide-3 {
     background-image: 
         linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
         url('../../images/Carousel3.jpeg');
+    background-size: cover;
+    background-position: center;
 }
 
 .slide-title {

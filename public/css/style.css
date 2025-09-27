@@ -4,6 +4,25 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    transition: all 0.3s ease;
+    overflow-x: hidden;
+}
+
+/* Continuous scrolling improvements */
+section {
+    scroll-snap-align: start;
+}
+
+.container {
+    scroll-snap-align: start;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background: #1a1a2e;
@@ -63,6 +82,23 @@ body {
     padding: 0.5rem 1rem;
     border-radius: 5px;
     transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #64b5f6;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 80%;
 }
 
 .nav-links a:hover,
@@ -92,7 +128,7 @@ body {
     min-height: 100vh;
     background: 
         linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
-        url('../../images/INNOVATE-71.jpg') center/cover;
+        url('../../images/frontcover.jpg') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -252,6 +288,23 @@ body {
     margin-bottom: 1rem;
     display: flex;
     gap: 2rem;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: translateY(40px);
+    border-left: 4px solid transparent;
+}
+
+.schedule-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+    border-left-color: #64b5f6;
+}
+
+.schedule-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(15px) translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    border-left-color: #42a5f5;
 }
 
 .schedule-time {
@@ -402,29 +455,57 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
     margin-top: 2rem;
+    contain: layout style paint;
 }
 
 .gallery-item {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    transition: all 0.3s ease;
+    transition: transform 0.2s ease;
     background: #000;
+    will-change: transform;
 }
 
 .gallery-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
 .gallery-item img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+    opacity: 0;
+    transform: translateY(10px);
+    will-change: opacity, transform;
+}
+
+.gallery-item img.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-item img.loading {
+    opacity: 0.3;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+.gallery-item img.error {
+    opacity: 0.5;
+    background: #f0f0f0;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.05);
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
 }
 
 /* Featured Images Section */
@@ -510,6 +591,20 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.speaker-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.speaker-card:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
 
 .speaker-card .speaker-avatar {
@@ -518,6 +613,9 @@ body {
     background: linear-gradient(45deg, #64b5f6, #42a5f5);
     border-radius: 50%;
     flex-shrink: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .speaker-info h3 {

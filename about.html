@@ -18,7 +18,7 @@
             <ul class="nav-links">
                 <li><a href="/about.html" class="active">ABOUT</a></li>
                 <li><a href="/index.html">CONFERENCE</a></li>
-                <li><a href="/challenge.html">CHALLENGE</a></li>
+                <!-- <li><a href="/challenge.html">CHALLENGE</a></li> -->
             </ul>
             <a href="#register" class="register-btn">REGISTER</a>
         </div>
@@ -137,15 +137,25 @@
             const slideElement = document.querySelector('.slide-title');
             const carouselElement = document.querySelector('.carousel-slide');
             
-            slideElement.textContent = slides[currentSlide];
+            // Add smooth transition effect
+            carouselElement.classList.add('transitioning');
             
-            // Update background image
-            carouselElement.className = 'carousel-slide';
-            if (currentSlide === 1) {
-                carouselElement.classList.add('slide-2');
-            } else if (currentSlide === 2) {
-                carouselElement.classList.add('slide-3');
-            }
+            setTimeout(() => {
+                slideElement.textContent = slides[currentSlide];
+                
+                // Update background image smoothly
+                carouselElement.className = 'carousel-slide';
+                if (currentSlide === 1) {
+                    carouselElement.classList.add('slide-2');
+                } else if (currentSlide === 2) {
+                    carouselElement.classList.add('slide-3');
+                }
+                
+                // Remove transition effect smoothly
+                setTimeout(() => {
+                    carouselElement.classList.remove('transitioning');
+                }, 200);
+            }, 600);
             
             // Update indicators
             document.querySelectorAll('.indicator').forEach((indicator, index) => {
@@ -163,8 +173,8 @@
             updateSlide();
         }
 
-        // Auto-advance carousel
-        setInterval(nextSlide, 5000);
+        // Auto-advance carousel with faster timing
+        setInterval(nextSlide, 3000);
 
         // Trigger animations on page load
         window.addEventListener('load', () => {

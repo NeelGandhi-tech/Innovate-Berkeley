@@ -18,7 +18,7 @@
             <ul class="nav-links">
                 <li><a href="/about" class="active">ABOUT</a></li>
                 <li><a href="/conference">CONFERENCE</a></li>
-                <li><a href="/challenge">CHALLENGE</a></li>
+                <!-- <li><a href="/challenge">CHALLENGE</a></li> -->
             </ul>
             <a href="#register" class="register-btn">REGISTER</a>
         </div>
@@ -137,15 +137,25 @@
             const slideElement = document.querySelector('.slide-title');
             const carouselElement = document.querySelector('.carousel-slide');
             
-            slideElement.textContent = slides[currentSlide];
+            // Add rolling transition effect
+            carouselElement.classList.add('transitioning');
             
-            // Update background image
-            carouselElement.className = 'carousel-slide';
-            if (currentSlide === 1) {
-                carouselElement.classList.add('slide-2');
-            } else if (currentSlide === 2) {
-                carouselElement.classList.add('slide-3');
-            }
+            setTimeout(() => {
+                slideElement.textContent = slides[currentSlide];
+                
+                // Update background image with rolling effect
+                carouselElement.className = 'carousel-slide';
+                if (currentSlide === 1) {
+                    carouselElement.classList.add('slide-2');
+                } else if (currentSlide === 2) {
+                    carouselElement.classList.add('slide-3');
+                }
+                
+                // Remove transition effect with rolling motion
+                setTimeout(() => {
+                    carouselElement.classList.remove('transitioning');
+                }, 300);
+            }, 750);
             
             // Update indicators
             document.querySelectorAll('.indicator').forEach((indicator, index) => {
