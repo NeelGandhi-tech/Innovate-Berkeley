@@ -153,42 +153,43 @@ body {
 /* Mobile styles */
 @media (max-width: 768px) {
     .mobile-menu-toggle {
-        display: flex;
+        display: flex !important;
     }
     
     .nav-links {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background: rgba(26, 26, 46, 0.95);
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding-top: 2rem;
-        transition: left 0.3s ease;
-        backdrop-filter: blur(10px);
+        position: fixed !important;
+        top: 70px !important;
+        left: -100% !important;
+        width: 100% !important;
+        height: calc(100vh - 70px) !important;
+        background: rgba(26, 26, 46, 0.95) !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        padding-top: 2rem !important;
+        transition: left 0.3s ease !important;
+        backdrop-filter: blur(10px) !important;
+        z-index: 9999 !important;
     }
     
     .nav-links.active {
-        left: 0;
+        left: 0 !important;
     }
     
     .nav-links li {
-        margin: 1rem 0;
+        margin: 1rem 0 !important;
     }
     
     .nav-links a {
-        font-size: 1.2rem;
-        padding: 1rem 2rem;
-        display: block;
-        width: 100%;
-        text-align: center;
+        font-size: 1.2rem !important;
+        padding: 1rem 2rem !important;
+        display: block !important;
+        width: 100% !important;
+        text-align: center !important;
     }
     
     .register-btn {
-        display: none;
+        display: none !important;
     }
 }
 
