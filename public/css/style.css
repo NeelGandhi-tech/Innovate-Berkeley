@@ -154,6 +154,7 @@ body {
 @media (max-width: 768px) {
     .mobile-menu-toggle {
         display: flex !important;
+        z-index: 10000 !important;
     }
     
     .nav-links {
@@ -170,6 +171,9 @@ body {
         transition: left 0.3s ease !important;
         backdrop-filter: blur(10px) !important;
         z-index: 9999 !important;
+        list-style: none !important;
+        margin: 0 !important;
+        padding-left: 0 !important;
     }
     
     .nav-links.active {
@@ -178,6 +182,8 @@ body {
     
     .nav-links li {
         margin: 1rem 0 !important;
+        width: 100% !important;
+        text-align: center !important;
     }
     
     .nav-links a {
@@ -186,6 +192,13 @@ body {
         display: block !important;
         width: 100% !important;
         text-align: center !important;
+        color: white !important;
+        text-decoration: none !important;
+    }
+    
+    .nav-links a:hover {
+        background: rgba(100, 181, 246, 0.2) !important;
+        color: #64b5f6 !important;
     }
     
     .register-btn {
