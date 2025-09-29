@@ -5,7 +5,7 @@
 [build.environment]
   NODE_VERSION = "18"
 
-# Handle client-side routing - specific routes only
+# Handle client-side routing - specific routes only (NO catch-all)
 [[redirects]]
   from = "/about"
   to = "/about.html"
