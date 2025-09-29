@@ -13,9 +13,13 @@
         <div class="nav-container">
             <div class="logo">
                 <img src="/images/logo.png?v=<%= Date.now() %>" alt="Innovate Logo">
-                
             </div>
-            <ul class="nav-links">
+            <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="/">CONFERENCE</a></li>
                 <li><a href="/about">ABOUT</a></li>
                 <li><a href="/partners">PAST PARTNERS</a></li>
@@ -129,7 +133,8 @@
     </section>
 
 
-    <!-- Sponsors Section -->
+    <!-- Sponsors Section - Commented out -->
+    <!--
     <section class="sponsors-section">
         <div class="container">
             <h2>Our Sponsors</h2>
@@ -158,6 +163,7 @@
             </div>
         </div>
     </section>
+    -->
 
     <!-- FAQ Section -->
     <section class="faq-section">
@@ -289,6 +295,23 @@
             } else {
                 navbar.style.background = 'rgba(26, 26, 46, 0.3)';
             }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const navLinks = document.getElementById('nav-links');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuToggle.classList.remove('active');
+            });
         });
 
         // Trigger animations on page load
