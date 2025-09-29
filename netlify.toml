@@ -5,7 +5,7 @@
 [build.environment]
   NODE_VERSION = "18"
 
-# Handle client-side routing - specific routes first
+# Handle client-side routing - specific routes only
 [[redirects]]
   from = "/about"
   to = "/about.html"
@@ -25,10 +25,3 @@
   from = "/challenge"
   to = "/challenge.html"
   status = 200
-
-# Catch-all redirect for SPA routing (but not for static assets)
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  force = false
