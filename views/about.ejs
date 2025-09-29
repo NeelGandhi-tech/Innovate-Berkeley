@@ -141,52 +141,6 @@
             }
         });
 
-        // Carousel functionality
-        let currentSlide = 0;
-        const slides = ['Startup Summit 2023', 'Innovation Expo 2022', 'Tech Meetup 2021'];
-
-        function updateSlide() {
-            const slideElement = document.querySelector('.slide-title');
-            const carouselElement = document.querySelector('.carousel-slide');
-            
-            // Add rolling transition effect
-            carouselElement.classList.add('transitioning');
-            
-            setTimeout(() => {
-                slideElement.textContent = slides[currentSlide];
-                
-                // Update background image with rolling effect
-                carouselElement.className = 'carousel-slide';
-                if (currentSlide === 1) {
-                    carouselElement.classList.add('slide-2');
-                } else if (currentSlide === 2) {
-                    carouselElement.classList.add('slide-3');
-                }
-                
-                // Remove transition effect with rolling motion
-                setTimeout(() => {
-                    carouselElement.classList.remove('transitioning');
-                }, 300);
-            }, 750);
-            
-            // Update indicators
-            document.querySelectorAll('.indicator').forEach((indicator, index) => {
-                indicator.classList.toggle('active', index === currentSlide);
-            });
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            updateSlide();
-        }
-
-        function previousSlide() {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            updateSlide();
-        }
-
-        // Auto-advance carousel
-        setInterval(nextSlide, 5000);
 
         // Trigger animations on page load
         window.addEventListener('load', () => {
