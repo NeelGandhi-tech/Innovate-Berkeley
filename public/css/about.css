@@ -92,7 +92,7 @@ body {
     min-height: 100vh;
     background: 
         linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
-        url('../../images/INNOVATE-78.jpg') center/cover;
+        url('/images/INNOVATE-78.jpg') center/cover;
     display: flex;
     align-items: center;
     padding: 100px 0 50px;
@@ -167,7 +167,7 @@ body {
     height: 300px;
     background: 
         linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)),
-        url('../../images/INNOVATE-127.jpg') center 20%/cover;
+        url('/images/INNOVATE-127.jpg') center 20%/cover;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     margin-bottom: 2rem;
