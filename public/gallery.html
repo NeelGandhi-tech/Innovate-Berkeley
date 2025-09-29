@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - Innovate @ Berkeley</title>
     <link rel="icon" type="image/jpeg" href="/images/small_logo.jpg">
-    <link rel="stylesheet" href="/css/style.css?v=1759126452319">
+    <link rel="stylesheet" href="/css/style.css?v=1759126620151">
     <style>
         .gallery-hero {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
@@ -116,7 +116,24 @@
         
         .gallery-loading p {
             font-size: 1.1rem;
-            margin: 0;
+            margin: 0 0 1rem 0;
+        }
+        
+        .progress-bar {
+            width: 200px;
+            height: 4px;
+            background: rgba(100, 181, 246, 0.3);
+            border-radius: 2px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: #64b5f6;
+            border-radius: 2px;
+            width: 0%;
+            transition: width 0.3s ease;
         }
     </style>
 </head>
@@ -125,7 +142,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="/images/logo.png?v=1759126452319" alt="Innovate Logo">
+                <img src="/images/logo.png?v=1759126620151" alt="Innovate Logo">
                 
             </div>
             <ul class="nav-links">
@@ -154,76 +171,79 @@
             <div class="gallery-loading" id="gallery-loading">
                 <div class="loading-spinner"></div>
                 <p>Loading photos...</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
             </div>
             <div class="gallery-grid" id="gallery-grid" style="opacity: 0;">
                 <div class="gallery-item" data-category="2023">
-                    <img src="/images/innovate-62.jpg?v=1759126452319" alt="Innovate Event 2023">
+                    <img src="/images/innovate-62.jpg?v=1759126620151" alt="Innovate Event 2023">
                 </div>
                 <div class="gallery-item" data-category="2023">
-                    <img src="/images/innovate-66.jpg?v=1759126452319" alt="Innovate Event 2023">
+                    <img src="/images/innovate-66.jpg?v=1759126620151" alt="Innovate Event 2023">
                 </div>
                 <div class="gallery-item" data-category="2023">
-                    <img src="/images/innovate-80.jpg?v=1759126452319" alt="Innovate Event 2023">
+                    <img src="/images/innovate-80.jpg?v=1759126620151" alt="Innovate Event 2023">
                 </div>
                 <div class="gallery-item" data-category="2023">
-                    <img src="/images/innovate-89.jpg?v=1759126452319" alt="Innovate Event 2023">
+                    <img src="/images/innovate-89.jpg?v=1759126620151" alt="Innovate Event 2023">
                 </div>
                 <div class="gallery-item" data-category="2022">
-                    <img src="/images/INNOVATE-71.jpg?v=1759126452319" alt="Innovate Event 2022">
+                    <img src="/images/INNOVATE-71.jpg?v=1759126620151" alt="Innovate Event 2022">
                 </div>
                 <div class="gallery-item" data-category="2022">
-                    <img src="/images/innovate-127.jpg?v=1759126452319" alt="Innovate Event 2022">
+                    <img src="/images/innovate-127.jpg?v=1759126620151" alt="Innovate Event 2022">
                 </div>
                 <div class="gallery-item" data-category="2022">
-                    <img src="/images/innovate-154.jpg?v=1759126452319" alt="Innovate Event 2022">
+                    <img src="/images/innovate-154.jpg?v=1759126620151" alt="Innovate Event 2022">
                 </div>
                 <div class="gallery-item" data-category="2022">
-                    <img src="/images/innovate-212.jpg?v=1759126452319" alt="Innovate Event 2022">
+                    <img src="/images/innovate-212.jpg?v=1759126620151" alt="Innovate Event 2022">
                 </div>
                 <div class="gallery-item" data-category="2021">
-                    <img src="/images/innovate-20.jpg?v=1759126452319" alt="Innovate Event 2021">
+                    <img src="/images/innovate-20.jpg?v=1759126620151" alt="Innovate Event 2021">
                 </div>
                 <div class="gallery-item" data-category="2021">
-                    <img src="/images/Innovate-28.jpg?v=1759126452319" alt="Innovate Event 2021">
+                    <img src="/images/Innovate-28.jpg?v=1759126620151" alt="Innovate Event 2021">
                 </div>
                 <div class="gallery-item" data-category="2023">
-                    <img src="/images/innovate-81.jpg?v=1759126452319" alt="Berkeley Campus">
+                    <img src="/images/innovate-81.jpg?v=1759126620151" alt="Berkeley Campus">
                 </div>
                 <div class="gallery-item" data-category="2023">
-                    <img src="/images/INNOVATE-143.jpg?v=1759126452319" alt="Innovate Event 2023">
+                    <img src="/images/INNOVATE-143.jpg?v=1759126620151" alt="Innovate Event 2023">
                 </div>
                 <div class="gallery-item" data-category="2023">
-                    <img src="/images/Innovate-28.jpg?v=1759126452319" alt="Innovate Event 2023">
+                    <img src="/images/Innovate-28.jpg?v=1759126620151" alt="Innovate Event 2023">
                 </div>
                 <div class="gallery-item" data-category="2023">
-                    <img src="/images/innovate-36.jpg?v=1759126452319" alt="Innovate Event 2023">
+                    <img src="/images/innovate-36.jpg?v=1759126620151" alt="Innovate Event 2023">
                 </div>
                 <div class="gallery-item" data-category="2023">
-                    <img src="/images/innovate-43.jpg?v=1759126452319" alt="Innovate Event 2023">
+                    <img src="/images/innovate-43.jpg?v=1759126620151" alt="Innovate Event 2023">
                 </div>
                 <div class="gallery-item" data-category="2023">
-                    <img src="/images/innovate-48.jpg?v=1759126452319" alt="Innovate Event 2023">
+                    <img src="/images/innovate-48.jpg?v=1759126620151" alt="Innovate Event 2023">
                 </div>
                 <div class="gallery-item" data-category="2023">
-                    <img src="/images/INNOVATE-71.jpg?v=1759126452319" alt="Innovate Event 2023">
+                    <img src="/images/INNOVATE-71.jpg?v=1759126620151" alt="Innovate Event 2023">
                 </div>
                 <div class="gallery-item" data-category="2023">
-                    <img src="/images/INNOVATE-78.jpg?v=1759126452319" alt="Innovate Event 2023">
+                    <img src="/images/INNOVATE-78.jpg?v=1759126620151" alt="Innovate Event 2023">
                 </div>
                 <div class="gallery-item" data-category="2023">
-                    <img src="/images/INNOVATE-91.jpg?v=1759126452319" alt="Innovate Event 2023">
+                    <img src="/images/INNOVATE-91.jpg?v=1759126620151" alt="Innovate Event 2023">
                 </div>
                 <div class="gallery-item" data-category="2023">
-                    <img src="/images/Carousel1.jpeg?v=1759126452319" alt="Innovate Event 2023">
+                    <img src="/images/Carousel1.jpeg?v=1759126620151" alt="Innovate Event 2023">
                 </div>
                 <div class="gallery-item" data-category="2023">
-                    <img src="/images/Carousel2.jpeg?v=1759126452319" alt="Innovate Event 2023">
+                    <img src="/images/Carousel2.jpeg?v=1759126620151" alt="Innovate Event 2023">
                 </div>
                 <div class="gallery-item" data-category="2023">
-                    <img src="/images/Carousel3.jpeg?v=1759126452319" alt="Innovate Event 2023">
+                    <img src="/images/Carousel3.jpeg?v=1759126620151" alt="Innovate Event 2023">
                 </div>
                 <div class="gallery-item" data-category="2023">
-                    <img src="/images/Innovate-81.jpg?v=1759126452319" alt="Berkeley Campus">
+                    <img src="/images/Innovate-81.jpg?v=1759126620151" alt="Berkeley Campus">
                 </div>
             </div>
         </div>
@@ -338,8 +358,67 @@
             });
         }, observerOptions);
 
-        // Wait 2 seconds for photos to load, then show gallery
-        setTimeout(() => {
+        // Wait for all images to actually load before showing gallery
+        function waitForImagesToLoad() {
+            const images = document.querySelectorAll('.gallery-item img');
+            let loadedCount = 0;
+            const totalImages = images.length;
+            
+            // Update loading text with progress
+            const loadingText = document.querySelector('.gallery-loading p');
+            
+            function updateProgress() {
+                if (loadingText) {
+                    loadingText.textContent = `Loading photos... ${loadedCount}/${totalImages}`;
+                }
+                
+                // Update progress bar
+                const progressFill = document.getElementById('progress-fill');
+                if (progressFill) {
+                    const percentage = (loadedCount / totalImages) * 100;
+                    progressFill.style.width = percentage + '%';
+                }
+            }
+            
+            if (totalImages === 0) {
+                showGallery();
+                return;
+            }
+            
+            images.forEach((img, index) => {
+                if (img.complete && img.naturalHeight !== 0) {
+                    // Image already loaded
+                    loadedCount++;
+                    updateProgress();
+                } else {
+                    // Wait for image to load
+                    img.addEventListener('load', () => {
+                        loadedCount++;
+                        updateProgress();
+                        if (loadedCount === totalImages) {
+                            showGallery();
+                        }
+                    });
+                    
+                    img.addEventListener('error', () => {
+                        loadedCount++;
+                        updateProgress();
+                        if (loadedCount === totalImages) {
+                            showGallery();
+                        }
+                    });
+                }
+            });
+            
+            // Fallback: show gallery after 5 seconds maximum
+            setTimeout(() => {
+                if (loadedCount < totalImages) {
+                    showGallery();
+                }
+            }, 5000);
+        }
+        
+        function showGallery() {
             // Hide loading indicator
             const loadingIndicator = document.getElementById('gallery-loading');
             if (loadingIndicator) {
@@ -360,7 +439,10 @@
                 el.style.transition = 'all 0.6s ease';
                 observer.observe(el);
             });
-        }, 2000);
+        }
+        
+        // Start waiting for images to load
+        waitForImagesToLoad();
     </script>
 </body>
 </html>

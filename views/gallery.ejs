@@ -116,7 +116,24 @@
         
         .gallery-loading p {
             font-size: 1.1rem;
-            margin: 0;
+            margin: 0 0 1rem 0;
+        }
+        
+        .progress-bar {
+            width: 200px;
+            height: 4px;
+            background: rgba(100, 181, 246, 0.3);
+            border-radius: 2px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: #64b5f6;
+            border-radius: 2px;
+            width: 0%;
+            transition: width 0.3s ease;
         }
     </style>
 </head>
@@ -154,6 +171,9 @@
             <div class="gallery-loading" id="gallery-loading">
                 <div class="loading-spinner"></div>
                 <p>Loading photos...</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
             </div>
             <div class="gallery-grid" id="gallery-grid" style="opacity: 0;">
                 <div class="gallery-item" data-category="2023">
@@ -338,8 +358,67 @@
             });
         }, observerOptions);
 
-        // Wait 2 seconds for photos to load, then show gallery
-        setTimeout(() => {
+        // Wait for all images to actually load before showing gallery
+        function waitForImagesToLoad() {
+            const images = document.querySelectorAll('.gallery-item img');
+            let loadedCount = 0;
+            const totalImages = images.length;
+            
+            // Update loading text with progress
+            const loadingText = document.querySelector('.gallery-loading p');
+            
+            function updateProgress() {
+                if (loadingText) {
+                    loadingText.textContent = `Loading photos... ${loadedCount}/${totalImages}`;
+                }
+                
+                // Update progress bar
+                const progressFill = document.getElementById('progress-fill');
+                if (progressFill) {
+                    const percentage = (loadedCount / totalImages) * 100;
+                    progressFill.style.width = percentage + '%';
+                }
+            }
+            
+            if (totalImages === 0) {
+                showGallery();
+                return;
+            }
+            
+            images.forEach((img, index) => {
+                if (img.complete && img.naturalHeight !== 0) {
+                    // Image already loaded
+                    loadedCount++;
+                    updateProgress();
+                } else {
+                    // Wait for image to load
+                    img.addEventListener('load', () => {
+                        loadedCount++;
+                        updateProgress();
+                        if (loadedCount === totalImages) {
+                            showGallery();
+                        }
+                    });
+                    
+                    img.addEventListener('error', () => {
+                        loadedCount++;
+                        updateProgress();
+                        if (loadedCount === totalImages) {
+                            showGallery();
+                        }
+                    });
+                }
+            });
+            
+            // Fallback: show gallery after 5 seconds maximum
+            setTimeout(() => {
+                if (loadedCount < totalImages) {
+                    showGallery();
+                }
+            }, 5000);
+        }
+        
+        function showGallery() {
             // Hide loading indicator
             const loadingIndicator = document.getElementById('gallery-loading');
             if (loadingIndicator) {
@@ -360,7 +439,10 @@
                 el.style.transition = 'all 0.6s ease';
                 observer.observe(el);
             });
-        }, 2000);
+        }
+        
+        // Start waiting for images to load
+        waitForImagesToLoad();
     </script>
 </body>
 </html>
