@@ -14,6 +14,9 @@ function convertEjsToHtml(ejsContent) {
         .replace(/<%=.*?%>/g, '') // Remove EJS output tags
         .replace(/<%.*?%>/g, ''); // Remove any remaining EJS tags
     
+    // Add cache busting to all image references
+    htmlContent = htmlContent.replace(/src="\/images\/([^"]+)"/g, `src="/images/$1?v=${timestamp}"`);
+    
     return htmlContent;
 }
 

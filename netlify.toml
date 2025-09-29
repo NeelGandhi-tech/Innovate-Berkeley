@@ -4,24 +4,3 @@
 
 [build.environment]
   NODE_VERSION = "18"
-
-# Handle client-side routing - specific routes only
-[[redirects]]
-  from = "/about"
-  to = "/about.html"
-  status = 200
-
-[[redirects]]
-  from = "/partners"
-  to = "/partners.html"
-  status = 200
-
-[[redirects]]
-  from = "/gallery"
-  to = "/gallery.html"
-  status = 200
-
-[[redirects]]
-  from = "/challenge"
-  to = "/challenge.html"
-  status = 200
