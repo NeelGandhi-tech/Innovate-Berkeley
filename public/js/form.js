@@ -38,31 +38,49 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         })
         .then(response => {
+            console.log('Response status:', response.status);
+            console.log('Response headers:', response.headers);
+            
             if (response.ok) {
-                // Success
-                submitBtn.textContent = 'Message Sent!';
-                submitBtn.style.background = '#28a745';
-                form.reset();
-                // Reset interest button to default
-                interestButtons.forEach(b => b.classList.remove('active'));
-                document.querySelector('.interest-btn[data-value="sponsor"]').classList.add('active');
-                hiddenInput.value = 'sponsor';
-                
-                // Reset button after 3 seconds
-                setTimeout(() => {
-                    submitBtn.textContent = originalText;
-                    submitBtn.style.background = '#007bff';
-                    submitBtn.disabled = false;
-                }, 3000);
+                return response.json();
             } else {
-                throw new Error('Network response was not ok');
+                return response.text().then(text => {
+                    throw new Error(`HTTP ${response.status}: ${text}`);
+                });
             }
+        })
+        .then(data => {
+            console.log('Success:', data);
+            // Success
+            submitBtn.textContent = 'Message Sent!';
+            submitBtn.style.background = '#28a745';
+            form.reset();
+            // Reset interest button to default
+            interestButtons.forEach(b => b.classList.remove('active'));
+            document.querySelector('.interest-btn[data-value="sponsor"]').classList.add('active');
+            hiddenInput.value = 'sponsor';
+            
+            // Reset button after 3 seconds
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.style.background = '#007bff';
+                submitBtn.disabled = false;
+            }, 3000);
         })
         .catch(error => {
             // Error
-            console.error('Error:', error);
+            console.error('Form submission error:', error);
             submitBtn.textContent = 'Error - Try Again';
             submitBtn.style.background = '#dc3545';
+            
+            // Show more specific error message
+            if (error.message.includes('HTTP 422')) {
+                submitBtn.textContent = 'Invalid Data - Check Fields';
+            } else if (error.message.includes('HTTP 429')) {
+                submitBtn.textContent = 'Too Many Requests - Wait';
+            } else if (error.message.includes('NetworkError')) {
+                submitBtn.textContent = 'Network Error - Check Connection';
+            }
             
             // Reset button after 3 seconds
             setTimeout(() => {
