@@ -1,4 +1,4 @@
-// Form handling and Formspree integration
+// Contact form setup
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.contact-form');
     const interestButtons = document.querySelectorAll('.interest-btn');
@@ -6,35 +6,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const submitBtn = form.querySelector('.submit-btn');
     const originalText = submitBtn.textContent;
 
-    // Handle interest button interactions
+    // Interest button selection
     interestButtons.forEach(btn => {
         btn.addEventListener('click', function() {
-            // Remove active class from all buttons
             interestButtons.forEach(b => b.classList.remove('active'));
-            // Add active class to clicked button
             this.classList.add('active');
-            // Update hidden input value
             hiddenInput.value = this.getAttribute('data-value');
         });
     });
 
-    // Handle form submission using Formspree AJAX
+    // Form submission handler
     async function handleSubmit(event) {
         event.preventDefault();
         
-        // Debug: Log the form action
-        console.log('Form action:', event.target.action);
-        console.log('Form method:', event.target.method);
+        console.log('Submitting to:', event.target.action);
+        console.log('Method:', event.target.method);
         
-        // Show loading state
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
         submitBtn.style.background = '#6c757d';
 
         var data = new FormData(event.target);
         
-        // Debug: Log form data
-        console.log('Form data entries:');
+        console.log('Form data:');
         for (let [key, value] of data.entries()) {
             console.log(key, value);
         }
@@ -49,17 +43,15 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             if (response.ok) {
-                // Success
                 submitBtn.textContent = 'Message Sent!';
                 submitBtn.style.background = '#28a745';
                 form.reset();
                 
-                // Reset interest button to default
+                // Reset to default selection
                 interestButtons.forEach(b => b.classList.remove('active'));
                 document.querySelector('.interest-btn[data-value="sponsor"]').classList.add('active');
                 hiddenInput.value = 'sponsor';
                 
-                // Reset button after 3 seconds
                 setTimeout(() => {
                     submitBtn.textContent = originalText;
                     submitBtn.style.background = '#007bff';
@@ -74,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 submitBtn.style.background = '#dc3545';
                 
-                // Reset button after 3 seconds
                 setTimeout(() => {
                     submitBtn.textContent = originalText;
                     submitBtn.style.background = '#007bff';
@@ -82,11 +73,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 }, 3000);
             }
         } catch (error) {
-            console.error('Form submission error:', error);
+            console.error('Submission failed:', error);
             submitBtn.textContent = 'Network Error - Try Again';
             submitBtn.style.background = '#dc3545';
             
-            // Reset button after 3 seconds
             setTimeout(() => {
                 submitBtn.textContent = originalText;
                 submitBtn.style.background = '#007bff';
