@@ -81,32 +81,6 @@
         </div>
     </section>
 
-    <!-- About Gallery Section -->
-    <section class="about-gallery-section">
-        <div class="about-gallery-container">
-            <h2 class="about-gallery-title">Event Highlights</h2>
-            <div class="about-gallery-grid">
-                <div class="about-gallery-item">
-                    <img src="/images/frontcover.jpg" alt="Innovate Event Cover">
-                </div>
-                <div class="about-gallery-item">
-                    <img src="/images/berkeley-campus-hero.jpg" alt="Berkeley Campus">
-                </div>
-                <div class="about-gallery-item">
-                    <img src="/images/berkeley-campus.jpg" alt="Berkeley Campus">
-                </div>
-                <div class="about-gallery-item">
-                    <img src="/images/innovate-112.jpg" alt="Innovate Event">
-                </div>
-                <div class="about-gallery-item">
-                    <img src="/images/innovate-19.jpg" alt="Innovate Event">
-                </div>
-                <div class="about-gallery-item">
-                    <img src="/images/innovate-248.jpg" alt="Innovate Event">
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Organizers Section -->
     <section class="organizers-section">
@@ -238,6 +212,37 @@
                 }
             });
         }, observerOptions);
+
+        // Carousel functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const indicators = document.querySelectorAll('.indicator');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        function previousSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        // Initialize carousel
+        showSlide(0);
+
+        // Auto-advance carousel
+        setInterval(nextSlide, 5000);
 
         // Observe elements for animation
         document.querySelectorAll('.organizer-logo-section, .organizer-info').forEach(el => {
