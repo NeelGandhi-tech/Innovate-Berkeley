@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.contact-form');
     const interestButtons = document.querySelectorAll('.interest-btn');
     const hiddenInput = document.getElementById('interest-type');
+    const submitBtn = form.querySelector('.submit-btn');
+    const originalText = submitBtn.textContent;
 
     // Handle interest button interactions
     interestButtons.forEach(btn => {
@@ -16,78 +18,72 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Handle form submission
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
+    // Handle form submission using Formspree AJAX
+    async function handleSubmit(event) {
+        event.preventDefault();
         
         // Show loading state
-        const submitBtn = form.querySelector('.submit-btn');
-        const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
+        submitBtn.style.background = '#6c757d';
 
-        // Prepare form data
-        const formData = new FormData(form);
+        var data = new FormData(event.target);
         
-        // Submit to Formspree
-        fetch('https://formspree.io/f/mqayplry', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-        .then(response => {
-            console.log('Response status:', response.status);
-            console.log('Response headers:', response.headers);
-            
+        try {
+            const response = await fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
             if (response.ok) {
-                return response.json();
+                // Success
+                submitBtn.textContent = 'Message Sent!';
+                submitBtn.style.background = '#28a745';
+                form.reset();
+                
+                // Reset interest button to default
+                interestButtons.forEach(b => b.classList.remove('active'));
+                document.querySelector('.interest-btn[data-value="sponsor"]').classList.add('active');
+                hiddenInput.value = 'sponsor';
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.background = '#007bff';
+                    submitBtn.disabled = false;
+                }, 3000);
             } else {
-                return response.text().then(text => {
-                    throw new Error(`HTTP ${response.status}: ${text}`);
-                });
+                const data = await response.json();
+                if (Object.hasOwn(data, 'errors')) {
+                    submitBtn.textContent = 'Error: ' + data["errors"].map(error => error["message"]).join(", ");
+                } else {
+                    submitBtn.textContent = 'Error - Try Again';
+                }
+                submitBtn.style.background = '#dc3545';
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.background = '#007bff';
+                    submitBtn.disabled = false;
+                }, 3000);
             }
-        })
-        .then(data => {
-            console.log('Success:', data);
-            // Success
-            submitBtn.textContent = 'Message Sent!';
-            submitBtn.style.background = '#28a745';
-            form.reset();
-            // Reset interest button to default
-            interestButtons.forEach(b => b.classList.remove('active'));
-            document.querySelector('.interest-btn[data-value="sponsor"]').classList.add('active');
-            hiddenInput.value = 'sponsor';
-            
-            // Reset button after 3 seconds
-            setTimeout(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.style.background = '#007bff';
-                submitBtn.disabled = false;
-            }, 3000);
-        })
-        .catch(error => {
-            // Error
+        } catch (error) {
             console.error('Form submission error:', error);
-            submitBtn.textContent = 'Error - Try Again';
+            submitBtn.textContent = 'Network Error - Try Again';
             submitBtn.style.background = '#dc3545';
             
-            // Show more specific error message
-            if (error.message.includes('HTTP 422')) {
-                submitBtn.textContent = 'Invalid Data - Check Fields';
-            } else if (error.message.includes('HTTP 429')) {
-                submitBtn.textContent = 'Too Many Requests - Wait';
-            } else if (error.message.includes('NetworkError')) {
-                submitBtn.textContent = 'Network Error - Check Connection';
-            }
-            
             // Reset button after 3 seconds
             setTimeout(() => {
                 submitBtn.textContent = originalText;
                 submitBtn.style.background = '#007bff';
                 submitBtn.disabled = false;
             }, 3000);
-        });
-    });
+        }
+    }
+
+    form.addEventListener("submit", handleSubmit);
 });
