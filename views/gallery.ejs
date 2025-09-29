@@ -92,6 +92,32 @@
         .loaded {
             opacity: 1;
         }
+        
+        .gallery-loading {
+            text-align: center;
+            padding: 4rem 0;
+            color: #64b5f6;
+        }
+        
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(100, 181, 246, 0.3);
+            border-top: 4px solid #64b5f6;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .gallery-loading p {
+            font-size: 1.1rem;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
@@ -124,9 +150,12 @@
     <!-- Gallery Section -->
     <section class="gallery-section">
         <div class="container">
-            
-            
-            <div class="gallery-grid">
+            <h2 class="gallery-title">Event Gallery</h2>
+            <div class="gallery-loading" id="gallery-loading">
+                <div class="loading-spinner"></div>
+                <p>Loading photos...</p>
+            </div>
+            <div class="gallery-grid" id="gallery-grid" style="opacity: 0;">
                 <div class="gallery-item" data-category="2023">
                     <img src="/images/innovate-62.jpg" alt="Innovate Event 2023">
                 </div>
@@ -309,13 +338,29 @@
             });
         }, observerOptions);
 
-        // Observe gallery items for animation
-        document.querySelectorAll('.gallery-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'all 0.6s ease';
-            observer.observe(el);
-        });
+        // Wait 2 seconds for photos to load, then show gallery
+        setTimeout(() => {
+            // Hide loading indicator
+            const loadingIndicator = document.getElementById('gallery-loading');
+            if (loadingIndicator) {
+                loadingIndicator.style.display = 'none';
+            }
+            
+            // Show gallery grid
+            const galleryGrid = document.getElementById('gallery-grid');
+            if (galleryGrid) {
+                galleryGrid.style.opacity = '1';
+                galleryGrid.style.transition = 'opacity 0.5s ease';
+            }
+            
+            // Animate gallery items
+            document.querySelectorAll('.gallery-item').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease';
+                observer.observe(el);
+            });
+        }, 2000);
     </script>
 </body>
 </html>
