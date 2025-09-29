@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const formData = new FormData(form);
         
         // Submit to Formspree
-        fetch('https://formspree.io/f/xpwgkqpn', {
+        fetch('https://formspree.io/f/mqayplry', {
             method: 'POST',
             body: formData,
             headers: {
