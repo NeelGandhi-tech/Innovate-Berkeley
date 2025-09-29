@@ -19,6 +19,14 @@ app.get('/', (req, res) => {
 //     res.render('challenge');
 // });
 
+app.get('/partners', (req, res) => {
+    res.render('partners');
+});
+
+app.get('/gallery', (req, res) => {
+    res.render('gallery');
+});
+
 app.get('/about', (req, res) => {
     res.render('about');
 });

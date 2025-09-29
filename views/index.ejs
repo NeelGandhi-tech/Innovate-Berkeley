@@ -12,15 +12,17 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="/images/logo.jpeg" alt="Innovate Logo">
-                innovate
+                <img src="/images/logo.png" alt="Innovate Logo">
+                
             </div>
             <ul class="nav-links">
-                <li><a href="/about">ABOUT</a></li>
                 <li><a href="/conference">CONFERENCE</a></li>
+                <li><a href="/about">ABOUT</a></li>
+                <li><a href="/partners">PAST PARTNERS</a></li>
+                <li><a href="/gallery">GALLERY</a></li>
                 <!-- <li><a href="/challenge">CHALLENGE</a></li> -->
             </ul>
-            <a href="#register" class="register-btn">REGISTER</a>
+            <a href="#contact" class="register-btn">CONTACT US</a>
         </div>
     </nav>
 
@@ -33,16 +35,15 @@
                 <span id="typing-text" class="typing-text">Together we can innovate.</span>
             </h1>
             <p class="hero-subtitle fade-in">STARTUP DISRUPTION IN BERKELEY'S FRONTYARD. POWERED BY AEZ</p>
-            <a href="#register" class="hero-cta fade-in">REGISTER NOW</a>
+            <div class="hero-location fade-in">
+                Pauley Ballroom • BERKELEY, CA<br>
+                NOVEMBER 19, 2025
+            </div>
+            <a href="#contact" class="hero-cta fade-in">CONTACT US</a>
         </div>
-        <div class="hero-location">
-            BERKELEY HAAS<br>
-            SPIKER FORUM<br>
-            BERKELEY, CA<br><br>
-            NOVEMBER 12, 2025
-        </div>
-        <div class="scroll-indicator" onclick="document.querySelector('.contact-section').scrollIntoView({behavior: 'smooth'})"></div>
+        <div class="scroll-indicator" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})"></div>
     </section>
+
 
     <!-- Schedule Section -->
     <section class="schedule-section">
@@ -50,219 +51,109 @@
             <h2>Schedule</h2>
             
             <div class="schedule-item">
-                <div class="schedule-time">4:30 – 5:00</div>
+                <div class="schedule-time">3:30 – 4:00 PM</div>
                 <div class="schedule-content">
-                    <h3>Registration and Check In</h3>
+                    <h3>Registration and Check-In</h3>
+                    <p>Nametag Pickup, Initial Attendees</p>
                 </div>
             </div>
 
             <div class="schedule-item">
-                <div class="schedule-time">5:00 – 5:45</div>
+                <div class="schedule-time">4:00 – 4:45 PM</div>
                 <div class="schedule-content">
                     <h3>Welcome and Networking</h3>
+                    <p>Startup Booth Interactions, Stage Introductions for Initial Attendees and Keynote</p>
                 </div>
             </div>
 
             <div class="schedule-item keynote">
-                <div class="schedule-time">5:45 – 6:15</div>
+                <div class="schedule-time">4:45 – 5:15 PM</div>
                 <div class="schedule-content">
-                    <h3>Keynote Speaker</h3>
+                    <h3>Keynote #1</h3>
+                    <p>10-15 minute Keynote → 15-20 minute Audience Q&A</p>
                     <div class="speaker-info">
-                        <div class="speaker-avatar"></div>
+                        <div class="speaker-avatar small" style="background-image: url('/images/Past Speakers/Marcus Ryu.jpeg')"></div>
                         <div class="speaker-details">
-                            <h4>Shaun Maguire</h4>
-                            <p>Partner, Sequoia Capital</p>
-                            <div class="linkedin-icon">in</div>
+                            <h4>Marcus Ryu <a href="https://linkedin.com/in/marcusryu" target="_blank" class="linkedin-icon">in</a></h4>
+                            <p>Battery Ventures</p>
                         </div>
                     </div>
                     <div class="speaker-description">
-                        Shaun Maguire, a Partner at Sequoia Capital, draws on his scientific background and entrepreneurial experience to invest in groundbreaking startups. His portfolio features prominent investments in companies like AMP Robotics, Knowde, Vise, and Watershed, emphasizing sectors where advanced technology meets business innovation. Additionally, Shaun has played a key role in supporting SpaceX, focusing on transformative solutions that drive the future of industries. With a keen eye for disruptive potential, he is dedicated to fostering ventures that challenge the status quo and shape the technological landscape.
+                        Partner at Battery Ventures with extensive experience in venture capital and startup investments. Marcus will share insights on the future of technology and entrepreneurship.
+                    </div>
+                </div>
+            </div>
+
+            <div class="schedule-item panel">
+                <div class="schedule-time">5:15 – 6:00 PM</div>
+                <div class="schedule-content">
+                    <h3>Panel</h3>
+                    <p>30 minute directed Q&A → 15 minute Audience Q&A</p>
+                </div>
+            </div>
+
+            <div class="schedule-item">
+                <div class="schedule-time">6:30 – 7:00 PM</div>
+                <div class="schedule-content">
+                    <h3>Networking Break</h3>
+                    <p>Startup Networking, Break from Keynotes</p>
+                </div>
+            </div>
+
+            <div class="schedule-item keynote">
+                <div class="schedule-time">7:00 – 7:30 PM</div>
+                <div class="schedule-content">
+                    <h3>Keynote #2</h3>
+                    <p>10-15 minute Keynote → 15-20 minute Q&A</p>
+                    <div class="speaker-info">
+                        <div class="speaker-avatar small" style="background-image: url('/images/Past Speakers/Grace Ma.jpeg')"></div>
+                        <div class="speaker-details">
+                            <h4>Grace Ma <a href="https://linkedin.com/in/gracema" target="_blank" class="linkedin-icon">in</a></h4>
+                            <p>Bessemer Venture Partners</p>
+                        </div>
+                    </div>
+                    <div class="speaker-description">
+                        Principal at Bessemer Venture Partners focusing on enterprise software and fintech investments. Grace will discuss building successful startups in today's competitive landscape.
                     </div>
                 </div>
             </div>
 
             <div class="schedule-item">
-                <div class="schedule-time">6:15 – 7:15</div>
+                <div class="schedule-time">7:30 – 8:00 PM</div>
                 <div class="schedule-content">
-                    <h3>Startup Pitch Challenge</h3>
-                </div>
-            </div>
-
-            <div class="schedule-item panel">
-                <div class="schedule-time">7:15 – 8:00</div>
-                <div class="schedule-content">
-                    <h3>Venture Capitalist Panel</h3>
-                    <h4 class="speakers-label">Speakers</h4>
-                    <div class="panel-speakers">
-                        <div class="panel-speaker">
-                            <div class="speaker-avatar ann"></div>
-                            <div class="speaker-details">
-                                <h4>Ann Bordetsky <span class="linkedin-icon">in</span></h4>
-                                <p>Partner, New Enterprise Associates</p>
-                            </div>
-                        </div>
-                        <div class="panel-speaker">
-                            <div class="speaker-avatar deedy"></div>
-                            <div class="speaker-details">
-                                <h4>Deedy Das <span class="linkedin-icon">in</span></h4>
-                                <p>Principal, Menlo Ventures</p>
-                            </div>
-                        </div>
-                        <div class="panel-speaker">
-                            <div class="speaker-avatar jonathan"></div>
-                            <div class="speaker-details">
-                                <h4>Jonathan Mendelson <span class="linkedin-icon">in</span></h4>
-                                <p>Investor, Accel</p>
-                            </div>
-                        </div>
-                    </div>
+                    <h3>Thank Yous and Networking</h3>
+                    <p>Thank Yous for Panelists and Keynotes, Gifts, Outro Networking</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Startups Section -->
-    <section class="featured-startups-section">
+
+    <!-- Sponsors Section -->
+    <section class="sponsors-section">
         <div class="container">
-            <h2>This Year's Featured Startups</h2>
-            <div class="startups-grid current-year">
-                <div class="startup-logo">KoBold Metals</div>
-                <div class="startup-logo">granica</div>
-                <div class="startup-logo">ORBY</div>
-                <div class="startup-logo">Banyan Infrastructure</div>
-                <div class="startup-logo">numbers station</div>
-                <div class="startup-logo">WindBorne</div>
-                <div class="startup-logo">X-THERMA</div>
-                <div class="startup-logo">Cultivo</div>
-                <div class="startup-logo">REVOLV</div>
-                <div class="startup-logo">RONBOW</div>
-                <div class="startup-logo">DataPelago</div>
-                <div class="startup-logo">Alembic</div>
-                <div class="startup-logo">KAEDIM</div>
-                <div class="startup-logo">Planetarians</div>
-                <div class="startup-logo">RxGuardian</div>
-                <div class="startup-logo">enact</div>
-                <div class="startup-logo">HERCULES AI</div>
-                <div class="startup-logo">Zero Emission Industries</div>
-                <div class="startup-logo">KETOS</div>
-            </div>
-
-            <h2>Past Featured Startups</h2>
-            <div class="startups-grid past-year">
-                <div class="startup-logo">Hypersonix</div>
-                <div class="startup-logo">sematic</div>
-                <div class="startup-logo">mission bio</div>
-                <div class="startup-logo">Verdant Robotics</div>
-                <div class="startup-logo">Patterns</div>
-                <div class="startup-logo">Botrista</div>
-                <div class="startup-logo">RisingWave</div>
-                <div class="startup-logo">WINDFALL</div>
-                <div class="startup-logo">Cloud Thread</div>
-                <div class="startup-logo">MoneyThumb</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Past Speakers Section -->
-    <section class="past-speakers-section">
-        <div class="container">
-            <h2>Past Speakers and Panelists</h2>
-            <div class="speakers-grid">
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Past Speakers/Nikhil.jpeg')"></div>
-                    <div class="speaker-info">
-                        <h3>Nikhil Arora</h3>
-                        <p>Back to the Roots</p>
+            <h2>Our Sponsors</h2>
+            <div class="sponsors-grid">
+                <div class="sponsor-card">
+                    <div class="sponsor-logo">
+                        <img src="/images/aez.png" alt="AEZ Logo">
                     </div>
+                    <h3>AEZ</h3>
+                    <p>Association of Engineering Students</p>
                 </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Past Speakers/Alagu Periyannan.jpeg')"></div>
-                    <div class="speaker-info">
-                        <h3>Alagu Periyannan</h3>
-                        <p>BlueJeans</p>
+                <div class="sponsor-card">
+                    <div class="sponsor-logo">
+                        <div class="sponsor-placeholder">TechCorp</div>
                     </div>
+                    <h3>TechCorp</h3>
+                    <p>Leading Technology Solutions</p>
                 </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Past Speakers/Marcus Ryu.jpeg')"></div>
-                    <div class="speaker-info">
-                        <h3>Marcus Ryu</h3>
-                        <p>Battery Ventures</p>
+                <div class="sponsor-card">
+                    <div class="sponsor-logo">
+                        <div class="sponsor-placeholder">InnovateLab</div>
                     </div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Past Speakers/Vinay Iyengar.jpeg')"></div>
-                    <div class="speaker-info">
-                        <h3>Vinay Iyengar</h3>
-                        <p>Two Sigma Ventures</p>
-                    </div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Past Speakers/Grace Ma.jpeg')"></div>
-                    <div class="speaker-info">
-                        <h3>Grace Ma</h3>
-                        <p>Bessemer Venture Partners</p>
-                    </div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Past Speakers/Connor Love.jpeg')"></div>
-                    <div class="speaker-info">
-                        <h3>Connor Love</h3>
-                        <p>Lightspeed Venture Partners</p>
-                    </div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Past Speakers/Akash Malhotra.png')"></div>
-                    <div class="speaker-info">
-                        <h3>Akash Malhotra</h3>
-                        <p>The House Fund</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-
-    <!-- Gallery Section -->
-    <section class="gallery-section">
-        <div class="container">
-            <h2>Past Events Gallery</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="/images/innovate-62.jpg" alt="Innovate Event">
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/innovate-66.jpg" alt="Innovate Event">
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/innovate-75.jpg" alt="Innovate Event">
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/innovate-80.jpg" alt="Innovate Event">
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/innovate-89.jpg" alt="Innovate Event">
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/innovate-71.jpg" alt="Innovate Event">
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/innovate-127.jpg" alt="Innovate Event">
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/innovate-154.jpg" alt="Innovate Event">
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/innovate-212.jpg" alt="Innovate Event">
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/innovate-20.jpg" alt="Innovate Event">
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/innovate-28.jpg" alt="Innovate Event">
-                </div>
-                <div class="gallery-item">
-                    <img src="/images/innovate-81.jpg" alt="Berkeley Campus">
+                    <h3>InnovateLab</h3>
+                    <p>Innovation & Research Hub</p>
                 </div>
             </div>
         </div>
@@ -286,7 +177,7 @@
             </div>
             <div class="faq-item">
                 <h3>What do I do if I have more questions?</h3>
-                <p>Send us an email at <a href="mailto:innovate@aez.berkeley.edu">innovate@aez.berkeley.edu</a>.</p>
+                <p>Send us an email at <a href="mailto:Innovate2025@berkeley.edu">Innovate2025@berkeley.edu</a>.</p>
             </div>
         </div>
     </section>
@@ -298,11 +189,56 @@
             <div class="logistics-grid">
                 <div class="logistics-card">
                     <h3>Date & Time</h3>
-                    <p>November 12, 2025<br>5 - 8 PM</p>
+                    <p>November 19, 2025<br>3 - 8 PM</p>
                 </div>
                 <div class="logistics-card">
                     <h3>Location</h3>
-                    <p>Chou Hall Floor 6<br>Cheit Ln, Berkeley, CA 94720</p>
+                    <p>Pauley Ballroom<br>2495 Bancroft Way, Berkeley, CA 94720</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <form action="https://formspree.io/f/xpwgkqpn" method="POST" class="contact-form">
+                        <div class="form-group">
+                            <label>I am interested in:</label>
+                            <div class="button-group">
+                                <button type="button" class="interest-btn" data-value="sponsor">Company Sponsorship</button>
+                                <button type="button" class="interest-btn" data-value="attendee">Attending the Event</button>
+                                <button type="button" class="interest-btn" data-value="other">Other Questions?</button>
+                            </div>
+                            <input type="hidden" id="interest-type" name="interest-type" value="sponsor" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your interest in Innovate@Berkeley..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -319,7 +255,7 @@
             <div class="footer-social">
                 <h4>Follow Us</h4>
                 <ul class="social-links">
-                    <li><a href="mailto:innovate@aez.berkeley.edu">innovate@aez.berkeley.edu</a></li>
+                    <li><a href="mailto:Innovate2025@berkeley.edu">Innovate2025@berkeley.edu</a></li>
                     <li><a href="https://facebook.com/berkeleyinnovate">@berkeleyinnovate</a></li>
                     <li><a href="https://instagram.com/berkeleyinnovate">@berkeleyinnovate</a></li>
                 </ul>
@@ -420,6 +356,7 @@
         document.querySelectorAll('.speaker-card').forEach(el => {
             speakerObserver.observe(el);
         });
+
 
         // Typing animation
         const texts = [
@@ -535,5 +472,8 @@
             }
         });
     </script>
+    
+    <!-- Form handling script -->
+    <script src="/js/form.js"></script>
 </body>
 </html>
