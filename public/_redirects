@@ -1,7 +1,5 @@
 # Netlify redirects for SPA routing
-/about /about.html 200
-/challenge /index.html 200
-/conference /index.html 200
+/*    /index.html   200
 
-# Fallback for any other routes
-/* /index.html 200
+# API routes (if you add any later)
+/api/*  /.netlify/functions/:splat  200

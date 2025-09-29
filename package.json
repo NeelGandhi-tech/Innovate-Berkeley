@@ -5,11 +5,15 @@
     "main": "app.js",
     "scripts": {
       "start": "node app.js",
-      "dev": "nodemon app.js"
+      "dev": "nodemon app.js",
+      "build": "node build-static.js",
+      "build:netlify": "npm run build && npm run build:static",
+      "build:static": "node build-static.js"
     },
     "dependencies": {
       "express": "^4.18.2",
-      "ejs": "^3.1.9"
+      "ejs": "^3.1.9",
+      "serverless-http": "^3.2.0"
     },
     "devDependencies": {
       "nodemon": "^3.0.1"
