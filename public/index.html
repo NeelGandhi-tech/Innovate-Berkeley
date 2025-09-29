@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Innovate @ Berkeley</title>
-    <link rel="icon" type="image/jpeg" href="/images/small_logo.jpg?v=1759176246911">
-    <link rel="stylesheet" href="/css/style.css?v=1759176246911">
+    <link rel="icon" type="image/jpeg" href="/images/small_logo.jpg?v=1759176400310">
+    <link rel="stylesheet" href="/css/style.css?v=1759176400310">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="/images/logo.png?v=1759176246911?v=1759176246911" alt="Innovate Logo">
+                <img src="/images/logo.png?v=1759176400310?v=1759176400310" alt="Innovate Logo">
             </div>
             <div class="mobile-menu-toggle" id="mobile-menu-toggle">
                 <span></span>
@@ -145,7 +145,7 @@
             <div class="sponsors-grid">
                 <div class="sponsor-card">
                     <div class="sponsor-logo">
-                        <img src="/images/aez.png?v=1759176246911" alt="AEZ Logo">
+                        <img src="/images/aez.png?v=1759176400310" alt="AEZ Logo">
                     </div>
                     <h3>AEZ</h3>
                     <p>Association of Engineering Students</p>
@@ -301,36 +301,20 @@
             }
         });
 
-        // Simple mobile menu toggle
-        function toggleMobileMenu() {
-            const navLinks = document.getElementById('nav-links');
-            const mobileToggle = document.getElementById('mobile-menu-toggle');
-            
-            if (navLinks && mobileToggle) {
-                navLinks.classList.toggle('mobile-active');
-                mobileToggle.classList.toggle('mobile-active');
-            }
-        }
-
-        // Add click event to mobile menu button
+        // Very simple mobile menu
         document.addEventListener('DOMContentLoaded', function() {
             const mobileToggle = document.getElementById('mobile-menu-toggle');
-            if (mobileToggle) {
-                mobileToggle.addEventListener('click', toggleMobileMenu);
-            }
-
-            // Close menu when clicking on nav links
-            const navLinks = document.querySelectorAll('.nav-links a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    const navLinksEl = document.getElementById('nav-links');
-                    const mobileToggleEl = document.getElementById('mobile-menu-toggle');
-                    if (navLinksEl && mobileToggleEl) {
-                        navLinksEl.classList.remove('mobile-active');
-                        mobileToggleEl.classList.remove('mobile-active');
+            const navLinks = document.getElementById('nav-links');
+            
+            if (mobileToggle && navLinks) {
+                mobileToggle.onclick = function() {
+                    if (navLinks.style.display === 'block') {
+                        navLinks.style.display = 'none';
+                    } else {
+                        navLinks.style.display = 'block';
                     }
-                });
-            });
+                };
+            }
         });
 
         // Trigger animations on page load
@@ -516,6 +500,6 @@
     </script>
     
     <!-- Form handling script -->
-    <script src="/js/form.js?v=1759176246911"></script>
+    <script src="/js/form.js?v=1759176400310"></script>
 </body>
 </html>

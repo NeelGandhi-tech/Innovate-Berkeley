@@ -146,36 +146,20 @@
             }
         });
 
-        // Simple mobile menu toggle
-        function toggleMobileMenu() {
-            const navLinks = document.getElementById('nav-links');
-            const mobileToggle = document.getElementById('mobile-menu-toggle');
-            
-            if (navLinks && mobileToggle) {
-                navLinks.classList.toggle('mobile-active');
-                mobileToggle.classList.toggle('mobile-active');
-            }
-        }
-
-        // Add click event to mobile menu button
+        // Very simple mobile menu
         document.addEventListener('DOMContentLoaded', function() {
             const mobileToggle = document.getElementById('mobile-menu-toggle');
-            if (mobileToggle) {
-                mobileToggle.addEventListener('click', toggleMobileMenu);
-            }
-
-            // Close menu when clicking on nav links
-            const navLinks = document.querySelectorAll('.nav-links a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    const navLinksEl = document.getElementById('nav-links');
-                    const mobileToggleEl = document.getElementById('mobile-menu-toggle');
-                    if (navLinksEl && mobileToggleEl) {
-                        navLinksEl.classList.remove('mobile-active');
-                        mobileToggleEl.classList.remove('mobile-active');
+            const navLinks = document.getElementById('nav-links');
+            
+            if (mobileToggle && navLinks) {
+                mobileToggle.onclick = function() {
+                    if (navLinks.style.display === 'block') {
+                        navLinks.style.display = 'none';
+                    } else {
+                        navLinks.style.display = 'block';
                     }
-                });
-            });
+                };
+            }
         });
 
         // Trigger animations on page load
