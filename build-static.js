@@ -32,12 +32,40 @@ function processEjsFile(inputPath, outputPath) {
     }
 }
 
+// Function to copy directory recursively
+function copyDir(src, dest) {
+    if (!fs.existsSync(dest)) {
+        fs.mkdirSync(dest, { recursive: true });
+    }
+    
+    const entries = fs.readdirSync(src, { withFileTypes: true });
+    
+    for (let entry of entries) {
+        const srcPath = path.join(src, entry.name);
+        const destPath = path.join(dest, entry.name);
+        
+        if (entry.isDirectory()) {
+            copyDir(srcPath, destPath);
+        } else {
+            fs.copyFileSync(srcPath, destPath);
+        }
+    }
+}
+
 // Main build process
 function buildStatic() {
     console.log('Building static files for Netlify...');
     
     const viewsDir = path.join(__dirname, 'views');
     const publicDir = path.join(__dirname, 'public');
+    const imagesDir = path.join(__dirname, 'images');
+    const publicImagesDir = path.join(publicDir, 'images');
+    
+    // Copy images directory to public directory
+    if (fs.existsSync(imagesDir)) {
+        console.log('Copying images to public directory...');
+        copyDir(imagesDir, publicImagesDir);
+    }
     
     // List of EJS files to convert
     const ejsFiles = [

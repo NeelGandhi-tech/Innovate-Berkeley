@@ -4,5 +4,5 @@
 /gallery  /gallery.html  200
 /challenge /challenge.html 200
 
-# Catch-all redirect
+# Catch-all redirect (but not for static assets)
 /*    /index.html   200
