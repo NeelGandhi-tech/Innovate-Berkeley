@@ -22,12 +22,22 @@ document.addEventListener('DOMContentLoaded', function() {
     async function handleSubmit(event) {
         event.preventDefault();
         
+        // Debug: Log the form action
+        console.log('Form action:', event.target.action);
+        console.log('Form method:', event.target.method);
+        
         // Show loading state
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
         submitBtn.style.background = '#6c757d';
 
         var data = new FormData(event.target);
+        
+        // Debug: Log form data
+        console.log('Form data entries:');
+        for (let [key, value] of data.entries()) {
+            console.log(key, value);
+        }
         
         try {
             const response = await fetch(event.target.action, {
