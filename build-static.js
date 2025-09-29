@@ -3,8 +3,12 @@ const path = require('path');
 
 // Function to convert EJS to HTML by removing EJS syntax
 function convertEjsToHtml(ejsContent) {
+    // Generate a timestamp for cache busting
+    const timestamp = Date.now();
+    
     // Remove EJS includes and other server-side code
     let htmlContent = ejsContent
+        .replace(/<%= Date\.now\(\) %>/g, timestamp) // Replace Date.now() with actual timestamp
         .replace(/<%[^%]*%>/g, '') // Remove EJS tags
         .replace(/<%-[^%]*%>/g, '') // Remove EJS output tags
         .replace(/<%=.*?%>/g, '') // Remove EJS output tags
