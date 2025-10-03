@@ -167,7 +167,7 @@
             padding: 1.5rem;
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 2rem;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             opacity: 0;
             transform: translateY(20px);
@@ -186,8 +186,8 @@
         }
         
         .speaker-card .speaker-avatar {
-            width: 50px;
-            height: 50px;
+            width: 80px;
+            height: 80px;
             background: linear-gradient(45deg, #64b5f6, #42a5f5);
             border-radius: 50%;
             flex-shrink: 0;
@@ -196,10 +196,17 @@
             background-repeat: no-repeat;
         }
         
+        .speaker-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
         .speaker-info h3 {
             font-size: 1rem;
             color: white;
-            margin-bottom: 0.3rem;
+            margin: 0;
+            line-height: 1.2;
         }
         
         .speaker-info p {
@@ -363,10 +370,11 @@
     <section class="past-speakers-section">
         <div class="container">
             <div class="section-title">
-                <h2>Past-Speakers and Panelists</h2>
+                <h2>Past Speakers and Panelists</h2>
                 <p>Amazing speakers who have shared their insights at Innovate@Berkeley</p>
             </div>
             <div class="speakers-grid">
+                <!-- Top Spot: Nikhil Arora -->
                 <div class="speaker-card">
                     <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Nikhil.jpeg')"></div>
                     <div class="speaker-info">
@@ -374,45 +382,86 @@
                         <p>Back to the Roots</p>
                     </div>
                 </div>
+                
+                <!-- Tier 1: Top-tier VCs (Sequoia, Accel, NEA) -->
                 <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Alagu-Periyannan.jpeg')"></div>
+                    <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Shaun.jpg')"></div>
                     <div class="speaker-info">
-                        <h3>Alagu-Periyannan</h3>
-                        <p>BlueJeans</p>
+                        <h3>Shaun Maguire</h3>
+                        <p>Sequoia Capital</p>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Ann.jpg')"></div>
+                    <div class="speaker-info">
+                        <h3>Ann Bordetsky</h3>
+                        <p>New Enterprise Associates</p>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Jonathan.jpg')"></div>
+                    <div class="speaker-info">
+                        <h3>Jonathan Mendelson</h3>
+                        <p>Accel</p>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Vedant.jpg')"></div>
+                    <div class="speaker-info">
+                        <h3>Vedant Suri</h3>
+                        <p>General Catalyst</p>
+                    </div>
+                </div>
+                
+                <!-- Tier 2: Partners at Established VCs -->
+                <div class="speaker-card">
+                    <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Deedy.jpg')"></div>
+                    <div class="speaker-info">
+                        <h3>Deedy Das</h3>
+                        <p>Menlo Ventures</p>
                     </div>
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Marcus-Ryu.jpeg')"></div>
                     <div class="speaker-info">
-                        <h3>Marcus-Ryu</h3>
+                        <h3>Marcus Ryu</h3>
                         <p>Battery Ventures</p>
-                    </div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Vinay-Iyengar.jpeg')"></div>
-                    <div class="speaker-info">
-                        <h3>Vinay-Iyengar</h3>
-                        <p>Two Sigma Ventures</p>
                     </div>
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Grace-Ma.jpeg')"></div>
                     <div class="speaker-info">
-                        <h3>Grace-Ma</h3>
+                        <h3>Grace Ma</h3>
                         <p>Bessemer Venture Partners</p>
                     </div>
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Connor-Love.jpeg')"></div>
                     <div class="speaker-info">
-                        <h3>Connor-Love</h3>
+                        <h3>Connor Love</h3>
                         <p>Lightspeed Venture Partners</p>
+                    </div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Vinay-Iyengar.jpeg')"></div>
+                    <div class="speaker-info">
+                        <h3>Vinay Iyengar</h3>
+                        <p>Two Sigma Ventures</p>
+                    </div>
+                </div>
+                
+                <!-- Tier 3: Other speakers -->
+                <div class="speaker-card">
+                    <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Alagu-Periyannan.jpeg')"></div>
+                    <div class="speaker-info">
+                        <h3>Alagu Periyannan</h3>
+                        <p>BlueJeans</p>
                     </div>
                 </div>
                 <div class="speaker-card">
                     <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Akash-Malhotra.png')"></div>
                     <div class="speaker-info">
-                        <h3>Akash-Malhotra</h3>
+                        <h3>Akash Malhotra</h3>
                         <p>The House Fund</p>
                     </div>
                 </div>
@@ -492,3 +541,4 @@
     </script>
 </body>
 </html>
+
