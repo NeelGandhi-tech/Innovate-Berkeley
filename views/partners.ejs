@@ -34,15 +34,18 @@
         
         .partners-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
             margin-top: 3rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .partner-card {
             background: white;
             border-radius: 12px;
-            padding: 2rem;
+            padding: 1.5rem;
             text-align: center;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -54,8 +57,8 @@
         }
         
         .partner-logo {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             background: #f0f0f0;
             border-radius: 8px;
             margin: 0 auto 1rem;
@@ -103,23 +106,47 @@
         }
         
         .startup-card {
-            background: #f8f9fa;
-            border-radius: 8px;
+            background: white;
+            border-radius: 12px;
             padding: 1.5rem;
             text-align: center;
-            border: 1px solid #e9ecef;
-            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .startup-card:hover {
-            background: #e9ecef;
-            transform: translateY(-2px);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        
+        .startup-logo {
+            width: 100px;
+            height: 100px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: #666;
+            border: 2px dashed #ddd;
+            overflow: hidden;
+        }
+        
+        .startup-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
         }
         
         .startup-name {
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 600;
             color: #1a1a2e;
+            margin-bottom: 0.5rem;
         }
         
         .section-title {
@@ -306,45 +333,87 @@
             </div>
             <div class="startups-grid">
                 <div class="startup-card">
+                    <div class="startup-logo">
+                        <img src="/images/Startups/kobold.png" alt="KoBold Metals">
+                    </div>
                     <div class="startup-name">KoBold Metals</div>
                 </div>
                 <div class="startup-card">
+                    <div class="startup-logo">
+                        <img src="/images/Startups/granica.png" alt="granica">
+                    </div>
                     <div class="startup-name">granica</div>
                 </div>
                 <div class="startup-card">
+                    <div class="startup-logo">
+                        <img src="/images/Startups/orby.png" alt="ORBY">
+                    </div>
                     <div class="startup-name">ORBY</div>
                 </div>
                 <div class="startup-card">
+                    <div class="startup-logo">
+                        <img src="/images/Startups/banyan.png" alt="Banyan Infrastructure">
+                    </div>
                     <div class="startup-name">Banyan Infrastructure</div>
                 </div>
                 <div class="startup-card">
+                    <div class="startup-logo">
+                        <img src="/images/Startups/numbers-station.png" alt="numbers station">
+                    </div>
                     <div class="startup-name">numbers station</div>
                 </div>
                 <div class="startup-card">
+                    <div class="startup-logo">
+                        <img src="/images/Startups/windborne.svg" alt="WindBorne">
+                    </div>
                     <div class="startup-name">WindBorne</div>
                 </div>
                 <div class="startup-card">
+                    <div class="startup-logo">
+                        <img src="/images/Startups/xtherma.png" alt="X-THERMA">
+                    </div>
                     <div class="startup-name">X-THERMA</div>
                 </div>
                 <div class="startup-card">
+                    <div class="startup-logo">
+                        <img src="/images/Startups/cultivo.png" alt="Cultivo">
+                    </div>
                     <div class="startup-name">Cultivo</div>
                 </div>
                 <div class="startup-card">
+                    <div class="startup-logo">
+                        <img src="/images/Startups/revolv.webp" alt="REVOLV">
+                    </div>
                     <div class="startup-name">REVOLV</div>
                 </div>
                 <div class="startup-card">
+                    <div class="startup-logo">
+                        <img src="/images/Startups/ronbow.png" alt="RONBOW">
+                    </div>
                     <div class="startup-name">RONBOW</div>
                 </div>
                 <div class="startup-card">
+                    <div class="startup-logo">
+                        <img src="/images/Startups/datapelago.png" alt="DataPelago">
+                    </div>
                     <div class="startup-name">DataPelago</div>
                 </div>
                 <div class="startup-card">
+                    <div class="startup-logo">
+                        <img src="/images/Startups/alembic.png" alt="Alembic">
+                    </div>
                     <div class="startup-name">Alembic</div>
                 </div>
                 <div class="startup-card">
+                    <div class="startup-logo">
+                        <img src="/images/Startups/kaedim.png" alt="KAEDIM">
+                    </div>
                     <div class="startup-name">KAEDIM</div>
                 </div>
                 <div class="startup-card">
+                    <div class="startup-logo">
+                        <img src="/images/Startups/planetarians.webp" alt="Planetarians">
+                    </div>
                     <div class="startup-name">Planetarians</div>
                 </div>
                 <div class="startup-card">
