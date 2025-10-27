@@ -332,8 +332,15 @@ body {
 }
 
 .footer-about h3::before {
-    content: "🚀";
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url('/images/small_logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
     margin-right: 0.5rem;
+    vertical-align: middle;
 }
 
 .footer-about h4 {
