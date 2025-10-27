@@ -152,6 +152,91 @@
             margin: 0 auto;
         }
         
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .partners-hero {
+                padding: 80px 0 60px;
+            }
+            
+            .partners-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .partners-hero p {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+            
+            .partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+            
+            .partner-card {
+                padding: 1rem;
+            }
+            
+            .partner-logo {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .partner-name {
+                font-size: 1rem;
+            }
+            
+            .startups-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+            
+            .startup-card {
+                padding: 1rem;
+            }
+            
+            .startup-logo {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .startup-name {
+                font-size: 0.9rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .section-title p {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .partners-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .startups-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.8rem;
+            }
+            
+            .partner-logo {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .startup-logo {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        
         /* Past-Speakers Section */
         .past-speakers-section {
             padding: 80px 0;
