@@ -331,16 +331,11 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.footer-about h3::before {
-    content: "";
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-image: url('/images/small_logo.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-right: 0.5rem;
-    vertical-align: middle;
+.footer-logo {
+    max-height: 60px;
+    width: auto;
+    margin-bottom: 1.5rem;
+    filter: brightness(0) invert(1);
 }
 
 .footer-about h4 {
