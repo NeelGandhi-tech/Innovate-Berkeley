@@ -92,7 +92,7 @@ body {
     min-height: 100vh;
     background: 
         linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
-        url('/images/INNOVATE-78.jpg?v=1759125800') center/cover;
+        url('/images/frontcover.jpg?v=1759125800') center/cover;
     display: flex;
     align-items: center;
     padding: 100px 0 50px;
