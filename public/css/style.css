@@ -854,7 +854,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(100, 181, 246, 0.08) 0%, rgba(66, 165, 245, 0.08) 100%);
+    background: transparent;
     pointer-events: none;
 }
 
@@ -879,7 +879,7 @@ body {
 
 .startups-section .section-title p {
     font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .startups-grid {
@@ -892,7 +892,7 @@ body {
 .startup-card {
     text-align: center;
     transition: transform 0.3s ease;
-    background: rgba(255, 255, 255, 0.05);
+    background: white;
     border-radius: 8px;
     padding: 1rem;
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
@@ -909,14 +909,14 @@ body {
 }
 
 .startup-logo {
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 180px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: transparent;
+    background: white;
     border-radius: 12px;
     padding: 1.5rem;
     border: none;
@@ -928,11 +928,12 @@ body {
     width: auto;
     height: auto;
     object-fit: contain;
+    object-position: center center;
 }
 
 .startup-logo span {
     color: #1a1a2e;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 600;
     text-align: center;
     padding: 0.75rem;
@@ -994,8 +995,8 @@ body {
     }
     
     .startup-logo {
-        width: 130px;
-        height: 130px;
+        width: 150px;
+        height: 150px;
         padding: 1.25rem;
     }
     
