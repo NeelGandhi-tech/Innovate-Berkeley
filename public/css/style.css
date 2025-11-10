@@ -903,9 +903,9 @@ body {
 }
 
 .startup-card:hover .startup-logo {
-    background: rgba(100, 181, 246, 0.25);
-    border-color: rgba(100, 181, 246, 0.5);
-    box-shadow: 0 10px 30px rgba(100, 181, 246, 0.3);
+    background: transparent;
+    border: none;
+    box-shadow: none;
 }
 
 .startup-logo {
@@ -916,10 +916,10 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: rgba(100, 181, 246, 0.15);
+    background: transparent;
     border-radius: 12px;
     padding: 1.5rem;
-    border: 1px solid rgba(100, 181, 246, 0.3);
+    border: none;
 }
 
 .startup-logo img {
@@ -928,9 +928,6 @@ body {
     width: auto;
     height: auto;
     object-fit: contain;
-    background: white;
-    padding: 0.75rem;
-    border-radius: 8px;
 }
 
 .startup-logo span {
@@ -1002,9 +999,6 @@ body {
         padding: 1.25rem;
     }
     
-    .startup-logo img {
-        padding: 0.5rem;
-    }
 }
 
 /* Animation for elements */
