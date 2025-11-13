@@ -35,6 +35,10 @@ app.get('/about', (req, res) => {
     res.render('about');
 });
 
+app.get('/register', (req, res) => {
+    res.render('register');
+});
+
 app.get('/conference', (req, res) => {
     res.redirect('/');
 });
@@ -55,6 +59,8 @@ app.get('*', (req, res) => {
         return res.render('gallery');
     } else if (req.path === '/challenge') {
         return res.render('challenge');
+    } else if (req.path === '/register') {
+        return res.render('register');
     } else {
         // For any other route, serve the home page
         return res.render('index');

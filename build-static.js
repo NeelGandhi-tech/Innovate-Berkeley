@@ -80,7 +80,8 @@ function buildStatic() {
         'about.ejs',
         'partners.ejs',
         'gallery.ejs',
-        'challenge.ejs'
+        'challenge.ejs',
+        'register.ejs'
     ];
     
     ejsFiles.forEach(file => {
