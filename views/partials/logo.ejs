@@ -1,0 +1,9 @@
+<%#
+  One partner logo, or a text wordmark when no logo file exists.
+  Locals: item (entry from data/partners.json), hidden (true for the duplicate marquee copy).
+-%>
+<% if (item.logo) { -%>
+<img class="partner-logo<%= item.logo.onDark ? ' partner-logo--on-dark' : '' %>" src="<%= item.logo.src %>" alt="<%= hidden ? '' : item.name %>" width="<%= item.logo.width %>" height="<%= item.logo.height %>" decoding="async">
+<% } else { -%>
+<span class="partner-logo partner-logo--wordmark"><%= item.name %></span>
+<% } -%>

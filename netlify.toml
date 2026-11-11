@@ -4,3 +4,18 @@
 
 [build.environment]
   NODE_VERSION = "18"
+
+# Old /register links go straight to the Luma event. force = true wins over public/register.html,
+# which stays as a fallback. Keep the URL in sync with registerUrl in data/site.json.
+[[redirects]]
+  from = "/register"
+  to = "https://luma.com/xuxqydtd"
+  status = 301
+  force = true
+
+# The About page was folded into the main page; old /about links land there.
+[[redirects]]
+  from = "/about"
+  to = "/"
+  status = 301
+  force = true

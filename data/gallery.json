@@ -1,0 +1,148 @@
+[
+  {
+    "year": "Fall 2025",
+    "photos": [
+      {
+        "src": "/images/Innovate-FA25/INNOVATE_FA25-110.jpg",
+        "alt": "Five people standing together at the Typeface booth",
+        "width": 6240,
+        "height": 4160
+      },
+      {
+        "src": "/images/Innovate-FA25/INNOVATE_FA25-125.jpg",
+        "alt": "Five attendees posing together in the hallway outside the event hall",
+        "width": 6240,
+        "height": 4160
+      },
+      {
+        "src": "/images/Innovate-FA25/INNOVATE_FA25-145.jpg",
+        "alt": "Three speakers seated on stools on stage",
+        "width": 6240,
+        "height": 4160
+      },
+      {
+        "src": "/images/Innovate-FA25/INNOVATE_FA25-203.jpg",
+        "alt": "A group of students posing together in the event hall",
+        "width": 6240,
+        "height": 4160
+      },
+      {
+        "src": "/images/Innovate-FA25/INNOVATE_FA25-254.jpg",
+        "alt": "A panel of three speakers on stage, seen from behind the seated audience",
+        "width": 6240,
+        "height": 4160
+      },
+      {
+        "src": "/images/Innovate-FA25/INNOVATE_FA25-272.jpg",
+        "alt": "A large group photo in the event hall, with the event slide on the screen behind them",
+        "width": 6240,
+        "height": 4160
+      }
+    ]
+  },
+  {
+    "year": "2023",
+    "photos": [
+      {
+        "src": "/images/innovate-62.jpg",
+        "alt": "Attendees moving between tables in the event hall, with the Innovate slide on a screen in the background",
+        "width": 6240,
+        "height": 4160
+      },
+      {
+        "src": "/images/innovate-66.jpg",
+        "alt": "Two attendees posing together in the event hall",
+        "width": 6240,
+        "height": 4160
+      },
+      {
+        "src": "/images/innovate-89.jpg",
+        "alt": "Two attendees posing together in front of a screen showing the AEZ logo",
+        "width": 6240,
+        "height": 4160
+      },
+      {
+        "src": "/images/Innovate-81.jpg",
+        "alt": "A VC panel on stage, with speakers from Menlo Ventures, General Catalyst and Accel listed on the screen behind them",
+        "width": 7008,
+        "height": 4672
+      },
+      {
+        "src": "/images/INNOVATE-143.jpg",
+        "alt": "A speaker presenting a slide titled Chatbot Unicorns",
+        "width": 6240,
+        "height": 4160
+      },
+      {
+        "src": "/images/innovate-43.jpg",
+        "alt": "A speaker presenting from the Berkeley Haas lectern",
+        "width": 4672,
+        "height": 7008
+      },
+      {
+        "src": "/images/innovate-48.jpg",
+        "alt": "The Granica booth, with a branded table and a standing banner",
+        "width": 4160,
+        "height": 6240
+      },
+      {
+        "src": "/images/INNOVATE-78.jpg",
+        "alt": "A crowded room of attendees talking between sessions",
+        "width": 6240,
+        "height": 4160
+      },
+      {
+        "src": "/images/INNOVATE-91.jpg",
+        "alt": "Attendees seated in rows in the event hall before a session",
+        "width": 6240,
+        "height": 4160
+      },
+      {
+        "src": "/images/Carousel1.jpeg",
+        "alt": "Startup booths in a ballroom, with a Rocket Club banner in the centre",
+        "width": 2048,
+        "height": 1366
+      }
+    ]
+  },
+  {
+    "year": "2022",
+    "photos": [
+      {
+        "src": "/images/innovate-127.jpg",
+        "alt": "A large group photo of attendees in the event hall",
+        "width": 6240,
+        "height": 4160
+      },
+      {
+        "src": "/images/innovate-154.jpg",
+        "alt": "Four panelists on stools on stage, in front of a Menlo Ventures slide",
+        "width": 7008,
+        "height": 4672
+      },
+      {
+        "src": "/images/innovate-212.jpg",
+        "alt": "Two people on stage holding an oversized Innovate prize cheque",
+        "width": 7008,
+        "height": 4672
+      }
+    ]
+  },
+  {
+    "year": "2021",
+    "photos": [
+      {
+        "src": "/images/innovate-20.jpg",
+        "alt": "Two founders at the Kaedim booth, with laptops and a branded banner",
+        "width": 6240,
+        "height": 4160
+      },
+      {
+        "src": "/images/Innovate-28.jpg",
+        "alt": "A speaker presenting to a full lecture hall",
+        "width": 7008,
+        "height": 4672
+      }
+    ]
+  }
+]

@@ -1,0 +1,24 @@
+<%#
+  Shared <head> contents. Locals: title, description, path (e.g. "/partners"), ogImage (optional site path).
+-%>
+<%
+  const pageTitle = title ? title + ' · ' + site.name : site.name + ' · ' + site.eventDate;
+  const image = site.url + (locals.ogImage || '/images/photos/og-fa25-254.jpg');
+-%>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+    <meta name="description" content="<%= description %>">
+    <link rel="canonical" href="<%= site.url + path %>">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="<%= site.name %>">
+    <meta property="og:url" content="<%= site.url + path %>">
+    <meta property="og:title" content="<%= pageTitle %>">
+    <meta property="og:description" content="<%= description %>">
+    <meta property="og:image" content="<%= image %>">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="/images/small_logo.png">
+    <link rel="apple-touch-icon" href="/images/small_logo.png">
+    <link rel="preload" href="/fonts/instrument-serif-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/public-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/site.css">

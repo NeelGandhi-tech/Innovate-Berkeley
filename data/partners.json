@@ -1,0 +1,601 @@
+[
+  {
+    "name": "Sequoia Capital",
+    "logo": {
+      "src": "/images/logos/sequoia.svg",
+      "width": 297,
+      "height": 39
+    },
+    "kind": "vc",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "Accel",
+    "logo": {
+      "src": "/images/logos/accel.svg",
+      "width": 1288,
+      "height": 413
+    },
+    "kind": "vc",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "General Catalyst",
+    "logo": {
+      "src": "/images/logos/general-catalyst.svg",
+      "width": 3885,
+      "height": 563
+    },
+    "kind": "vc",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "Thrive Capital",
+    "logo": {
+      "src": "/images/logos/thrive-capital.svg",
+      "width": 233,
+      "height": 30
+    },
+    "kind": "vc",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "Lightspeed Venture Partners",
+    "logo": {
+      "src": "/images/logos/lightspeed.svg",
+      "width": 600,
+      "height": 122
+    },
+    "kind": "vc",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "Bessemer Venture Partners",
+    "logo": {
+      "src": "/images/logos/bessemer-venture-partners.jpg",
+      "width": 223,
+      "height": 96
+    },
+    "kind": "vc",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "New Enterprise Associates",
+    "logo": {
+      "src": "/images/logos/nea.svg",
+      "width": 126,
+      "height": 48
+    },
+    "kind": "vc",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "Menlo Ventures",
+    "logo": {
+      "src": "/images/logos/menlo-ventures.svg",
+      "width": 102,
+      "height": 40
+    },
+    "kind": "vc",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "Battery Ventures",
+    "logo": {
+      "src": "/images/logos/battery-ventures.png",
+      "width": 180,
+      "height": 52
+    },
+    "kind": "vc",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "Felicis",
+    "logo": {
+      "src": "/images/logos/felicis.svg",
+      "width": 98,
+      "height": 24
+    },
+    "kind": "vc",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "Two Sigma Ventures",
+    "logo": {
+      "src": "/images/logos/two-sigma-ventures.svg",
+      "width": 600,
+      "height": 108
+    },
+    "kind": "vc",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "Theory Ventures",
+    "logo": {
+      "src": "/images/logos/theory-ventures.svg",
+      "width": 189,
+      "height": 25
+    },
+    "kind": "vc",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "The House Fund",
+    "logo": {
+      "src": "/images/logos/house-fund.svg",
+      "width": 332,
+      "height": 306
+    },
+    "kind": "vc",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "Entrepreneurs First",
+    "logo": {
+      "src": "/images/logos/entrepreneurs-first.png",
+      "width": 96,
+      "height": 96
+    },
+    "kind": "vc",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "Rooted Ventures",
+    "logo": null,
+    "kind": "vc",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "Cursor",
+    "logo": {
+      "src": "/images/logos/cursor.svg",
+      "width": 600,
+      "height": 146
+    },
+    "kind": "company",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "Commure + Athelas",
+    "logo": {
+      "src": "/images/logos/commure.svg",
+      "width": 118,
+      "height": 43
+    },
+    "kind": "company",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "BlueJeans",
+    "logo": {
+      "src": "/images/logos/bluejeans.svg",
+      "width": 140,
+      "height": 32
+    },
+    "kind": "company",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "Back to the Roots",
+    "logo": {
+      "src": "/images/logos/back-to-the-roots.svg",
+      "width": 393,
+      "height": 162
+    },
+    "kind": "company",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "Axiado",
+    "logo": {
+      "src": "/images/logos/axiado.png",
+      "width": 128,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": 2027,
+    "marquee": true
+  },
+  {
+    "name": "Terabase Energy",
+    "logo": {
+      "src": "/images/logos/terabase.jpg",
+      "width": 685,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": 2027,
+    "marquee": true
+  },
+  {
+    "name": "Typeface",
+    "logo": {
+      "src": "/images/logos/typeface.png",
+      "width": 420,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": 2027,
+    "marquee": true
+  },
+  {
+    "name": "Empower Semiconductor",
+    "logo": {
+      "src": "/images/logos/empower-semiconductor.png",
+      "width": 381,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": 2027,
+    "marquee": true
+  },
+  {
+    "name": "Suki",
+    "logo": {
+      "src": "/images/logos/suki.png",
+      "width": 336,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": 2027,
+    "marquee": true
+  },
+  {
+    "name": "ServiceUp",
+    "logo": {
+      "src": "/images/logos/serviceup.png",
+      "width": 395,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": 2027,
+    "marquee": true
+  },
+  {
+    "name": "Lyric Bio",
+    "logo": {
+      "src": "/images/logos/lyric-bio.png",
+      "width": 240,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": 2027,
+    "marquee": true
+  },
+  {
+    "name": "Opsera",
+    "logo": {
+      "src": "/images/logos/opsera.svg",
+      "width": 341,
+      "height": 77,
+      "onDark": true
+    },
+    "kind": "startup",
+    "year": 2027,
+    "marquee": true
+  },
+  {
+    "name": "Everest Systems",
+    "logo": {
+      "src": "/images/logos/everest-systems.png",
+      "width": 103,
+      "height": 96,
+      "onDark": true
+    },
+    "kind": "startup",
+    "year": 2027,
+    "marquee": true
+  },
+  {
+    "name": "Cribl",
+    "logo": null,
+    "kind": "startup",
+    "year": 2027,
+    "marquee": true
+  },
+  {
+    "name": "Veza",
+    "logo": {
+      "src": "/images/logos/veza.svg",
+      "width": 3267,
+      "height": 821
+    },
+    "kind": "startup",
+    "year": 2027,
+    "marquee": true
+  },
+  {
+    "name": "FinalLayer",
+    "logo": {
+      "src": "/images/logos/finallayer.png",
+      "width": 571,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": 2027,
+    "marquee": true
+  },
+  {
+    "name": "Starpath Robotics",
+    "logo": {
+      "src": "/images/logos/starpath.png",
+      "width": 234,
+      "height": 96,
+      "onDark": true
+    },
+    "kind": "startup",
+    "year": 2027,
+    "marquee": true
+  },
+  {
+    "name": "Delphi",
+    "logo": null,
+    "kind": "startup",
+    "year": 2027,
+    "marquee": true
+  },
+  {
+    "name": "Straiker",
+    "logo": {
+      "src": "/images/logos/straiker.png",
+      "width": 230,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": 2027,
+    "marquee": true
+  },
+  {
+    "name": "Allium",
+    "logo": {
+      "src": "/images/logos/allium.png",
+      "width": 345,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": 2027,
+    "marquee": true
+  },
+  {
+    "name": "Vizcom",
+    "logo": {
+      "src": "/images/logos/vizcom.png",
+      "width": 562,
+      "height": 96,
+      "onDark": true
+    },
+    "kind": "startup",
+    "year": 2027,
+    "marquee": true
+  },
+  {
+    "name": "Windfall",
+    "logo": {
+      "src": "/images/logos/windfall.jpg",
+      "width": 96,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": 2027,
+    "marquee": true
+  },
+  {
+    "name": "Coreshell Technologies",
+    "logo": {
+      "src": "/images/logos/coreshell.jpg",
+      "width": 380,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": 2027,
+    "marquee": true
+  },
+  {
+    "name": "d-Matrix",
+    "logo": {
+      "src": "/images/logos/d-matrix.png",
+      "width": 328,
+      "height": 92,
+      "onDark": true
+    },
+    "kind": "startup",
+    "year": 2027,
+    "marquee": true
+  },
+  {
+    "name": "Mandolin",
+    "logo": {
+      "src": "/images/logos/mandolin.png",
+      "width": 183,
+      "height": 30
+    },
+    "kind": "startup",
+    "year": 2027,
+    "marquee": true
+  },
+  {
+    "name": "Xona",
+    "logo": {
+      "src": "/images/logos/xona.png",
+      "width": 97,
+      "height": 96,
+      "onDark": true
+    },
+    "kind": "startup",
+    "year": 2027,
+    "marquee": true
+  },
+  {
+    "name": "KoBold Metals",
+    "logo": {
+      "src": "/images/logos/kobold-metals.png",
+      "width": 250,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Granica",
+    "logo": {
+      "src": "/images/logos/granica.png",
+      "width": 172,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Orby",
+    "logo": {
+      "src": "/images/logos/orby.png",
+      "width": 235,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Banyan Infrastructure",
+    "logo": {
+      "src": "/images/logos/banyan-infrastructure.png",
+      "width": 240,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Numbers Station",
+    "logo": {
+      "src": "/images/logos/numbers-station.png",
+      "width": 529,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "WindBorne",
+    "logo": {
+      "src": "/images/logos/windborne.svg",
+      "width": 1088,
+      "height": 214
+    },
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "X-Therma",
+    "logo": {
+      "src": "/images/logos/x-therma.png",
+      "width": 183,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Cultivo",
+    "logo": {
+      "src": "/images/logos/cultivo.png",
+      "width": 153,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Revolv",
+    "logo": {
+      "src": "/images/logos/revolv.webp",
+      "width": 600,
+      "height": 77
+    },
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Ronbow",
+    "logo": {
+      "src": "/images/logos/ronbow.png",
+      "width": 211,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "DataPelago",
+    "logo": {
+      "src": "/images/logos/datapelago.png",
+      "width": 485,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Alembic",
+    "logo": {
+      "src": "/images/logos/alembic.png",
+      "width": 377,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Kaedim",
+    "logo": {
+      "src": "/images/logos/kaedim.png",
+      "width": 153,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Planetarians",
+    "logo": {
+      "src": "/images/logos/planetarians.webp",
+      "width": 2000,
+      "height": 306
+    },
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  }
+]

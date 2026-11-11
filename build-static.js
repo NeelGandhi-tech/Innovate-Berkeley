@@ -1,19 +1,17 @@
 const fs = require('fs');
 const path = require('path');
+const ejs = require('ejs');
 
-// Function to convert EJS to HTML by removing EJS syntax
-function convertEjsToHtml(ejsContent) {
+// Data shared by every template (same locals as app.js)
+const locals = require('./data/locals');
+
+// Render an EJS template to HTML
+function convertEjsToHtml(ejsContent, filename) {
     // Generate a timestamp for cache busting
     const timestamp = Date.now();
-    
-    // Remove EJS includes and other server-side code
-    let htmlContent = ejsContent
-        .replace(/<%= Date\.now\(\) %>/g, timestamp) // Replace Date.now() with actual timestamp
-        .replace(/<%[^%]*%>/g, '') // Remove EJS tags
-        .replace(/<%-[^%]*%>/g, '') // Remove EJS output tags
-        .replace(/<%=.*?%>/g, '') // Remove EJS output tags
-        .replace(/<%.*?%>/g, ''); // Remove any remaining EJS tags
-    
+
+    let htmlContent = ejs.render(ejsContent, locals, { filename });
+
     // Add cache busting to all image references
     htmlContent = htmlContent.replace(/src="\/images\/([^"]+)"/g, `src="/images/$1?v=${timestamp}"`);
     
@@ -24,7 +22,7 @@ function convertEjsToHtml(ejsContent) {
 function processEjsFile(inputPath, outputPath) {
     try {
         const ejsContent = fs.readFileSync(inputPath, 'utf8');
-        const htmlContent = convertEjsToHtml(ejsContent);
+        const htmlContent = convertEjsToHtml(ejsContent, inputPath);
         
         // Ensure output directory exists
         const outputDir = path.dirname(outputPath);
@@ -36,6 +34,7 @@ function processEjsFile(inputPath, outputPath) {
         console.log(`Converted: ${inputPath} -> ${outputPath}`);
     } catch (error) {
         console.error(`Error processing ${inputPath}:`, error.message);
+        process.exitCode = 1; // fail the deploy instead of shipping a missing page
     }
 }
 
@@ -77,11 +76,11 @@ function buildStatic() {
     // List of EJS files to convert
     const ejsFiles = [
         'index.ejs',
-        'about.ejs',
         'partners.ejs',
         'gallery.ejs',
         'challenge.ejs',
-        'register.ejs'
+        'register.ejs',
+        'foundry.ejs'
     ];
     
     ejsFiles.forEach(file => {

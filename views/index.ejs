@@ -1,515 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innovate @ Berkeley</title>
-    <link rel="icon" type="image/jpeg" href="/images/small_logo.jpg">
-    <link rel="icon" type="image/png" href="/images/small_logo.png">
-    <link rel="apple-touch-icon" href="/images/small_logo.png">
-    <link rel="shortcut icon" href="/images/small_logo.jpg">
-    <link rel="stylesheet" href="/css/style.css?v=<%= Date.now() %>">
+<%- include('partials/head', { title: '', path: '/', description: `Innovate@Berkeley is the largest startup expo at Berkeley. Speakers, startup booths and the whole startup community. ${site.eventDate}, ${site.eventPlace}.` }) %>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="/">
-                    <img src="/images/logo.png?v=<%= Date.now() %>" alt="Innovate Logo">
-                </a>
-            </div>
-            <div class="mobile-menu-toggle" id="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="/">CONFERENCE</a></li>
-                <li><a href="/about">ABOUT</a></li>
-                <li><a href="/partners">PAST PARTNERS</a></li>
-                <li><a href="/gallery">GALLERY</a></li>
-                <!-- <li><a href="/challenge">CHALLENGE</a></li> -->
-            </ul>
-            <a href="/register" class="register-btn">REGISTER</a>
-        </div>
-    </nav>
+    <%- include('partials/site-header', { current: 'home' }) %>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-background"></div>
-        <div class="hero-content">
-            <div class="hero-badge fade-in">BERKELEY'S LARGEST ENTREPRENEURSHIP EXPO</div>
-            <h1 class="hero-title fade-in">
-                <span id="typing-text" class="typing-text">Together we can innovate.</span>
-            </h1>
-            <p class="hero-subtitle fade-in">STARTUP DISRUPTION IN BERKELEY'S FRONTYARD. POWERED BY AEZ</p>
-            <div class="hero-location fade-in">
-                BERKELEY, CA<br>
-                Thursday, February 11, 2027
-                <br>
-               
+    <main id="main">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="wrap grid">
+                <div class="hero__text">
+                    <p class="kicker">Berkeley's largest entrepreneurship expo</p>
+                    <h1 class="hero__title">Innovate @&nbsp;Berkeley</h1>
+                    <p class="hero__when"><time datetime="2027-02-11"><%= site.eventDate %></time> · <%= site.eventPlace %></p>
+                    <p class="hero__lede">Startup disruption in Berkeley's front yard, powered by AEZ.</p>
+                    <div class="hero__actions">
+                        <a class="button button--primary button--large" href="<%= site.registerUrl %>">Register</a>
+                        <p class="hero__note">Free for Berkeley students. $25 for all other attendees.</p>
+                    </div>
+                </div>
+                <figure class="hero__photo">
+                    <img src="/images/photos/fa25-254-960.jpg"
+                         srcset="/images/photos/fa25-254-960.jpg 960w, /images/photos/fa25-254-1600.jpg 1600w"
+                         sizes="(min-width: 900px) 58vw, 100vw"
+                         width="1600" height="1066" fetchpriority="high" decoding="async"
+                         alt="A panel of three speakers on stage at Innovate Fall 2025, seen from behind the seated audience">
+                    <figcaption>Panel, Fall 2025</figcaption>
+                </figure>
             </div>
-            <a href="/register" class="hero-cta fade-in">REGISTER</a>
-        </div>
-        <div class="scroll-indicator" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})"></div>
-    </section>
+        </section>
 
+        <!-- Partner marquee -->
+        <%- include('partials/marquee') %>
 
-    
-    <!-- This Year's Startups Section -->
-    <section class="startups-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>This Year's Featured Startups</h2>
-                <p>Join us to meet these amazing startups at Innovate@Berkeley</p>
+        <!-- Past speakers -->
+        <section class="section speakers" aria-labelledby="speakers-title">
+            <div class="wrap grid">
+                <header class="section__head">
+                    <p class="kicker">Who has spoken</p>
+                    <h2 id="speakers-title">Past speakers</h2>
+                    <a class="text-link" href="/partners">All past partners</a>
+                </header>
+                <ol class="speaker-list">
+<% speakers.forEach(s => { -%>
+                    <li><span class="speaker-list__name"><%= s.name %></span> <span class="speaker-list__firm"><%= s.firm %></span></li>
+<% }) -%>
+                </ol>
             </div>
-            <div class="startups-grid">
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/current startups/AXIADO_LOGO_RGB.png" alt="Axiado Corporation">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/current startups/Terabase_Primary_Logo_Full_Color (7).jpg" alt="Terabase Energy">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/current startups/Typeface-logo-ForWhiteBackground.png" alt="Typeface Inc">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/current startups/Empower Logo 2025 Trimmed (1).png" alt="Empower Semiconductor">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/current startups/suki-logo-tight.png" alt="Suki.ai">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/current startups/ServiceUp-Logo-Dark.png" alt="ServiceUp">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/current startups/LyricBio_Color_Logo.png" alt="Lyric Bio">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/Startups/opsera.png" alt="Opsera">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/current startups/everest_logo_on_drk.png" alt="Everest Systems">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/Startups/cribl.svg" alt="Cribl">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/Startups/veza.png" alt="Veza Technologies, Inc.">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/current startups/finallayer-logo-withoutbg.png" alt="FinalLayer">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/Startups/starpath.png" alt="Starpath Robotics">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <span>Delphi</span>
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/current startups/Straiker-black.png" alt="Straiker">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/current startups/allium-logo-v2-black.png" alt="Allium">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/Startups/vizcom.png" alt="Vizcom">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/current startups/windfall_data_logo.jpeg" alt="Windfall">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/current startups/Coreshell Logo BlackWhite.jpg" alt="Coreshell Technologies">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/Startups/dmatrix.png" alt="d-Matrix Inc.">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/Startups/mandolin.png" alt="Mandolin">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/Startups/xona.png" alt="Xona">
-                    </div>
+        </section>
+
+        <!-- What to expect -->
+        <section class="section expect" aria-labelledby="expect-title">
+            <div class="wrap grid">
+                <header class="section__head">
+                    <p class="kicker">The day</p>
+                    <h2 id="expect-title">What to expect</h2>
+                    <p class="section__body">Innovate@Berkeley is the largest startup expo at Berkeley and the hub for entrepreneurship. Speakers, startup booths, and challenges make for a program of events that involves the entire startup community.</p>
+                </header>
+                <div class="expect__photos">
+                    <figure class="expect__photo expect__photo--wide">
+                        <img src="/images/photos/fa25-110-960.jpg"
+                             srcset="/images/photos/fa25-110-480.jpg 480w, /images/photos/fa25-110-960.jpg 960w"
+                             sizes="(min-width: 900px) 58vw, 100vw"
+                             width="960" height="640" loading="lazy" decoding="async"
+                             alt="Five people standing together at the Typeface booth at Innovate Fall 2025">
+                        <figcaption>Startup booths</figcaption>
+                    </figure>
+                    <figure class="expect__photo">
+                        <img src="/images/photos/fa25-145-480.jpg"
+                             srcset="/images/photos/fa25-145-480.jpg 480w, /images/photos/fa25-145-960.jpg 960w"
+                             sizes="(min-width: 900px) 29vw, 50vw"
+                             width="960" height="640" loading="lazy" decoding="async"
+                             alt="Three speakers seated on stools on stage at Innovate Fall 2025">
+                        <figcaption>Speakers</figcaption>
+                    </figure>
+                    <figure class="expect__photo">
+                        <img src="/images/photos/fa25-125-480.jpg"
+                             srcset="/images/photos/fa25-125-480.jpg 480w, /images/photos/fa25-125-960.jpg 960w"
+                             sizes="(min-width: 900px) 29vw, 50vw"
+                             width="960" height="640" loading="lazy" decoding="async"
+                             alt="Five attendees posing together in the hallway outside the event hall at Innovate Fall 2025">
+                        <figcaption>The community</figcaption>
+                    </figure>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <h3>Who can attend?</h3>
-                <p>Everyone!</p>
-            </div>
-            <div class="faq-item">
-                <h3>How much does it cost?</h3>
-                <p>It's free for Berkeley students! For all other attendees, the registration fee is $25.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Do I have to stay the whole time?</h3>
-                <p>Feel free to come in and out as your schedule allows. However, we recommend coming by 4:30 PM to check in.</p>
-            </div>
-            <div class="faq-item">
-                <h3>What do I do if I have more questions?</h3>
-                <p>Send us an email at <a href="mailto:Innovate2025@berkeley.edu">Innovate2025@berkeley.edu</a>.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Logistics Section -->
-    <section class="logistics-section">
-        <div class="logistics-container">
-            <h2 class="logistics-title">Logistics</h2>
-            <div class="logistics-grid">
-                <div class="logistics-card">
-                    <h3>Time</h3>
-                    <p>Thursday, February 11, 2027</p>
-                </div>
-                <div class="logistics-card">
-                    <h3>Location</h3>
-                    <p>BERKELEY, CA 94720</p>
+        <!-- FAQ -->
+        <section class="section faq" aria-labelledby="faq-title">
+            <div class="wrap grid">
+                <header class="section__head">
+                    <p class="kicker">Before you come</p>
+                    <h2 id="faq-title">Questions</h2>
+                </header>
+                <div class="faq__list">
+                    <details>
+                        <summary>Who can attend?</summary>
+                        <p>Everyone!</p>
+                    </details>
+                    <details>
+                        <summary>How much does it cost?</summary>
+                        <p>It's free for Berkeley students! For all other attendees, the registration fee is $25.</p>
+                    </details>
+                    <details>
+                        <summary>Do I have to stay the whole time?</summary>
+                        <p>Feel free to come in and out as your schedule allows. However, we recommend coming by 4:30 PM to check in.</p>
+                    </details>
+                    <details>
+                        <summary>What do I do if I have more questions?</summary>
+                        <p>Send us an email at <a href="mailto:Innovate2025@berkeley.edu">Innovate2025@berkeley.edu</a>.</p>
+                    </details>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <div class="contact-content">
-                <div class="contact-form-container">
-                    <form action="https://formspree.io/f/mqayplry" method="POST" class="contact-form">
-                        <div class="form-group">
-                            <label>I am interested in:</label>
-                            <div class="button-group">
-                                <button type="button" class="interest-btn" data-value="sponsor">Company Sponsorship</button>
-                                <button type="button" class="interest-btn" data-value="attendee">Attending the Event</button>
-                                <button type="button" class="interest-btn" data-value="other">Other Questions?</button>
-                            </div>
-                            <input type="hidden" id="interest-type" name="interest-type" value="sponsor" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="name">Name *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        
-                        
-                        <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your interest in Innovate@Berkeley..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
-                </div>
+        <!-- Photo between sections -->
+        <figure class="photo-band">
+            <img src="/images/photos/fa25-272-960.jpg"
+                 srcset="/images/photos/fa25-272-480.jpg 480w, /images/photos/fa25-272-960.jpg 960w"
+                 sizes="100vw" width="960" height="640" loading="lazy" decoding="async"
+                 alt="A large group photo in the event hall at Innovate Fall 2025, with the event slide on the screen behind them">
+            <figcaption class="wrap">Innovate, Fall 2025</figcaption>
+        </figure>
+
+        <!-- Contact -->
+        <section class="section contact" id="contact" aria-labelledby="contact-title">
+            <div class="wrap grid">
+                <header class="section__head">
+                    <p class="kicker">Sponsors, attendees, anyone</p>
+                    <h2 id="contact-title">Contact us</h2>
+                </header>
+                <form class="contact-form" action="https://formspree.io/f/mqayplry" method="POST">
+                    <fieldset class="field field--choice">
+                        <legend>I am interested in</legend>
+                        <label><input type="radio" name="interest-type" value="sponsor" checked> Company sponsorship</label>
+                        <label><input type="radio" name="interest-type" value="attendee"> Attending the event</label>
+                        <label><input type="radio" name="interest-type" value="other"> Other questions</label>
+                    </fieldset>
+                    <div class="field">
+                        <label for="name">Name <span class="field__req">(required)</span></label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email <span class="field__req">(required)</span></label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+                    <div class="field">
+                        <label for="phone">Phone <span class="field__req">(optional)</span></label>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel">
+                    </div>
+                    <div class="field field--full">
+                        <label for="message">Message <span class="field__req">(required)</span></label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <div class="field--full">
+                        <button type="submit" class="button button--primary submit-btn">Send message</button>
+                    </div>
+                </form>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-about">
-                <img src="/images/logo.png" alt="Innovate Logo" class="footer-logo">
-                <h4>ABOUT</h4>
-                <p>Innovate@Berkeley is the largest startup expo at Berkeley and is the ultimate hub for entrepreneurship. Speakers, startup booths, and challenges make for an exciting program of events that involves the entire startup community.</p>
-            </div>
-            <div class="footer-social">
-                <h4>Follow Us</h4>
-                <ul class="social-links">
-                    <li><a href="mailto:Innovate2025@berkeley.edu">Innovate2025@berkeley.edu</a></li>
-                    <li><a href="https://facebook.com/berkeleyinnovate">@berkeleyinnovate</a></li>
-                    <li><a href="https://instagram.com/berkeleyinnovate">@berkeleyinnovate</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 Innovate at Berkeley. All rights reserved.</p>
-        </div>
-    </footer>
+    <%- include('partials/site-footer') %>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Add scroll effect to navbar
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 100) {
-                navbar.style.background = 'rgba(26, 26, 46, 0.8)';
-            } else {
-                navbar.style.background = 'rgba(26, 26, 46, 0.3)';
-            }
-        });
-
-        // Very simple mobile menu
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileToggle = document.getElementById('mobile-menu-toggle');
-            const navLinks = document.getElementById('nav-links');
-            
-            if (mobileToggle && navLinks) {
-                mobileToggle.onclick = function() {
-                    if (navLinks.style.display === 'block') {
-                        navLinks.style.display = 'none';
-                    } else {
-                        navLinks.style.display = 'block';
-                    }
-                };
-            }
-        });
-
-        // Trigger animations on page load
-        window.addEventListener('load', () => {
-            const elements = document.querySelectorAll('.fade-in');
-            elements.forEach((el, index) => {
-                setTimeout(() => {
-                    el.style.animationPlayState = 'running';
-                }, index * 100);
-            });
-        });
-
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe cards for animation
-        document.querySelectorAll('.logistics-card, .schedule-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'all 0.6s ease';
-            observer.observe(el);
-        });
-
-        // Animate schedule items on scroll
-        const scheduleObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('animate');
-                    }, index * 150);
-                }
-            });
-        }, { threshold: 0.2, rootMargin: '0px 0px -50px 0px' });
-
-        // Initialize schedule items for animation
-        document.querySelectorAll('.schedule-item').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            scheduleObserver.observe(el);
-        });
-
-        // Animate speaker cards
-        const speakerObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('animate');
-                    }, index * 100);
-                }
-            });
-        }, { threshold: 0.2, rootMargin: '0px 0px -50px 0px' });
-
-        document.querySelectorAll('.speaker-card').forEach(el => {
-            speakerObserver.observe(el);
-        });
-
-
-        // Typing animation
-        const texts = [
-            "Together we can innovate.",
-            "Build the future.",
-            "Start something amazing.",
-            "Change the world.",
-            "Create tomorrow."
-        ];
-        
-        let textIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        const typingElement = document.getElementById('typing-text');
-        
-        function typeText() {
-            const currentText = texts[textIndex];
-            
-            if (isDeleting) {
-                typingElement.textContent = currentText.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typingElement.textContent = currentText.substring(0, charIndex + 1);
-                charIndex++;
-            }
-            
-            let typeSpeed = isDeleting ? 50 : 100;
-            
-            if (!isDeleting && charIndex === currentText.length) {
-                typeSpeed = 2000; // Pause at end
-                isDeleting = true;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                textIndex = (textIndex + 1) % texts.length;
-                typeSpeed = 500; // Pause before next text
-            }
-            
-            setTimeout(typeText, typeSpeed);
-        }
-        
-        // Start typing animation after page load
-        setTimeout(typeText, 1000);
-
-        // Optimized gallery loading performance with lazy loading
-        const galleryImages = document.querySelectorAll('.gallery-item img');
-        
-        // Use Intersection Observer for lazy loading with better performance
-        const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    
-                    // Add loading class for better UX
-                    img.classList.add('loading');
-                    
-                    if (img.complete && img.naturalHeight !== 0) {
-                        // Image already loaded
-                        img.classList.remove('loading');
-                        img.classList.add('loaded');
-                    } else {
-                        // Wait for image to load
-                        img.addEventListener('load', () => {
-                            img.classList.remove('loading');
-                            img.classList.add('loaded');
-                        }, { once: true });
-                        
-                        img.addEventListener('error', () => {
-                            img.classList.remove('loading');
-                            img.classList.add('error');
-                        }, { once: true });
-                    }
-                    
-                    imageObserver.unobserve(img);
-                }
-            });
-        }, { 
-            rootMargin: '100px 0px',
-            threshold: 0.01 
-        });
-        
-        // Only observe images that are not already loaded
-        galleryImages.forEach(img => {
-            if (!img.complete || img.naturalHeight === 0) {
-                imageObserver.observe(img);
-            } else {
-                img.classList.add('loaded');
-            }
-        });
-
-        // Enhanced smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Continuous scrolling improvements
-        let isScrolling = false;
-        window.addEventListener('scroll', () => {
-            if (!isScrolling) {
-                window.requestAnimationFrame(() => {
-                    // Add any scroll-based animations here
-                    isScrolling = false;
-                });
-                isScrolling = true;
-            }
-        });
-    </script>
-    
-    <!-- Form handling script -->
-    <script src="/js/form.js?v=<%= Date.now() %>"></script>
+    <script src="/js/form.js"></script>
 </body>
 </html>

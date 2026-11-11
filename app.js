@@ -10,6 +10,9 @@ app.use('/images', express.static('images'));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+// Data shared by every template (same locals as build-static.js)
+Object.assign(app.locals, require('./data/locals'));
+
 // Middleware for parsing JSON and URL-encoded data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -31,12 +34,18 @@ app.get('/gallery', (req, res) => {
     res.render('gallery');
 });
 
+// The About page was folded into the main page; old links land there (Netlify does the same)
 app.get('/about', (req, res) => {
-    res.render('about');
+    res.redirect(301, '/');
 });
 
+app.get('/foundry', (req, res) => {
+    res.render('foundry');
+});
+
+// Old /register links go straight to the Luma event (Netlify does the same in netlify.toml)
 app.get('/register', (req, res) => {
-    res.render('register');
+    res.redirect(301, app.locals.site.registerUrl);
 });
 
 app.get('/conference', (req, res) => {
@@ -51,9 +60,7 @@ app.get('*', (req, res) => {
     }
     
     // For all other routes, serve the appropriate page or redirect to home
-    if (req.path === '/about') {
-        return res.render('about');
-    } else if (req.path === '/partners') {
+    if (req.path === '/partners') {
         return res.render('partners');
     } else if (req.path === '/gallery') {
         return res.render('gallery');

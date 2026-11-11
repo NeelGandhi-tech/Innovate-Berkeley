@@ -3,714 +3,306 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Past Partners - Innovate @ Berkeley</title>
-    <link rel="icon" type="image/jpeg" href="/images/small_logo.jpg">
+    <title>Past partners · Innovate @ Berkeley</title>
+    <meta name="description" content="Past speakers, firms, sponsors and startups at Innovate@Berkeley, including Sequoia Capital, Accel, General Catalyst and Thrive Capital.">
+    <link rel="canonical" href="https://berkeleyinnovate.com/partners">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Innovate @ Berkeley">
+    <meta property="og:url" content="https://berkeleyinnovate.com/partners">
+    <meta property="og:title" content="Past partners · Innovate @ Berkeley">
+    <meta property="og:description" content="Past speakers, firms, sponsors and startups at Innovate@Berkeley, including Sequoia Capital, Accel, General Catalyst and Thrive Capital.">
+    <meta property="og:image" content="https://berkeleyinnovate.com/images/photos/og-fa25-254.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/png" href="/images/small_logo.png">
     <link rel="apple-touch-icon" href="/images/small_logo.png">
-    <link rel="shortcut icon" href="/images/small_logo.jpg">
-    <link rel="stylesheet" href="/css/style.css?v=1781193046803">
-    <style>
-        .partners-hero {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            padding: 120px 0 80px;
-            text-align: center;
-            color: white;
-        }
-        
-        .partners-hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-        
-        .partners-hero p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .partners-section {
-            padding: 80px 0;
-            background: #f8f9fa;
-        }
-        
-        .partners-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-top: 3rem;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .partner-card {
-            text-align: center;
-            transition: transform 0.3s ease;
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-        
-        .partner-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-        }
-        
-        .partner-logo {
-            width: 250px;
-            height: 250px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-        
-        .partner-logo img {
-            max-width: 100%;
-            max-height: 100%;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-        }
-        
-        .partner-name {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #1a1a2e;
-            margin-bottom: 0.5rem;
-        }
-        
-        .partner-type {
-            font-size: 0.9rem;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        
-        .startups-section {
-            padding: 80px 0;
-            background: white;
-        }
-        
-        .startups-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-        
-        .startup-card {
-            text-align: center;
-            transition: transform 0.3s ease;
-            background: white;
-            border-radius: 8px;
-            padding: 1rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .startup-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-        }
-        
-        .startup-logo {
-            width: 180px;
-            height: 180px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-        }
-        
-        .startup-logo img {
-            max-width: 100%;
-            max-height: 100%;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-        }
-        
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-        
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: #1a1a2e;
-            margin-bottom: 0.5rem;
-        }
-        
-        .startups-section .section-title h2 {
-            color: #1a1a2e !important;
-        }
-        
-        .startups-section .section-title p {
-            color: #1a1a2e !important;
-        }
-        
-        .section-title p {
-            font-size: 1.1rem;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .partners-hero {
-                padding: 80px 0 60px;
-            }
-            
-            .partners-hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .partners-hero p {
-                font-size: 1rem;
-                padding: 0 1rem;
-            }
-            
-            .partners-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-                padding: 0 1rem;
-            }
-            
-            .partner-card {
-                padding: 1rem;
-            }
-            
-            .partner-logo {
-                width: 200px;
-                height: 200px;
-            }
-            
-            .partner-name {
-                font-size: 1rem;
-            }
-            
-            .startups-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-                padding: 0 1rem;
-            }
-            
-            .startup-card {
-                padding: 1rem;
-            }
-            
-            .startup-logo {
-                width: 150px;
-                height: 150px;
-            }
-            
-            .startup-name {
-                font-size: 0.9rem;
-            }
-            
-            .section-title h2 {
-                font-size: 2rem;
-            }
-            
-            .section-title p {
-                font-size: 1rem;
-                padding: 0 1rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .partners-grid {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-            
-            .startups-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 0.8rem;
-            }
-            
-            .partner-logo {
-                width: 180px;
-                height: 180px;
-            }
-            
-            .startup-logo {
-                width: 140px;
-                height: 140px;
-            }
-        }
-        
-        /* Past-Speakers Section */
-        .past-speakers-section {
-            padding: 80px 0;
-            background: #16213e;
-        }
-        
-        .past-speakers-section .section-title h2 {
-            color: #64b5f6;
-        }
-        
-        .past-speakers-section .section-title p {
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
-        .speakers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1rem;
-            margin-top: 3rem;
-        }
-        
-        .speaker-card {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        
-        .speaker-card.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .speaker-card:hover {
-            transform: scale(1.05);
-        }
-        
-        .speaker-card .speaker-avatar {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(45deg, #64b5f6, #42a5f5);
-            border-radius: 50%;
-            flex-shrink: 0;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        
-        .speaker-info {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        
-        .speaker-info h3 {
-            font-size: 1rem;
-            color: white;
-            margin: 0;
-            line-height: 1.2;
-        }
-        
-        .speaker-info p {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-            margin: 0;
-        }
-    </style>
+    <link rel="preload" href="/fonts/instrument-serif-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/public-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/site.css">
+
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="/">
-                    <img src="/images/logo.png?v=1781193046803" alt="Innovate Logo">
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/">CONFERENCE</a></li>
-                <li><a href="/about">ABOUT</a></li>
-                <li><a href="/partners" class="active">PAST PARTNERS</a></li>
-                <li><a href="/gallery">GALLERY</a></li>
-                <!-- <li><a href="/challenge">CHALLENGE</a></li> -->
+    <a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <div class="wrap site-header__inner">
+        <a class="site-header__logo" href="/">
+            <img src="/images/logo.png?v=1794374248833" alt="Innovate @ Berkeley, home" width="855" height="210">
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+            <ul>
+                <li><a href="/">About</a></li>
+                <li><a href="/partners" aria-current="page">Past partners</a></li>
+                <li><a href="/gallery">Gallery</a></li>
+                <li><a href="/foundry">Foundry</a></li>
+                <li><a href="/#contact">Contact</a></li>
             </ul>
-            <a href="/register" class="register-btn">REGISTER</a>
-        </div>
-    </nav>
-
-    <!-- Partners Hero Section -->
-    <section class="partners-hero">
-        <div class="container">
-            <h1>Past Partners & Startups</h1>
-            <p>We're grateful for the support of our partners and the amazing startups that have made Innovate@Berkeley possible over the years.</p>
-        </div>
-    </section>
-
-    <!-- Partners Section -->
-    <section class="partners-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Valued Partners</h2>
-                <p>Thank you to all our partners who have supported and sponsored Innovate@Berkeley</p>
-            </div>
-            <div class="partners-grid">
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="/images/Partners/microsoft.png?v=1781193046803" alt="Microsoft">
-                    </div>
-                    <div class="partner-name">Microsoft</div>
-                    <div class="partner-type">Sponsor</div>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="/images/Partners/uc-berkeley-asuc.png?v=1781193046803" alt="UC Berkeley ASUC">
-                    </div>
-                    <div class="partner-name">UC Berkeley ASUC</div>
-                    <div class="partner-type">Sponsor</div>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="/images/Partners/mayfield.png?v=1781193046803" alt="Mayfield Fund">
-                    </div>
-                    <div class="partner-name">Mayfield Fund</div>
-                    <div class="partner-type">Community</div>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="/images/Partners/jetblue-ventures.png?v=1781193046803" alt="JetBlue Ventures">
-                    </div>
-                    <div class="partner-name">JetBlue Ventures</div>
-                    <div class="partner-type">Sponsor</div>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="/images/Partners/singapore-global.png?v=1781193046803" alt="Singapore Global Network">
-                    </div>
-                    <div class="partner-name">Singapore Global Network</div>
-                    <div class="partner-type">Community</div>
-                </div>
-                <div class="partner-card">
-                    <div class="partner-logo">
-                        <img src="/images/Partners/ida-ireland.png?v=1781193046803" alt="Ireland FDI Agency">
-                    </div>
-                    <div class="partner-name">Ireland FDI Agency</div>
-                    <div class="partner-type">Sponsor</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Startups Section -->
-    <section class="startups-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Featured Startups, Firms and Sponsors</h2>
-                <p>Amazing startups that have participated in Innovate@Berkeley</p>
-            </div>
-            <div class="startups-grid">
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/Startups/kobold.png?v=1781193046803" alt="KoBold Metals">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/Startups/granica.png?v=1781193046803" alt="granica">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/Startups/orby.png?v=1781193046803" alt="ORBY">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/Startups/banyan.png?v=1781193046803" alt="Banyan Infrastructure">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/Startups/numbers-station.png?v=1781193046803" alt="numbers station">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/Startups/windborne.svg?v=1781193046803" alt="WindBorne">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/Startups/xtherma.png?v=1781193046803" alt="X-THERMA">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/Startups/cultivo.png?v=1781193046803" alt="Cultivo">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/Startups/revolv.webp?v=1781193046803" alt="REVOLV">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/Startups/ronbow.png?v=1781193046803" alt="RONBOW">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/Startups/datapelago.png?v=1781193046803" alt="DataPelago">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/Startups/alembic.png?v=1781193046803" alt="Alembic">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/Startups/kaedim.png?v=1781193046803" alt="KAEDIM">
-                    </div>
-                </div>
-                <div class="startup-card">
-                    <div class="startup-logo">
-                        <img src="/images/Startups/planetarians.webp?v=1781193046803" alt="Planetarians">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Past-Speakers Section -->
-    <section class="past-speakers-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Past Speakers and Panelists</h2>
-                <p>Amazing speakers who have shared their insights at Innovate@Berkeley</p>
-            </div>
-            <div class="speakers-grid">
-                <!-- Top Spot: Nikhil Arora -->
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Nikhil.jpeg')"></div>
-                    <div class="speaker-info">
-                        <h3>Nikhil Arora</h3>
-                        <p>Back to the Roots</p>
-                    </div>
-                </div>
-                <!-- Tier 1: Top-tier VCs (Sequoia, Accel, NEA, General Catalyst, Thrive) -->
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Shaun.jpg')"></div>
-                    <div class="speaker-info">
-                        <h3>Shaun Maguire</h3>
-                        <p>Sequoia Capital</p>
-                    </div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Ann.jpg')"></div>
-                    <div class="speaker-info">
-                        <h3>Ann Bordetsky</h3>
-                        <p>New Enterprise Associates</p>
-                    </div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/MadisonFaulkner.jpeg')"></div>
-                    <div class="speaker-info">
-                        <h3>Madison Faulkner</h3>
-                        <p>New Enterprise Associates</p>
-                    </div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Jonathan.jpg')"></div>
-                    <div class="speaker-info">
-                        <h3>Jonathan Mendelson</h3>
-                        <p>Accel</p>
-                    </div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Vedant.jpg')"></div>
-                    <div class="speaker-info">
-                        <h3>Vedant Suri</h3>
-                        <p>General Catalyst</p>
-                    </div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Miles.jpg')"></div>
-                    <div class="speaker-info">
-                        <h3>Miles Grimshaw</h3>
-                        <p>Thrive Capital</p>
-                    </div>
-                </div>
-                
-                <!-- Tier 2: Partners at Established VCs -->
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Deedy.jpg')"></div>
-                    <div class="speaker-info">
-                        <h3>Deedy Das</h3>
-                        <p>Menlo Ventures</p>
-                    </div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Marcus-Ryu.jpeg')"></div>
-                    <div class="speaker-info">
-                        <h3>Marcus Ryu</h3>
-                        <p>Battery Ventures</p>
-                    </div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Grace-Ma.jpeg')"></div>
-                    <div class="speaker-info">
-                        <h3>Grace Ma</h3>
-                        <p>Bessemer Venture Partners</p>
-                    </div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/FeyzaHaskara.jpeg')"></div>
-                    <div class="speaker-info">
-                        <h3>Feyza Haskaraman</h3>
-                        <p>Felicis</p>
-                    </div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Connor-Love.jpeg')"></div>
-                    <div class="speaker-info">
-                        <h3>Connor Love</h3>
-                        <p>Lightspeed Venture Partners</p>
-                    </div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Vinay-Iyengar.jpeg')"></div>
-                    <div class="speaker-info">
-                        <h3>Vinay Iyengar</h3>
-                        <p>Two Sigma Ventures</p>
-                    </div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/SpencerFarrar.jpeg')"></div>
-                    <div class="speaker-info">
-                        <h3>Spencer Farrar</h3>
-                        <p>Theory Ventures</p>
-                    </div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Rushil-Agarwal.jpeg')"></div>
-                    <div class="speaker-info">
-                        <h3>Rushil Agarwal</h3>
-                        <p>Rooted Ventures</p>
-                    </div>
-                </div>
-                
-                <!-- Tier 3: Founders, operators, and other speakers -->
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Alice Betnick.webp')"></div>
-                    <div class="speaker-info">
-                        <h3>Alice Bentinck</h3>
-                        <p>Entrepreneurs First</p>
-                    </div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Andrew.jpeg')"></div>
-                    <div class="speaker-info">
-                        <h3>Andrew Milich</h3>
-                        <p>Cursor</p>
-                    </div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/dhruv P.jpeg')"></div>
-                    <div class="speaker-info">
-                        <h3>Dhruv Parthasarathy</h3>
-                        <p>Commure + Athelas</p>
-                    </div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Alagu-Periyannan.jpeg')"></div>
-                    <div class="speaker-info">
-                        <h3>Alagu Periyannan</h3>
-                        <p>BlueJeans</p>
-                    </div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-avatar past" style="background-image: url('/images/Past-Speakers/Akash-Malhotra.png')"></div>
-                    <div class="speaker-info">
-                        <h3>Akash Malhotra</h3>
-                        <p>The House Fund</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-about">
-                <img src="/images/logo.png?v=1781193046803" alt="Innovate Logo" class="footer-logo">
-                <h4>ABOUT</h4>
-                <p>Innovate@Berkeley is the largest startup expo at Berkeley and is the ultimate hub for entrepreneurship. Speakers, startup booths, and challenges make for an exciting program of events that involves the entire startup community.</p>
-            </div>
-            <div class="footer-social">
-                <h4>Follow Us</h4>
-                <ul class="social-links">
-                    <li><a href="mailto:Innovate2025@berkeley.edu">Innovate2025@berkeley.edu</a></li>
-                    <li><a href="https://facebook.com/berkeleyinnovate">@berkeleyinnovate</a></li>
-                    <li><a href="https://instagram.com/berkeleyinnovate">@berkeleyinnovate</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 Innovate at Berkeley. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
+        </nav>
+        <a class="button button--primary site-header__register" href="https://luma.com/xuxqydtd">Register</a>
+    </div>
+</header>
+<script>
+    // Below 768px the nav collapses behind the Menu button. Without JS it stays visible.
+    (function () {
+        var header = document.querySelector('.site-header');
+        var toggle = header.querySelector('.menu-toggle');
+        header.classList.add('has-js');
+        function setOpen(open) {
+            toggle.setAttribute('aria-expanded', String(open));
+            header.classList.toggle('is-open', open);
+        }
+        toggle.addEventListener('click', function () {
+            setOpen(toggle.getAttribute('aria-expanded') !== 'true');
         });
-
-        // Add scroll effect to navbar
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 100) {
-                navbar.style.background = 'rgba(26, 26, 46, 0.8)';
-            } else {
-                navbar.style.background = 'rgba(26, 26, 46, 0.3)';
+        header.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && header.classList.contains('is-open')) {
+                setOpen(false);
+                toggle.focus();
             }
         });
+    })();
+</script>
 
-        // Animate cards on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+    <main id="main">
+        <section class="page-intro page-intro--text-only">
+            <div class="wrap grid">
+                <div class="page-intro__text">
+                    <p class="kicker">Past partners</p>
+                    <h1>Speakers, firms and startups</h1>
+                    <p class="page-intro__lede">We're grateful for the support of our partners and the startups that have made Innovate@Berkeley possible over the years.</p>
+                </div>
+            </div>
+        </section>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
+        <!-- Past speakers -->
+        <section class="section" aria-labelledby="speakers-title">
+            <div class="wrap grid">
+                <header class="section__head">
+                    <p class="kicker">20 people</p>
+                    <h2 id="speakers-title">Past speakers and panelists</h2>
+                </header>
+                <div class="section__content">
+                    <ul class="people">
+                            <li class="person">
+                            <img src="/images/speakers/nikhil-arora.jpg?v=1794374248833" width="320" height="320" alt="" loading="lazy" decoding="async">
+                            <p class="person__name">Nikhil Arora</p>
+                            <p class="person__firm">Back to the Roots</p>
+                        </li>
+                            <li class="person">
+                            <img src="/images/speakers/shaun-maguire.jpg?v=1794374248833" width="320" height="320" alt="" loading="lazy" decoding="async">
+                            <p class="person__name">Shaun Maguire</p>
+                            <p class="person__firm">Sequoia Capital</p>
+                        </li>
+                            <li class="person">
+                            <img src="/images/speakers/ann-bordetsky.jpg?v=1794374248833" width="320" height="320" alt="" loading="lazy" decoding="async">
+                            <p class="person__name">Ann Bordetsky</p>
+                            <p class="person__firm">New Enterprise Associates</p>
+                        </li>
+                            <li class="person">
+                            <img src="/images/speakers/madison-faulkner.jpg?v=1794374248833" width="320" height="320" alt="" loading="lazy" decoding="async">
+                            <p class="person__name">Madison Faulkner</p>
+                            <p class="person__firm">New Enterprise Associates</p>
+                        </li>
+                            <li class="person">
+                            <img src="/images/speakers/jonathan-mendelson.jpg?v=1794374248833" width="320" height="320" alt="" loading="lazy" decoding="async">
+                            <p class="person__name">Jonathan Mendelson</p>
+                            <p class="person__firm">Accel</p>
+                        </li>
+                            <li class="person">
+                            <img src="/images/speakers/vedant-suri.jpg?v=1794374248833" width="320" height="320" alt="" loading="lazy" decoding="async">
+                            <p class="person__name">Vedant Suri</p>
+                            <p class="person__firm">General Catalyst</p>
+                        </li>
+                            <li class="person">
+                            <img src="/images/speakers/miles-grimshaw.jpg?v=1794374248833" width="320" height="320" alt="" loading="lazy" decoding="async">
+                            <p class="person__name">Miles Grimshaw</p>
+                            <p class="person__firm">Thrive Capital</p>
+                        </li>
+                            <li class="person">
+                            <img src="/images/speakers/deedy-das.jpg?v=1794374248833" width="320" height="320" alt="" loading="lazy" decoding="async">
+                            <p class="person__name">Deedy Das</p>
+                            <p class="person__firm">Menlo Ventures</p>
+                        </li>
+                            <li class="person">
+                            <img src="/images/speakers/marcus-ryu.jpg?v=1794374248833" width="320" height="320" alt="" loading="lazy" decoding="async">
+                            <p class="person__name">Marcus Ryu</p>
+                            <p class="person__firm">Battery Ventures</p>
+                        </li>
+                            <li class="person">
+                            <img src="/images/speakers/grace-ma.jpg?v=1794374248833" width="320" height="320" alt="" loading="lazy" decoding="async">
+                            <p class="person__name">Grace Ma</p>
+                            <p class="person__firm">Bessemer Venture Partners</p>
+                        </li>
+                            <li class="person">
+                            <img src="/images/speakers/feyza-haskaraman.jpg?v=1794374248833" width="320" height="320" alt="" loading="lazy" decoding="async">
+                            <p class="person__name">Feyza Haskaraman</p>
+                            <p class="person__firm">Felicis</p>
+                        </li>
+                            <li class="person">
+                            <img src="/images/speakers/connor-love.jpg?v=1794374248833" width="320" height="320" alt="" loading="lazy" decoding="async">
+                            <p class="person__name">Connor Love</p>
+                            <p class="person__firm">Lightspeed Venture Partners</p>
+                        </li>
+                            <li class="person">
+                            <img src="/images/speakers/vinay-iyengar.jpg?v=1794374248833" width="320" height="320" alt="" loading="lazy" decoding="async">
+                            <p class="person__name">Vinay Iyengar</p>
+                            <p class="person__firm">Two Sigma Ventures</p>
+                        </li>
+                            <li class="person">
+                            <img src="/images/speakers/spencer-farrar.jpg?v=1794374248833" width="320" height="320" alt="" loading="lazy" decoding="async">
+                            <p class="person__name">Spencer Farrar</p>
+                            <p class="person__firm">Theory Ventures</p>
+                        </li>
+                            <li class="person">
+                            <img src="/images/speakers/rushil-agarwal.jpg?v=1794374248833" width="320" height="320" alt="" loading="lazy" decoding="async">
+                            <p class="person__name">Rushil Agarwal</p>
+                            <p class="person__firm">Rooted Ventures</p>
+                        </li>
+                            <li class="person">
+                            <img src="/images/speakers/alice-bentinck.jpg?v=1794374248833" width="320" height="320" alt="" loading="lazy" decoding="async">
+                            <p class="person__name">Alice Bentinck</p>
+                            <p class="person__firm">Entrepreneurs First</p>
+                        </li>
+                            <li class="person">
+                            <img src="/images/speakers/andrew-milich.jpg?v=1794374248833" width="320" height="320" alt="" loading="lazy" decoding="async">
+                            <p class="person__name">Andrew Milich</p>
+                            <p class="person__firm">Cursor</p>
+                        </li>
+                            <li class="person">
+                            <img src="/images/speakers/dhruv-parthasarathy.jpg?v=1794374248833" width="320" height="320" alt="" loading="lazy" decoding="async">
+                            <p class="person__name">Dhruv Parthasarathy</p>
+                            <p class="person__firm">Commure + Athelas</p>
+                        </li>
+                            <li class="person">
+                            <img src="/images/speakers/alagu-periyannan.jpg?v=1794374248833" width="320" height="320" alt="" loading="lazy" decoding="async">
+                            <p class="person__name">Alagu Periyannan</p>
+                            <p class="person__firm">BlueJeans</p>
+                        </li>
+                            <li class="person">
+                            <img src="/images/speakers/akash-malhotra.jpg?v=1794374248833" width="320" height="320" alt="" loading="lazy" decoding="async">
+                            <p class="person__name">Akash Malhotra</p>
+                            <p class="person__firm">The House Fund</p>
+                        </li>
+                        </ul>
+                </div>
+            </div>
+        </section>
 
-        // Observe cards for animation
-        document.querySelectorAll('.partner-card, .startup-card, .speaker-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'all 0.6s ease';
-            observer.observe(el);
-        });
-    </script>
+        <!-- Logos -->
+        <section class="section" aria-labelledby="firms-title">
+            <div class="wrap grid">
+                <header class="section__head">
+                    <p class="kicker">19 organisations</p>
+                    <h2 id="firms-title">Firms and sponsors</h2>
+                </header>
+                <div class="section__content">
+                    <ul class="logo-grid">
+                            <li><img class="partner-logo" src="/images/logos/sequoia.svg?v=1794374248833" alt="Sequoia Capital" width="297" height="39" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/accel.svg?v=1794374248833" alt="Accel" width="1288" height="413" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/general-catalyst.svg?v=1794374248833" alt="General Catalyst" width="3885" height="563" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/thrive-capital.svg?v=1794374248833" alt="Thrive Capital" width="233" height="30" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/lightspeed.svg?v=1794374248833" alt="Lightspeed Venture Partners" width="600" height="122" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/bessemer-venture-partners.jpg?v=1794374248833" alt="Bessemer Venture Partners" width="223" height="96" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/nea.svg?v=1794374248833" alt="New Enterprise Associates" width="126" height="48" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/menlo-ventures.svg?v=1794374248833" alt="Menlo Ventures" width="102" height="40" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/battery-ventures.png?v=1794374248833" alt="Battery Ventures" width="180" height="52" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/felicis.svg?v=1794374248833" alt="Felicis" width="98" height="24" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/two-sigma-ventures.svg?v=1794374248833" alt="Two Sigma Ventures" width="600" height="108" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/theory-ventures.svg?v=1794374248833" alt="Theory Ventures" width="189" height="25" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/house-fund.svg?v=1794374248833" alt="The House Fund" width="332" height="306" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/entrepreneurs-first.png?v=1794374248833" alt="Entrepreneurs First" width="96" height="96" decoding="async">
+</li>
+                            <li><span class="partner-logo partner-logo--wordmark">Rooted Ventures</span>
+</li>
+                            <li><img class="partner-logo" src="/images/logos/cursor.svg?v=1794374248833" alt="Cursor" width="600" height="146" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/commure.svg?v=1794374248833" alt="Commure + Athelas" width="118" height="43" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/bluejeans.svg?v=1794374248833" alt="BlueJeans" width="140" height="32" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/back-to-the-roots.svg?v=1794374248833" alt="Back to the Roots" width="393" height="162" decoding="async">
+</li>
+                        </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="startups-title">
+            <div class="wrap grid">
+                <header class="section__head">
+                    <p class="kicker">14 companies</p>
+                    <h2 id="startups-title">Past startups</h2>
+                </header>
+                <div class="section__content">
+                    <ul class="logo-grid">
+                            <li><img class="partner-logo" src="/images/logos/kobold-metals.png?v=1794374248833" alt="KoBold Metals" width="250" height="96" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/granica.png?v=1794374248833" alt="Granica" width="172" height="96" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/orby.png?v=1794374248833" alt="Orby" width="235" height="96" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/banyan-infrastructure.png?v=1794374248833" alt="Banyan Infrastructure" width="240" height="96" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/numbers-station.png?v=1794374248833" alt="Numbers Station" width="529" height="96" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/windborne.svg?v=1794374248833" alt="WindBorne" width="1088" height="214" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/x-therma.png?v=1794374248833" alt="X-Therma" width="183" height="96" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/cultivo.png?v=1794374248833" alt="Cultivo" width="153" height="96" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/revolv.webp?v=1794374248833" alt="Revolv" width="600" height="77" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/ronbow.png?v=1794374248833" alt="Ronbow" width="211" height="96" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/datapelago.png?v=1794374248833" alt="DataPelago" width="485" height="96" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/alembic.png?v=1794374248833" alt="Alembic" width="377" height="96" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/kaedim.png?v=1794374248833" alt="Kaedim" width="153" height="96" decoding="async">
+</li>
+                            <li><img class="partner-logo" src="/images/logos/planetarians.webp?v=1794374248833" alt="Planetarians" width="2000" height="306" decoding="async">
+</li>
+                        </ul>
+                    <p class="section__more">This year's startups are on the <a href="/">home page</a>.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+    <div class="wrap grid">
+        <div class="site-footer__brand">
+            <img src="/images/logo.png?v=1794374248833" alt="Innovate @ Berkeley" width="855" height="210">
+            <p>Organized by <a href="https://aezberkeley.org">Alpha Epsilon Zeta</a>.</p>
+        </div>
+        <ul class="site-footer__links">
+            
+            <li><a href="mailto:Innovate2025@berkeley.edu">Innovate2025@berkeley.edu</a></li>
+            <li><a href="https://instagram.com/berkeleyinnovate">Instagram</a></li>
+            <li><a href="https://facebook.com/berkeleyinnovate">Facebook</a></li>
+        </ul>
+        <ul class="site-footer__links">
+            <li><a href="/">About</a></li>
+            <li><a href="/partners">Past partners</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="https://luma.com/xuxqydtd">Register</a></li>
+        </ul>
+        <p class="site-footer__legal">&copy; 2026 Innovate at Berkeley. All rights reserved.</p>
+    </div>
+</footer>
+
 </body>
 </html>

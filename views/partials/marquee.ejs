@@ -1,0 +1,45 @@
+<%#
+  Two-row logo marquee. Rows render from data/partners.json.
+  Each row's items are rendered twice so the CSS loop has no seam; the second copy is aria-hidden.
+-%>
+<%
+  const rows = [
+    { id: 'marquee-past', label: 'Past partners', speed: 50, reverse: false,
+      items: partners.filter(p => p.marquee && p.kind !== 'startup') },
+    { id: 'marquee-current', label: 'At Innovate 2027', speed: 35, reverse: true,
+      items: partners.filter(p => p.marquee && p.kind === 'startup' && p.year === 2027) },
+  ];
+-%>
+<section class="marquee-section" aria-label="Partners and startups">
+<% rows.forEach(row => { -%>
+    <div class="marquee-row">
+        <p class="marquee-label" id="<%= row.id %>-label"><%= row.label %></p>
+        <div class="marquee<%= row.reverse ? ' marquee--reverse' : '' %>" data-speed="<%= row.speed %>" tabindex="0" role="region" aria-labelledby="<%= row.id %>-label">
+            <ul class="marquee__track">
+<% [false, true].forEach(hidden => { row.items.forEach(item => { -%>
+                <li<%- hidden ? ' aria-hidden="true"' : '' %>><%- include('logo', { item, hidden }) %></li>
+<% }) }) -%>
+            </ul>
+        </div>
+    </div>
+<% }) -%>
+</section>
+<script>
+    // Keep each row at a constant speed (px/s from data-speed) whatever its length:
+    // one loop travels half the track plus half a gap, so duration = distance / speed.
+    (function () {
+        var rows = document.querySelectorAll('.marquee[data-speed]');
+        function setDurations() {
+            rows.forEach(function (row) {
+                var track = row.querySelector('.marquee__track');
+                var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+                var distance = track.scrollWidth / 2 + gap / 2;
+                row.style.setProperty('--duration', (distance / Number(row.dataset.speed)).toFixed(2) + 's');
+            });
+        }
+        setDurations();
+        window.addEventListener('load', setDurations);
+        window.addEventListener('resize', setDurations);
+        if (document.fonts) document.fonts.ready.then(setDurations);
+    })();
+</script>

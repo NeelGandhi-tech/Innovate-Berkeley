@@ -3,441 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Innovate @ Berkeley</title>
-    <link rel="icon" type="image/jpeg" href="/images/small_logo.jpg">
+    <title>Gallery · Innovate @ Berkeley</title>
+    <meta name="description" content="Photos from past Innovate@Berkeley events, from 2021 to Fall 2025.">
+    <link rel="canonical" href="https://berkeleyinnovate.com/gallery">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Innovate @ Berkeley">
+    <meta property="og:url" content="https://berkeleyinnovate.com/gallery">
+    <meta property="og:title" content="Gallery · Innovate @ Berkeley">
+    <meta property="og:description" content="Photos from past Innovate@Berkeley events, from 2021 to Fall 2025.">
+    <meta property="og:image" content="https://berkeleyinnovate.com/images/photos/og-fa25-254.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/png" href="/images/small_logo.png">
     <link rel="apple-touch-icon" href="/images/small_logo.png">
-    <link rel="shortcut icon" href="/images/small_logo.jpg">
-    <link rel="stylesheet" href="/css/style.css?v=1781193046803">
-    <style>
-        .gallery-hero {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            padding: 80px 0 60px;
-            text-align: center;
-            color: white;
-        }
-        
-        .gallery-hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-        
-        .gallery-hero p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .gallery-section {
-            padding: 40px 0;
-            background: #f8f9fa;
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 1rem;
-        }
-        
-        .gallery-item {
-            position: relative;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            background: white;
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-        
-        
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-        
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: #1a1a2e;
-            margin-bottom: 0.5rem;
-        }
-        
-        .section-title p {
-            font-size: 1.1rem;
-            color: #666;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .loading {
-            opacity: 0.5;
-            transition: opacity 0.3s ease;
-        }
-        
-        .loaded {
-            opacity: 1;
-        }
-        
-        .gallery-loading {
-            text-align: center;
-            padding: 4rem 0;
-            color: #64b5f6;
-        }
-        
-        .loading-spinner {
-            width: 40px;
-            height: 40px;
-            border: 4px solid rgba(100, 181, 246, 0.3);
-            border-top: 4px solid #64b5f6;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 1rem;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .gallery-loading p {
-            font-size: 1.1rem;
-            margin: 0 0 1rem 0;
-        }
-        
-        .progress-bar {
-            width: 200px;
-            height: 4px;
-            background: rgba(100, 181, 246, 0.3);
-            border-radius: 2px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background: #64b5f6;
-            border-radius: 2px;
-            width: 0%;
-            transition: width 0.3s ease;
-        }
-    </style>
+    <link rel="preload" href="/fonts/instrument-serif-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/public-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/css/site.css">
+
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <a href="/">
-                    <img src="/images/logo.png?v=1781193046803" alt="Innovate Logo">
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/">CONFERENCE</a></li>
-                <li><a href="/about">ABOUT</a></li>
-                <li><a href="/partners">PAST PARTNERS</a></li>
-                <li><a href="/gallery" class="active">GALLERY</a></li>
-                <!-- <li><a href="/challenge">CHALLENGE</a></li> -->
+    <a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <div class="wrap site-header__inner">
+        <a class="site-header__logo" href="/">
+            <img src="/images/logo.png?v=1794374248834" alt="Innovate @ Berkeley, home" width="855" height="210">
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+            <ul>
+                <li><a href="/">About</a></li>
+                <li><a href="/partners">Past partners</a></li>
+                <li><a href="/gallery" aria-current="page">Gallery</a></li>
+                <li><a href="/foundry">Foundry</a></li>
+                <li><a href="/#contact">Contact</a></li>
             </ul>
-            <a href="/register" class="register-btn">REGISTER</a>
-        </div>
-    </nav>
-
-    <!-- Gallery Hero Section -->
-    <section class="gallery-hero">
-        <div class="container">
-            <h1>Event Gallery</h1>
-            <p>Relive the amazing moments from past Innovate@Berkeley events</p>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="gallery-section">
-        <div class="container">
-            <h2 class="gallery-title">Event Gallery</h2>
-            <div class="gallery-loading" id="gallery-loading">
-                <div class="loading-spinner"></div>
-                <p>Loading photos...</p>
-                <div class="progress-bar">
-                    <div class="progress-fill" id="progress-fill"></div>
-                </div>
-            </div>
-            <div class="gallery-grid" id="gallery-grid" style="opacity: 0;">
-                <!-- Photo 1 -->
-                <div class="gallery-item" data-category="2023">
-                    <img src="/images/innovate-62.jpg?v=1781193046803" alt="Innovate Event 2023">
-                </div>
-                <!-- Photo 2 -->
-                <div class="gallery-item" data-category="2023">
-                    <img src="/images/innovate-66.jpg?v=1781193046803" alt="Innovate Event 2023">
-                </div>
-                <!-- Photo 4 -->
-                <div class="gallery-item" data-category="2023">
-                    <img src="/images/innovate-89.jpg?v=1781193046803" alt="Innovate Event 2023">
-                </div>
-                <!-- Photo 6 -->
-                <div class="gallery-item" data-category="2022">
-                    <img src="/images/innovate-127.jpg?v=1781193046803" alt="Innovate Event 2022">
-                </div>
-                <!-- Photo 7 -->
-                <div class="gallery-item" data-category="2022">
-                    <img src="/images/innovate-154.jpg?v=1781193046803" alt="Innovate Event 2022">
-                </div>
-                <!-- Photo 8 -->
-                <div class="gallery-item" data-category="2022">
-                    <img src="/images/innovate-212.jpg?v=1781193046803" alt="Innovate Event 2022">
-                </div>
-                <!-- Photo 9 -->
-                <div class="gallery-item" data-category="2021">
-                    <img src="/images/innovate-20.jpg?v=1781193046803" alt="Innovate Event 2021">
-                </div>
-                <!-- Photo 10 -->
-                <div class="gallery-item" data-category="2021">
-                    <img src="/images/Innovate-28.jpg?v=1781193046803" alt="Innovate Event 2021">
-                </div>
-                <!-- Photo 11 -->
-                <div class="gallery-item" data-category="2023">
-                    <img src="/images/innovate-81.jpg?v=1781193046803" alt="Berkeley Campus">
-                </div>
-                <!-- Photo 12 -->
-                <div class="gallery-item" data-category="2023">
-                    <img src="/images/INNOVATE-143.jpg?v=1781193046803" alt="Innovate Event 2023">
-                </div>
-                <!-- Photo 14 -->
-                <div class="gallery-item" data-category="2023">
-                    <img src="/images/innovate-43.jpg?v=1781193046803" alt="Innovate Event 2023">
-                </div>
-                <!-- Photo 15 -->
-                <div class="gallery-item" data-category="2023">
-                    <img src="/images/innovate-48.jpg?v=1781193046803" alt="Innovate Event 2023">
-                </div>
-                <!-- Photo 16 -->
-                <div class="gallery-item" data-category="2023">
-                    <img src="/images/INNOVATE-78.jpg?v=1781193046803" alt="Innovate Event 2023">
-                </div>
-                <!-- Photo 17 -->
-                <div class="gallery-item" data-category="2023">
-                    <img src="/images/INNOVATE-91.jpg?v=1781193046803" alt="Innovate Event 2023">
-                </div>
-                <!-- Photo 18 -->
-                <div class="gallery-item" data-category="2023">
-                    <img src="/images/Carousel1.jpeg?v=1781193046803" alt="Innovate Event 2023">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-about">
-                <img src="/images/logo.png?v=1781193046803" alt="Innovate Logo" class="footer-logo">
-                <h4>ABOUT</h4>
-                <p>Innovate@Berkeley is the largest startup expo at Berkeley and is the ultimate hub for entrepreneurship. Speakers, startup booths, and challenges make for an exciting program of events that involves the entire startup community.</p>
-            </div>
-            <div class="footer-social">
-                <h4>Follow Us</h4>
-                <ul class="social-links">
-                    <li><a href="mailto:Innovate2025@berkeley.edu">Innovate2025@berkeley.edu</a></li>
-                    <li><a href="https://facebook.com/berkeleyinnovate">@berkeleyinnovate</a></li>
-                    <li><a href="https://instagram.com/berkeleyinnovate">@berkeleyinnovate</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2026 Innovate at Berkeley. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Add scroll effect to navbar
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 100) {
-                navbar.style.background = 'rgba(26, 26, 46, 0.8)';
-            } else {
-                navbar.style.background = 'rgba(26, 26, 46, 0.3)';
-            }
-        });
-
-
-        // Optimized gallery loading performance with lazy loading
-        const galleryImages = document.querySelectorAll('.gallery-item img');
-        
-        // Use Intersection Observer for lazy loading with better performance
-        const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    
-                    // Add loading class for better UX
-                    img.classList.add('loading');
-                    
-                    if (img.complete && img.naturalHeight !== 0) {
-                        // Image already loaded
-                        img.classList.remove('loading');
-                        img.classList.add('loaded');
-                    } else {
-                        // Wait for image to load
-                        img.addEventListener('load', () => {
-                            img.classList.remove('loading');
-                            img.classList.add('loaded');
-                        }, { once: true });
-                        
-                        img.addEventListener('error', () => {
-                            img.classList.remove('loading');
-                            img.classList.add('error');
-                        }, { once: true });
-                    }
-                    
-                    imageObserver.unobserve(img);
-                }
-            });
-        }, { 
-            rootMargin: '100px 0px',
-            threshold: 0.01 
-        });
-        
-        // Only observe images that are not already loaded
-        galleryImages.forEach(img => {
-            if (!img.complete || img.naturalHeight === 0) {
-                imageObserver.observe(img);
-            } else {
-                img.classList.add('loaded');
-            }
-        });
-
-        // Animate gallery items on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Wait for all images to actually load before showing gallery
-        function waitForImagesToLoad() {
-            const images = document.querySelectorAll('.gallery-item img');
-            let loadedCount = 0;
-            const totalImages = images.length;
-            
-            // Update loading text with progress
-            const loadingText = document.querySelector('.gallery-loading p');
-            
-            function updateProgress() {
-                if (loadingText) {
-                    loadingText.textContent = `Loading photos... ${loadedCount}/${totalImages}`;
-                }
-                
-                // Update progress bar
-                const progressFill = document.getElementById('progress-fill');
-                if (progressFill) {
-                    const percentage = (loadedCount / totalImages) * 100;
-                    progressFill.style.width = percentage + '%';
-                }
-            }
-            
-            if (totalImages === 0) {
-                showGallery();
-                return;
-            }
-            
-            images.forEach((img, index) => {
-                if (img.complete && img.naturalHeight !== 0) {
-                    // Image already loaded
-                    loadedCount++;
-                    updateProgress();
-                } else {
-                    // Wait for image to load
-                    img.addEventListener('load', () => {
-                        loadedCount++;
-                        updateProgress();
-                        if (loadedCount === totalImages) {
-                            showGallery();
-                        }
-                    });
-                    
-                    img.addEventListener('error', () => {
-                        loadedCount++;
-                        updateProgress();
-                        if (loadedCount === totalImages) {
-                            showGallery();
-                        }
-                    });
-                }
-            });
-            
-            // Fallback: show gallery after 5 seconds maximum
-            setTimeout(() => {
-                if (loadedCount < totalImages) {
-                    showGallery();
-                }
-            }, 5000);
+        </nav>
+        <a class="button button--primary site-header__register" href="https://luma.com/xuxqydtd">Register</a>
+    </div>
+</header>
+<script>
+    // Below 768px the nav collapses behind the Menu button. Without JS it stays visible.
+    (function () {
+        var header = document.querySelector('.site-header');
+        var toggle = header.querySelector('.menu-toggle');
+        header.classList.add('has-js');
+        function setOpen(open) {
+            toggle.setAttribute('aria-expanded', String(open));
+            header.classList.toggle('is-open', open);
         }
-        
-        function showGallery() {
-            // Hide loading indicator
-            const loadingIndicator = document.getElementById('gallery-loading');
-            if (loadingIndicator) {
-                loadingIndicator.style.display = 'none';
+        toggle.addEventListener('click', function () {
+            setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+        });
+        header.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && header.classList.contains('is-open')) {
+                setOpen(false);
+                toggle.focus();
             }
+        });
+    })();
+</script>
+
+
+    <main id="main">
+        <section class="page-intro page-intro--text-only">
+            <div class="wrap grid">
+                <div class="page-intro__text">
+                    <p class="kicker">Gallery</p>
+                    <h1>Past events</h1>
+                    <p class="page-intro__lede">Moments from past Innovate@Berkeley events.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section gallery-year" aria-labelledby="year-fall-2025">
+            <div class="wrap grid">
+                <header class="section__head">
+                    <h2 id="year-fall-2025">Fall 2025</h2>
+                </header>
+                <div class="section__content">
+                    <ul class="gallery-grid">
+                            <li>
+                            <img src="/images/Innovate-FA25/INNOVATE_FA25-110.jpg?v=1794374248834" width="6240" height="4160" alt="Five people standing together at the Typeface booth"
+                                 fetchpriority="high" decoding="async">
+                        </li>
+                            <li>
+                            <img src="/images/Innovate-FA25/INNOVATE_FA25-125.jpg?v=1794374248834" width="6240" height="4160" alt="Five attendees posing together in the hallway outside the event hall"
+                                 fetchpriority="high" decoding="async">
+                        </li>
+                            <li>
+                            <img src="/images/Innovate-FA25/INNOVATE_FA25-145.jpg?v=1794374248834" width="6240" height="4160" alt="Three speakers seated on stools on stage"
+                                 fetchpriority="high" decoding="async">
+                        </li>
+                            <li>
+                            <img src="/images/Innovate-FA25/INNOVATE_FA25-203.jpg?v=1794374248834" width="6240" height="4160" alt="A group of students posing together in the event hall"
+                                 loading="lazy" decoding="async">
+                        </li>
+                            <li>
+                            <img src="/images/Innovate-FA25/INNOVATE_FA25-254.jpg?v=1794374248834" width="6240" height="4160" alt="A panel of three speakers on stage, seen from behind the seated audience"
+                                 loading="lazy" decoding="async">
+                        </li>
+                            <li>
+                            <img src="/images/Innovate-FA25/INNOVATE_FA25-272.jpg?v=1794374248834" width="6240" height="4160" alt="A large group photo in the event hall, with the event slide on the screen behind them"
+                                 loading="lazy" decoding="async">
+                        </li>
+                        </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section gallery-year" aria-labelledby="year-2023">
+            <div class="wrap grid">
+                <header class="section__head">
+                    <h2 id="year-2023">2023</h2>
+                </header>
+                <div class="section__content">
+                    <ul class="gallery-grid">
+                            <li>
+                            <img src="/images/innovate-62.jpg?v=1794374248834" width="6240" height="4160" alt="Attendees moving between tables in the event hall, with the Innovate slide on a screen in the background"
+                                 loading="lazy" decoding="async">
+                        </li>
+                            <li>
+                            <img src="/images/innovate-66.jpg?v=1794374248834" width="6240" height="4160" alt="Two attendees posing together in the event hall"
+                                 loading="lazy" decoding="async">
+                        </li>
+                            <li>
+                            <img src="/images/innovate-89.jpg?v=1794374248834" width="6240" height="4160" alt="Two attendees posing together in front of a screen showing the AEZ logo"
+                                 loading="lazy" decoding="async">
+                        </li>
+                            <li>
+                            <img src="/images/Innovate-81.jpg?v=1794374248834" width="7008" height="4672" alt="A VC panel on stage, with speakers from Menlo Ventures, General Catalyst and Accel listed on the screen behind them"
+                                 loading="lazy" decoding="async">
+                        </li>
+                            <li>
+                            <img src="/images/INNOVATE-143.jpg?v=1794374248834" width="6240" height="4160" alt="A speaker presenting a slide titled Chatbot Unicorns"
+                                 loading="lazy" decoding="async">
+                        </li>
+                            <li>
+                            <img src="/images/innovate-43.jpg?v=1794374248834" width="4672" height="7008" alt="A speaker presenting from the Berkeley Haas lectern"
+                                 loading="lazy" decoding="async">
+                        </li>
+                            <li>
+                            <img src="/images/innovate-48.jpg?v=1794374248834" width="4160" height="6240" alt="The Granica booth, with a branded table and a standing banner"
+                                 loading="lazy" decoding="async">
+                        </li>
+                            <li>
+                            <img src="/images/INNOVATE-78.jpg?v=1794374248834" width="6240" height="4160" alt="A crowded room of attendees talking between sessions"
+                                 loading="lazy" decoding="async">
+                        </li>
+                            <li>
+                            <img src="/images/INNOVATE-91.jpg?v=1794374248834" width="6240" height="4160" alt="Attendees seated in rows in the event hall before a session"
+                                 loading="lazy" decoding="async">
+                        </li>
+                            <li>
+                            <img src="/images/Carousel1.jpeg?v=1794374248834" width="2048" height="1366" alt="Startup booths in a ballroom, with a Rocket Club banner in the centre"
+                                 loading="lazy" decoding="async">
+                        </li>
+                        </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section gallery-year" aria-labelledby="year-2022">
+            <div class="wrap grid">
+                <header class="section__head">
+                    <h2 id="year-2022">2022</h2>
+                </header>
+                <div class="section__content">
+                    <ul class="gallery-grid">
+                            <li>
+                            <img src="/images/innovate-127.jpg?v=1794374248834" width="6240" height="4160" alt="A large group photo of attendees in the event hall"
+                                 loading="lazy" decoding="async">
+                        </li>
+                            <li>
+                            <img src="/images/innovate-154.jpg?v=1794374248834" width="7008" height="4672" alt="Four panelists on stools on stage, in front of a Menlo Ventures slide"
+                                 loading="lazy" decoding="async">
+                        </li>
+                            <li>
+                            <img src="/images/innovate-212.jpg?v=1794374248834" width="7008" height="4672" alt="Two people on stage holding an oversized Innovate prize cheque"
+                                 loading="lazy" decoding="async">
+                        </li>
+                        </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section gallery-year" aria-labelledby="year-2021">
+            <div class="wrap grid">
+                <header class="section__head">
+                    <h2 id="year-2021">2021</h2>
+                </header>
+                <div class="section__content">
+                    <ul class="gallery-grid">
+                            <li>
+                            <img src="/images/innovate-20.jpg?v=1794374248834" width="6240" height="4160" alt="Two founders at the Kaedim booth, with laptops and a branded banner"
+                                 loading="lazy" decoding="async">
+                        </li>
+                            <li>
+                            <img src="/images/Innovate-28.jpg?v=1794374248834" width="7008" height="4672" alt="A speaker presenting to a full lecture hall"
+                                 loading="lazy" decoding="async">
+                        </li>
+                        </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+    <div class="wrap grid">
+        <div class="site-footer__brand">
+            <img src="/images/logo.png?v=1794374248834" alt="Innovate @ Berkeley" width="855" height="210">
+            <p>Organized by <a href="https://aezberkeley.org">Alpha Epsilon Zeta</a>.</p>
+        </div>
+        <ul class="site-footer__links">
             
-            // Show gallery grid
-            const galleryGrid = document.getElementById('gallery-grid');
-            if (galleryGrid) {
-                galleryGrid.style.opacity = '1';
-                galleryGrid.style.transition = 'opacity 0.5s ease';
-            }
-            
-            // Animate gallery items
-            document.querySelectorAll('.gallery-item').forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(20px)';
-                el.style.transition = 'all 0.6s ease';
-                observer.observe(el);
-            });
-        }
-        
-        // Start waiting for images to load
-        waitForImagesToLoad();
-    </script>
+            <li><a href="mailto:Innovate2025@berkeley.edu">Innovate2025@berkeley.edu</a></li>
+            <li><a href="https://instagram.com/berkeleyinnovate">Instagram</a></li>
+            <li><a href="https://facebook.com/berkeleyinnovate">Facebook</a></li>
+        </ul>
+        <ul class="site-footer__links">
+            <li><a href="/">About</a></li>
+            <li><a href="/partners">Past partners</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="https://luma.com/xuxqydtd">Register</a></li>
+        </ul>
+        <p class="site-footer__legal">&copy; 2026 Innovate at Berkeley. All rights reserved.</p>
+    </div>
+</footer>
+
 </body>
 </html>

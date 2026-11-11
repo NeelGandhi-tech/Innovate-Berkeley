@@ -1,0 +1,40 @@
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+    <div class="wrap site-header__inner">
+        <a class="site-header__logo" href="/">
+            <img src="/images/logo.png" alt="Innovate @ Berkeley, home" width="855" height="210">
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+            <ul>
+                <li><a href="/"<%- locals.current === 'home' ? ' aria-current="page"' : '' %>>About</a></li>
+                <li><a href="/partners"<%- locals.current === 'partners' ? ' aria-current="page"' : '' %>>Past partners</a></li>
+                <li><a href="/gallery"<%- locals.current === 'gallery' ? ' aria-current="page"' : '' %>>Gallery</a></li>
+                <li><a href="/foundry"<%- locals.current === 'foundry' ? ' aria-current="page"' : '' %>>Foundry</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a class="button button--primary site-header__register" href="<%= site.registerUrl %>">Register</a>
+    </div>
+</header>
+<script>
+    // Below 768px the nav collapses behind the Menu button. Without JS it stays visible.
+    (function () {
+        var header = document.querySelector('.site-header');
+        var toggle = header.querySelector('.menu-toggle');
+        header.classList.add('has-js');
+        function setOpen(open) {
+            toggle.setAttribute('aria-expanded', String(open));
+            header.classList.toggle('is-open', open);
+        }
+        toggle.addEventListener('click', function () {
+            setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+        });
+        header.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && header.classList.contains('is-open')) {
+                setOpen(false);
+                toggle.focus();
+            }
+        });
+    })();
+</script>
