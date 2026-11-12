@@ -7,7 +7,8 @@
   {
     "name": "Shaun Maguire",
     "firm": "Sequoia Capital",
-    "photo": "/images/speakers/shaun-maguire.jpg"
+    "photo": "/images/speakers/shaun-maguire.jpg",
+    "highlight": "Past Innovate speaker"
   },
   {
     "name": "Ann Bordetsky",
@@ -32,7 +33,8 @@
   {
     "name": "Miles Grimshaw",
     "firm": "Thrive Capital",
-    "photo": "/images/speakers/miles-grimshaw.jpg"
+    "photo": "/images/speakers/miles-grimshaw.jpg",
+    "highlight": "Fireside chat at Innovate"
   },
   {
     "name": "Deedy Das",

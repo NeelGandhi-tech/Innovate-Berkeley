@@ -438,47 +438,6 @@ figcaption {
     .section__head { grid-column: 1 / span 4; align-self: start; }
 }
 
-/* Past speakers: a tight typographic list */
-.speaker-list {
-    margin-top: var(--s4);
-    padding: 0;
-    list-style: none;
-    border-bottom: 1px solid var(--line);
-}
-
-.speaker-list li {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 0 var(--s2);
-    padding: 12px 0;
-    border-top: 1px solid var(--line);
-    break-inside: avoid;
-}
-
-.speaker-list__name {
-    font-weight: 600;
-}
-
-.speaker-list__firm {
-    color: var(--muted);
-    font-size: 0.9375rem;
-}
-
-@media (min-width: 640px) {
-    .speaker-list {
-        columns: 2;
-        column-gap: var(--s4);
-        border-bottom: 0;
-    }
-    .speaker-list li { border-top: 0; border-bottom: 1px solid var(--line); }
-}
-
-@media (min-width: 900px) {
-    .speaker-list { grid-column: 6 / -1; margin-top: 0; }
-}
-
 /* What to expect: photos lead on desktop, text on the right */
 .expect__photos {
     display: grid;
@@ -557,8 +516,9 @@ figcaption {
 
 .photo-band img {
     width: 100%;
-    height: clamp(240px, 42vw, 560px);
+    height: clamp(300px, 56vw, 800px);
     object-fit: cover;
+    object-position: center 70%; /* the people sit in the lower part of the frame */
 }
 
 .photo-band figcaption {
@@ -841,6 +801,26 @@ h3 {
     .people { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
+/* Home page: two highlighted speakers. Photos are 320px sources, so they never render wider */
+.people--highlights {
+    margin: var(--s4) 0 0;
+    grid-template-columns: repeat(2, minmax(0, 320px));
+}
+
+.person__note {
+    margin-top: 4px;
+    font-size: 0.9375rem;
+    line-height: 1.3;
+}
+
+@media (min-width: 640px) {
+    .people--highlights { grid-template-columns: repeat(2, minmax(0, 320px)); }
+}
+
+@media (min-width: 900px) {
+    .people--highlights { grid-column: 6 / -1; margin-top: 0; }
+}
+
 
 
 /* Partners: logo grid, same single-colour treatment as the marquee */
@@ -1107,10 +1087,6 @@ main {
     background: var(--paper);
 }
 
-.marquee-row + .marquee-row {
-    margin-top: var(--s4);
-}
-
 .marquee-label {
     max-width: calc(1200px + 2 * var(--gutter));
     margin: 0 auto var(--s2);
@@ -1211,9 +1187,9 @@ main {
 }
 
 @media (max-width: 767px) {
-    .marquee { --gap: 40px; }
-    .marquee .partner-logo { height: 24px; }
-    .marquee .partner-logo--wordmark { height: auto; line-height: 24px; font-size: 1.375rem; }
+    .marquee { --gap: 28px; }
+    .marquee .partner-logo { height: 20px; max-width: 100px; }
+    .marquee .partner-logo--wordmark { height: auto; line-height: 20px; font-size: 1.125rem; }
 }
 
 /* ----- Reduced motion: nothing moves ----- */

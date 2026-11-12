@@ -13,7 +13,7 @@
                 <div class="hero__text">
                     <p class="kicker">Berkeley's largest entrepreneurship expo</p>
                     <h1 class="hero__title">Innovate @&nbsp;Berkeley</h1>
-                    <p class="hero__when"><time datetime="2027-02-11"><%= site.eventDate %></time> · <%= site.eventPlace %></p>
+                    <p class="hero__when"><time datetime="2027-02-12"><%= site.eventDate %></time> · <%= site.eventPlace %></p>
                     <p class="hero__lede">Founder talks, startup booths and the people building companies at Berkeley. Powered by <a href="<%= site.organizerUrl %>">AEZ</a>.</p>
                     <div class="hero__actions">
                         <a class="button button--primary button--large" href="<%= site.registerUrl %>">Register</a>
@@ -34,19 +34,24 @@
         <!-- Partner marquee -->
         <%- include('partials/marquee') %>
 
-        <!-- Past speakers -->
+        <!-- Past speakers: highlights only. The full list lives on /partners -->
         <section class="section speakers" aria-labelledby="speakers-title">
             <div class="wrap grid">
                 <header class="section__head">
                     <p class="kicker">Who has spoken</p>
                     <h2 id="speakers-title">Past speakers</h2>
-                    <a class="text-link" href="/partners">All past partners</a>
+                    <a class="text-link" href="/partners#speakers">All past speakers</a>
                 </header>
-                <ol class="speaker-list">
-<% speakers.forEach(s => { -%>
-                    <li><span class="speaker-list__name"><%= s.name %></span> <span class="speaker-list__firm"><%= s.firm %></span></li>
+                <ul class="people people--highlights">
+<% speakers.filter(s => s.highlight).forEach(s => { -%>
+                    <li class="person">
+                        <img src="<%= s.photo %>" width="320" height="320" alt="<%= s.name %>" loading="lazy" decoding="async">
+                        <p class="person__name"><%= s.name %></p>
+                        <p class="person__firm"><%= s.firm %></p>
+                        <p class="person__note"><%= s.highlight %></p>
+                    </li>
 <% }) -%>
-                </ol>
+                </ul>
             </div>
         </section>
 
@@ -117,9 +122,9 @@
 
         <!-- Photo between sections -->
         <figure class="photo-band">
-            <img src="/images/photos/fa25-272-960.jpg"
-                 srcset="/images/photos/fa25-272-480.jpg 480w, /images/photos/fa25-272-960.jpg 960w"
-                 sizes="100vw" width="960" height="640" loading="lazy" decoding="async"
+            <img src="/images/photos/fa25-272-1600.jpg"
+                 srcset="/images/photos/fa25-272-480.jpg 480w, /images/photos/fa25-272-960.jpg 960w, /images/photos/fa25-272-1600.jpg 1600w, /images/photos/fa25-272-2400.jpg 2400w"
+                 sizes="100vw" width="2400" height="1600" loading="lazy" decoding="async"
                  alt="A large group photo in the event hall at Innovate Fall 2025, with the event slide on the screen behind them">
             <figcaption class="wrap">Innovate, Fall 2025</figcaption>
         </figure>

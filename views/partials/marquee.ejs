@@ -1,27 +1,22 @@
 <%#
-  Two-row logo marquee. Rows render from data/partners.json.
-  Each row's items are rendered twice so the CSS loop has no seam; the second copy is aria-hidden.
+  Logo marquee. Items render from data/partners.json.
+  Items are rendered twice so the CSS loop has no seam; the second copy is aria-hidden.
 -%>
 <%
-  const rows = [
-    { id: 'marquee-past', label: 'Past partners', speed: 50, reverse: false,
-      items: partners.filter(p => p.marquee && p.year !== 2027) },
-    { id: 'marquee-current', label: 'At Innovate 2027', speed: 35, reverse: true,
-      items: partners.filter(p => p.marquee && p.kind === 'startup' && p.year === 2027) },
+  // One row: past partners first, then this year's startups
+  const items = [
+    ...partners.filter(p => p.marquee && p.year !== 2027),
+    ...partners.filter(p => p.marquee && p.kind === 'startup' && p.year === 2027),
   ];
 -%>
-<section class="marquee-section" aria-label="Partners and startups">
-<% rows.forEach(row => { -%>
-    <div class="marquee-row">
-        <p class="marquee-label" id="<%= row.id %>-label"><%= row.label %></p>
-        <div class="marquee<%= row.reverse ? ' marquee--reverse' : '' %>" data-speed="<%= row.speed %>" tabindex="0" role="region" aria-labelledby="<%= row.id %>-label">
-            <ul class="marquee__track">
-<% [false, true].forEach(hidden => { row.items.forEach(item => { -%>
-                <li<%- hidden ? ' aria-hidden="true"' : '' %>><%- include('logo', { item, hidden }) %></li>
+<section class="marquee-section" aria-labelledby="marquee-label">
+    <p class="marquee-label" id="marquee-label">Partners and startups</p>
+    <div class="marquee" data-speed="50" tabindex="0" role="region" aria-labelledby="marquee-label">
+        <ul class="marquee__track">
+<% [false, true].forEach(hidden => { items.forEach(item => { -%>
+            <li<%- hidden ? ' aria-hidden="true"' : '' %>><%- include('logo', { item, hidden }) %></li>
 <% }) }) -%>
-            </ul>
-        </div>
+        </ul>
     </div>
-<% }) -%>
 </section>
 <script src="/js/marquee.js"></script>
