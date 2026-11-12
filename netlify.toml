@@ -9,7 +9,7 @@
 # which stays as a fallback. Keep the URL in sync with registerUrl in data/site.json.
 [[redirects]]
   from = "/register"
-  to = "https://luma.com/xuxqydtd"
+  to = "https://luma.com/regi9ncf"
   status = 301
   force = true
 
