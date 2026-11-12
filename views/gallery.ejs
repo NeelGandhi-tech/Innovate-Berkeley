@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<%- include('partials/head', { title: 'Gallery', path: '/gallery', ogImage: '/images/photos/og-fa25-254.jpg', description: 'Photos from past Innovate@Berkeley events, from 2021 to Fall 2025.' }) %>
+<%- include('partials/head', { title: 'Gallery', path: '/gallery', ogImage: '/images/photos/og-fa25-254.jpg', description: 'Photos from Innovate@Berkeley in Fall 2024 and Fall 2025.' }) %>
 </head>
 <body>
     <%- include('partials/site-header', { current: 'gallery' }) %>
@@ -16,28 +16,34 @@
                 </div>
             </div>
         </section>
-<% let index = 0; gallery.forEach(group => { const id = 'year-' + group.year.toLowerCase().replace(/\s+/g, '-'); -%>
+<%#
+  Each year is a continuously scrolling strip, built like the home page's partner row:
+  photos are rendered twice for a seamless loop (second copy aria-hidden, empty alt),
+  photo-strip.js makes it a real scroll container that glides on its own and can be scrolled by hand;
+  it pauses on hover, focus and while being scrolled, and never moves on its own with reduced motion.
+  Photos are not lazy-loaded: Chrome does not lazy-load images that move into view through a CSS animation,
+  so they would scroll past blank. The duplicate copy reuses the same cached files.
+-%>
+<% gallery.forEach((group, g) => { const id = 'year-' + group.year.toLowerCase().replace(/\s+/g, '-'); -%>
 
         <section class="section gallery-year" aria-labelledby="<%= id %>">
             <div class="wrap grid">
                 <header class="section__head">
                     <h2 id="<%= id %>"><%= group.year %></h2>
                 </header>
-                <div class="section__content">
-                    <ul class="gallery-grid">
-    <% group.photos.forEach(photo => { const eager = index++ < 3; -%>
-                        <li>
-                            <img src="<%= photo.src %>" width="<%= photo.width %>" height="<%= photo.height %>" alt="<%= photo.alt %>"
-                                 <%- eager ? 'fetchpriority="high"' : 'loading="lazy"' %> decoding="async">
-                        </li>
-    <% }) -%>
-                    </ul>
-                </div>
+            </div>
+            <div class="marquee marquee--photos<%= g % 2 ? ' marquee--reverse' : '' %>" data-speed="40" tabindex="0" role="region" aria-labelledby="<%= id %>">
+                <ul class="marquee__track">
+<% [false, true].forEach(hidden => { group.photos.forEach((photo, i) => { -%>
+                    <li<%- hidden ? ' aria-hidden="true"' : '' %>><img src="/images/photos/gallery/<%= photo.slug %>-800.jpg" width="<%= photo.width %>" height="<%= photo.height %>" alt="<%= hidden ? '' : photo.alt %>" draggable="false" decoding="async"></li>
+<% }) }) -%>
+                </ul>
             </div>
         </section>
 <% }) -%>
     </main>
 
     <%- include('partials/site-footer') %>
+    <script src="/js/photo-strip.js"></script>
 </body>
 </html>

@@ -889,6 +889,11 @@ h3 {
 
 .logo-grid .partner-logo--wordmark {
     height: auto;
+    max-width: 100%;
+    font-size: 1.5rem;
+    line-height: 1.1;
+    text-align: center;
+    white-space: normal; /* long names wrap inside their cell */
     opacity: 0.75;
 }
 
@@ -898,28 +903,6 @@ h3 {
 
 @media (min-width: 900px) {
     .logo-grid li { min-height: 128px; }
-}
-
-/* Gallery: photos at their real proportions in columns */
-.gallery-grid {
-    columns: 1;
-    column-gap: var(--s3);
-    padding: 0;
-    list-style: none;
-}
-
-.gallery-grid li {
-    break-inside: avoid;
-    margin-bottom: var(--s3);
-}
-
-.gallery-grid img {
-    width: 100%;
-    background: #e4e1d9; /* placeholder tone while a photo loads */
-}
-
-@media (min-width: 640px) {
-    .gallery-grid { columns: 2; }
 }
 
 /* Gallery: year heading sits above its photos, which use the full width */
@@ -936,8 +919,70 @@ h3 {
     margin-top: var(--s4);
 }
 
-@media (min-width: 1024px) {
-    .gallery-grid { columns: 3; }
+/* Gallery: each year is a continuously scrolling photo strip (same component as the partner row) */
+.gallery-year .section__head {
+    margin-bottom: var(--s4);
+}
+
+.marquee--photos {
+    --gap: var(--s2);
+}
+
+.marquee--photos .marquee__track img {
+    display: block;
+    width: auto;
+    height: 200px;
+    background: var(--tint); /* placeholder tone while a photo loads */
+}
+
+@media (min-width: 900px) {
+    .marquee--photos { --gap: var(--s3); }
+    .marquee--photos .marquee__track img { height: 280px; }
+}
+
+/* With photo-strip.js running, the strip is driven by script (glide, hover stop, swipe momentum).
+   Sideways gestures belong to the strip; vertical swipes still scroll the page. */
+.marquee--photos.is-interactive {
+    overflow: hidden;
+    padding-block: var(--s2); /* room for a hovered photo to grow without being clipped */
+    margin-block: calc(-1 * var(--s2));
+    touch-action: pan-y;
+    cursor: grab;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.marquee--photos.is-interactive.is-dragging {
+    cursor: grabbing;
+}
+
+.marquee--photos.is-interactive .marquee__track {
+    animation: none;
+}
+
+.marquee--photos img {
+    -webkit-user-drag: none;
+}
+
+/* Grabbing a photo should scroll the strip, never start the browser's own image drag or selection:
+   photos ignore the pointer, so presses land on the strip (hover zoom still works via the <li>). */
+.marquee--photos.is-interactive img {
+    pointer-events: none;
+}
+
+/* Hovered photo grows slightly */
+.marquee--photos .marquee__track > li {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.marquee--photos .marquee__track > li:hover {
+    transform: scale(1.06);
+    z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .marquee--photos .marquee__track > li { transition: none; }
 }
 
 
@@ -1160,6 +1205,7 @@ main {
 
 .marquee .partner-logo--wordmark {
     height: auto;
+    max-width: none; /* text names keep their full width; the 160px cap is for image logos */
     line-height: 32px;
     opacity: 0.75;
 }

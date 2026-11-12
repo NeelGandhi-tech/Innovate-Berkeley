@@ -5,8 +5,7 @@
             <p>Organized by <a href="<%= site.organizerUrl %>">Alpha Epsilon Zeta</a>.</p>
         </div>
         <ul class="site-footer__links">
-            <%# Task 3 replaces this address with the new mailbox, read from one config value. %>
-            <li><a href="mailto:Innovate2025@berkeley.edu">Innovate2025@berkeley.edu</a></li>
+            <li><a href="mailto:<%= site.contactEmail %>"><%= site.contactEmail %></a></li>
             <li><a href="<%= site.instagram %>">Instagram</a></li>
             <li><a href="<%= site.facebook %>">Facebook</a></li>
         </ul>

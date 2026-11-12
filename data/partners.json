@@ -307,10 +307,15 @@
   },
   {
     "name": "Cribl",
-    "logo": null,
+    "logo": {
+      "src": "/images/logos/cribl.svg",
+      "width": 116,
+      "height": 32
+    },
     "kind": "startup",
     "year": 2027,
-    "marquee": true
+    "marquee": true,
+    "past": true
   },
   {
     "name": "Veza",
@@ -396,7 +401,8 @@
     },
     "kind": "startup",
     "year": 2027,
-    "marquee": true
+    "marquee": true,
+    "past": true
   },
   {
     "name": "Coreshell Technologies",
@@ -595,6 +601,245 @@
       "height": 306
     },
     "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Enact Systems",
+    "logo": {
+      "src": "/images/logos/enact-systems.png",
+      "width": 226,
+      "height": 96,
+      "onDark": true
+    },
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Zero Emission Industries",
+    "logo": null,
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "RxGuardian",
+    "logo": null,
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "KETOS",
+    "logo": null,
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Revi",
+    "logo": null,
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Pano",
+    "logo": null,
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Trustero",
+    "logo": {
+      "src": "/images/logos/trustero.svg",
+      "width": 1501,
+      "height": 332
+    },
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Botrista",
+    "logo": null,
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Axonne",
+    "logo": {
+      "src": "/images/logos/axonne.png",
+      "width": 192,
+      "height": 96,
+      "onDark": true
+    },
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Hwy Haul",
+    "logo": {
+      "src": "/images/logos/hwy-haul.png",
+      "width": 368,
+      "height": 96
+    },
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Lazykey",
+    "logo": null,
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Verdant Robotics",
+    "logo": {
+      "src": "/images/logos/verdant-robotics.png",
+      "width": 270,
+      "height": 96,
+      "onDark": true
+    },
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Picabuu",
+    "logo": null,
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Mission Bio",
+    "logo": {
+      "src": "/images/logos/mission-bio.svg",
+      "width": 299,
+      "height": 46
+    },
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "RisingWave",
+    "logo": {
+      "src": "/images/logos/risingwave.svg",
+      "width": 143,
+      "height": 24,
+      "onDark": true
+    },
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Sematic",
+    "logo": null,
+    "kind": "startup",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Selfbook",
+    "logo": {
+      "src": "/images/logos/selfbook.svg",
+      "width": 120,
+      "height": 24
+    },
+    "kind": "startup",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "JetBlue Ventures",
+    "logo": {
+      "src": "/images/logos/jetblue-ventures.png",
+      "width": 322,
+      "height": 96
+    },
+    "kind": "vc",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "Bloomberg Beta",
+    "logo": {
+      "src": "/images/logos/bloomberg-beta.svg",
+      "width": 792,
+      "height": 127,
+      "onDark": true
+    },
+    "kind": "vc",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "Juniper Ventures",
+    "logo": null,
+    "kind": "vc",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "Draper University",
+    "logo": null,
+    "kind": "vc",
+    "year": null,
+    "marquee": true
+  },
+  {
+    "name": "Mayfield",
+    "logo": {
+      "src": "/images/logos/mayfield.png",
+      "width": 285,
+      "height": 96
+    },
+    "kind": "sponsor",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Microsoft for Startups",
+    "logo": null,
+    "kind": "sponsor",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "IDA Ireland",
+    "logo": {
+      "src": "/images/logos/ida-ireland.png",
+      "width": 250,
+      "height": 96
+    },
+    "kind": "sponsor",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "Singapore Global Network",
+    "logo": {
+      "src": "/images/logos/singapore-global-network.png",
+      "width": 143,
+      "height": 96
+    },
+    "kind": "sponsor",
+    "year": null,
+    "marquee": false
+  },
+  {
+    "name": "ASUC",
+    "logo": null,
+    "kind": "sponsor",
     "year": null,
     "marquee": false
   }

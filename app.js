@@ -10,8 +10,20 @@ app.use('/images', express.static('images'));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-// Data shared by every template (same locals as build-static.js)
-Object.assign(app.locals, require('./data/locals'));
+// Data shared by every template (same locals as build-static.js).
+// Re-read on every request so edits to data/*.json show up without restarting the dev server.
+const dataDir = path.join(__dirname, 'data');
+function loadLocals() {
+    Object.keys(require.cache)
+        .filter(file => file.startsWith(dataDir))
+        .forEach(file => delete require.cache[file]);
+    return require('./data/locals');
+}
+Object.assign(app.locals, loadLocals());
+app.use((req, res, next) => {
+    Object.assign(app.locals, loadLocals());
+    next();
+});
 
 // Middleware for parsing JSON and URL-encoded data
 app.use(express.json());

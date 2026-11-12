@@ -7,7 +7,7 @@
     <%- include('partials/site-header', { current: 'partners' }) %>
 <%
   const firms = partners.filter(p => p.kind !== 'startup');
-  const pastStartups = partners.filter(p => p.kind === 'startup' && p.year !== 2027);
+  const pastStartups = partners.filter(p => p.kind === 'startup' && (p.year !== 2027 || p.past));
 -%>
     <main id="main">
         <section class="page-intro page-intro--text-only">

@@ -5,7 +5,7 @@
 <%
   const rows = [
     { id: 'marquee-past', label: 'Past partners', speed: 50, reverse: false,
-      items: partners.filter(p => p.marquee && p.kind !== 'startup') },
+      items: partners.filter(p => p.marquee && p.year !== 2027) },
     { id: 'marquee-current', label: 'At Innovate 2027', speed: 35, reverse: true,
       items: partners.filter(p => p.marquee && p.kind === 'startup' && p.year === 2027) },
   ];
@@ -24,22 +24,4 @@
     </div>
 <% }) -%>
 </section>
-<script>
-    // Keep each row at a constant speed (px/s from data-speed) whatever its length:
-    // one loop travels half the track plus half a gap, so duration = distance / speed.
-    (function () {
-        var rows = document.querySelectorAll('.marquee[data-speed]');
-        function setDurations() {
-            rows.forEach(function (row) {
-                var track = row.querySelector('.marquee__track');
-                var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
-                var distance = track.scrollWidth / 2 + gap / 2;
-                row.style.setProperty('--duration', (distance / Number(row.dataset.speed)).toFixed(2) + 's');
-            });
-        }
-        setDurations();
-        window.addEventListener('load', setDurations);
-        window.addEventListener('resize', setDurations);
-        if (document.fonts) document.fonts.ready.then(setDurations);
-    })();
-</script>
+<script src="/js/marquee.js"></script>
