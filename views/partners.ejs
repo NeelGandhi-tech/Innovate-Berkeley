@@ -30,11 +30,7 @@
                 <div class="section__content">
                     <ul class="people">
     <% speakers.forEach(s => { -%>
-                        <li class="person">
-                            <img src="<%= s.photo %>" width="320" height="320" alt="" loading="lazy" decoding="async">
-                            <p class="person__name"><%= s.name %></p>
-                            <p class="person__firm"><%= s.firm %></p>
-                        </li>
+                        <%- include('partials/person', { s, img: s.photo, w: 320, h: 320, note: ''}) %>
     <% }) -%>
                     </ul>
                 </div>
@@ -77,5 +73,6 @@
     </main>
 
     <%- include('partials/site-footer') %>
+    <script src="/js/profiles.js"></script>
 </body>
 </html>

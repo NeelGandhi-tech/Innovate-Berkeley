@@ -2,103 +2,125 @@
   {
     "name": "Nikhil Arora",
     "firm": "Back to the Roots",
-    "photo": "/images/speakers/nikhil-arora.jpg"
+    "photo": "/images/speakers/nikhil-arora.jpg",
+    "bio": "Nikhil co-founded Back to the Roots with Alejandro Velez in 2009, while both were undergraduates at UC Berkeley. They turned down Wall Street and consulting paths to grow gourmet mushrooms on recycled coffee grounds, an idea that came out of a class lecture. The Oakland company has since become an organic gardening brand, and Nikhil serves as co-CEO. He has been named to the Forbes and Inc. 30 Under 30 lists."
   },
   {
     "name": "Shaun Maguire",
     "firm": "Sequoia Capital",
     "photo": "/images/speakers/shaun-maguire.jpg",
-    "highlight": "Past Innovate speaker"
+    "eventPhoto": "/images/speakers/shaun-maguire-event.jpg",
+    "highlight": "Past Innovate speaker",
+    "bio": "Shaun is a partner at Sequoia Capital, focused on enterprise, fintech and frontier technology. He joined Sequoia in 2019 after about three years as a partner at GV, where he led investments including Stripe and Opendoor. Before investing he co-founded the cybersecurity company Expanse, later acquired by Palo Alto Networks. He holds a PhD in physics from Caltech."
   },
   {
     "name": "Ann Bordetsky",
     "firm": "New Enterprise Associates",
-    "photo": "/images/speakers/ann-bordetsky.jpg"
+    "photo": "/images/speakers/ann-bordetsky.jpg",
+    "bio": "Ann is a partner at NEA, where she invests at the early stage in consumer technology, AI applications and marketplaces. Before venture she held business leadership roles at Uber and Twitter during their hypergrowth years, and worked at startups with two exits. She earned her undergraduate degree at UC Berkeley and an MBA from Stanford."
   },
   {
     "name": "Madison Faulkner",
     "firm": "New Enterprise Associates",
-    "photo": "/images/speakers/madison-faulkner.jpg"
+    "photo": "/images/speakers/madison-faulkner.jpg",
+    "bio": "Madison is an investor at NEA. Before NEA she made early-stage investments at Costanoa Ventures. She studied Management Science and Engineering at Stanford."
   },
   {
     "name": "Jonathan Mendelson",
     "firm": "Accel",
-    "photo": "/images/speakers/jonathan-mendelson.jpg"
+    "photo": "/images/speakers/jonathan-mendelson.jpg",
+    "bio": "Jonathan is a partner at Accel, which he joined in 2022, focused on enterprise software and consumer businesses. He previously worked in technology investment banking at Morgan Stanley. He grew up in the Bay Area and graduated from UC Berkeley."
   },
   {
     "name": "Vedant Suri",
     "firm": "General Catalyst",
-    "photo": "/images/speakers/vedant-suri.jpg"
+    "photo": "/images/speakers/vedant-suri.jpg",
+    "bio": "Vedant invests in enterprise software at General Catalyst in San Francisco, working across stages and favouring product-led companies. Before General Catalyst he was an investor at CapitalG, Alphabet's growth fund. Earlier he worked at Boston Consulting Group and Goldman Sachs. He studied at the Ivey Business School at Western University."
   },
   {
     "name": "Miles Grimshaw",
     "firm": "Thrive Capital",
     "photo": "/images/speakers/miles-grimshaw.jpg",
-    "highlight": "Fireside chat at Innovate"
+    "eventPhoto": "/images/speakers/miles-grimshaw-event.jpg",
+    "highlight": "Fireside chat at Innovate",
+    "bio": "Miles is a partner at Thrive Capital. He first joined Thrive in 2013 and worked on investments including GitHub, Slack, Airtable and Benchling. In 2020 he became a general partner at Benchmark, where he led the seed round in LangChain. He returned to Thrive in 2024 and sits on the board of Anysphere, the company behind Cursor."
   },
   {
     "name": "Deedy Das",
     "firm": "Menlo Ventures",
-    "photo": "/images/speakers/deedy-das.jpg"
+    "photo": "/images/speakers/deedy-das.jpg",
+    "bio": "Deedy is a partner at Menlo Ventures, investing in early-stage AI, infrastructure and enterprise software. He helped launch the Anthology Fund, Menlo's $100M fund with Anthropic. Before investing he was on the founding engineering team at Glean, where he later led product for Glean Assistant, and before that he worked on Google Search and at Facebook. He studied computer science at Cornell."
   },
   {
     "name": "Marcus Ryu",
     "firm": "Battery Ventures",
-    "photo": "/images/speakers/marcus-ryu.jpg"
+    "photo": "/images/speakers/marcus-ryu.jpg",
+    "bio": "Marcus is a general partner at Battery Ventures, focused on software and AI. In 2001 he co-founded Guidewire Software, the insurance software company, and led it as CEO through its 2012 IPO until 2019. Earlier he was an engagement manager at McKinsey and VP of strategy at Ariba. He has served on boards including MuleSoft, Procore and Checkr."
   },
   {
     "name": "Grace Ma",
     "firm": "Bessemer Venture Partners",
-    "photo": "/images/speakers/grace-ma.jpg"
+    "photo": "/images/speakers/grace-ma.jpg",
+    "bio": "Grace is an investor in Bessemer Venture Partners' growth practice in San Francisco, focused on AI and software. Before Bessemer she invested in software and fintech at Centana Growth Partners, and earlier worked at Oliver Wyman. She graduated from UC Berkeley's Haas School of Business."
   },
   {
     "name": "Feyza Haskaraman",
     "firm": "Felicis",
-    "photo": "/images/speakers/feyza-haskaraman.jpg"
+    "photo": "/images/speakers/feyza-haskaraman.jpg",
+    "bio": "Feyza is a partner at Felicis, investing in AI-native enterprise security, developer infrastructure and AI platforms. She joined from Menlo Ventures, where she backed companies in security and developer tools, and earlier worked at Insight Partners and McKinsey. She trained as an engineer at MIT."
   },
   {
     "name": "Connor Love",
     "firm": "Lightspeed Venture Partners",
-    "photo": "/images/speakers/connor-love.jpg"
+    "photo": "/images/speakers/connor-love.jpg",
+    "bio": "Connor was a partner at Lightspeed Venture Partners, where he led investments in defense, space, manufacturing and autonomous systems. He has since joined Andreessen Horowitz as a general partner in its American Dynamism practice. Before venture he served as an active-duty captain in the US military and deployed to Northern Iraq. He holds an MBA from Stanford."
   },
   {
     "name": "Vinay Iyengar",
     "firm": "Two Sigma Ventures",
-    "photo": "/images/speakers/vinay-iyengar.jpg"
+    "photo": "/images/speakers/vinay-iyengar.jpg",
+    "bio": "Vinay joined Two Sigma Ventures in 2020, investing in enterprise software, machine learning, marketplaces and infrastructure, and later took on an expanded leadership role at the firm. He previously invested at Bessemer Venture Partners."
   },
   {
     "name": "Spencer Farrar",
     "firm": "Theory Ventures",
-    "photo": "/images/speakers/spencer-farrar.jpg"
+    "photo": "/images/speakers/spencer-farrar.jpg",
+    "bio": "Spencer is a founding partner at Theory Ventures, the San Francisco firm started by Tomasz Tunguz, where he invests from pre-seed to Series A in software and AI. Before Theory he was a partner at the asset manager Bienville, and he began his career in structured finance. He studied cognitive science at UC Berkeley."
   },
   {
     "name": "Rushil Agarwal",
     "firm": "Rooted Ventures",
-    "photo": "/images/speakers/rushil-agarwal.jpg"
+    "photo": "/images/speakers/rushil-agarwal.jpg",
+    "bio": "Rushil spoke at Innovate as an investor with Rooted Ventures."
   },
   {
     "name": "Alice Bentinck",
     "firm": "Entrepreneurs First",
-    "photo": "/images/speakers/alice-bentinck.jpg"
+    "photo": "/images/speakers/alice-bentinck.jpg",
+    "bio": "Alice co-founded Entrepreneur First with Matt Clifford in 2011 and became its CEO in 2023. EF backs individuals before they have a co-founder or an idea and helps them build companies from scratch. She also co-founded Code First Girls and co-wrote How to Be a Founder. She started her career at McKinsey and was awarded an MBE in 2016."
   },
   {
     "name": "Andrew Milich",
     "firm": "Cursor",
-    "photo": "/images/speakers/andrew-milich.jpg"
+    "photo": "/images/speakers/andrew-milich.jpg",
+    "bio": "Andrew co-founded Skiff, the encrypted email and documents company acquired by Notion, where he went on to lead Notion Mail. He joined Cursor in 2025 as co-head of product engineering, and in 2026 moved to xAI."
   },
   {
     "name": "Dhruv Parthasarathy",
     "firm": "Commure + Athelas",
-    "photo": "/images/speakers/dhruv-parthasarathy.jpg"
+    "photo": "/images/speakers/dhruv-parthasarathy.jpg",
+    "bio": "Dhruv is co-founder and CTO of Commure, the healthcare technology company formed when Athelas and Commure combined in 2023. Earlier he led machine learning and self-driving car programs at Udacity. He studied computer science at MIT."
   },
   {
     "name": "Alagu Periyannan",
     "firm": "BlueJeans",
-    "photo": "/images/speakers/alagu-periyannan.jpg"
+    "photo": "/images/speakers/alagu-periyannan.jpg",
+    "bio": "Alagu co-founded BlueJeans, the cloud video conferencing company, and served as its CTO until Verizon acquired it in 2020. Earlier he was CTO of Blue Coat Systems, an entrepreneur in residence at Greylock and Norwest, and an engineer at Apple. He studied at BITS Pilani and NC State."
   },
   {
     "name": "Akash Malhotra",
     "firm": "The House Fund",
-    "photo": "/images/speakers/akash-malhotra.jpg"
+    "photo": "/images/speakers/akash-malhotra.jpg",
+    "bio": "Akash is a partner at The House Fund, which backs founders from the UC Berkeley community at pre-seed and seed. As a Berkeley student he co-founded the marketing technology company Eventable, where he served as COO."
   }
 ]

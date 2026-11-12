@@ -1,0 +1,21 @@
+<%# One speaker card. The photo grows on hover and flips over on click to show the bio.
+    Locals: s (speaker), img (photo src), w/h (img size), note (optional) -%>
+<li class="person">
+    <button class="person__card<%= w === h ? '' : ' person__card--wide' %>" type="button" aria-pressed="false" aria-label="<%= s.name %>, <%= s.firm %>. Show bio">
+        <span class="person__flip">
+            <span class="person__face person__face--front">
+                <img src="<%= img %>" width="<%= w %>" height="<%= h %>" alt="" loading="lazy" decoding="async">
+                <span class="person__hint" aria-hidden="true">Bio</span>
+            </span>
+            <span class="person__face person__face--back" aria-hidden="true">
+                <span class="person__bio"><%= s.bio %></span>
+            </span>
+        </span>
+    </button>
+    <p class="person__bio-sr visually-hidden" aria-live="polite"></p>
+    <p class="person__name"><%= s.name %></p>
+    <p class="person__firm"><%= s.firm %></p>
+<% if (note) { -%>
+    <p class="person__note"><%= note %></p>
+<% } -%>
+</li>

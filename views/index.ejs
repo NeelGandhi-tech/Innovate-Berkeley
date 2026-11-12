@@ -39,17 +39,12 @@
             <div class="wrap grid">
                 <header class="section__head">
                     <p class="kicker">Who has spoken</p>
-                    <h2 id="speakers-title">Past speakers</h2>
+                    <h2 id="speakers-title">Past partners</h2>
                     <a class="text-link" href="/partners#speakers">All past speakers</a>
                 </header>
                 <ul class="people people--highlights">
 <% speakers.filter(s => s.highlight).forEach(s => { -%>
-                    <li class="person">
-                        <img src="<%= s.photo %>" width="320" height="320" alt="<%= s.name %>" loading="lazy" decoding="async">
-                        <p class="person__name"><%= s.name %></p>
-                        <p class="person__firm"><%= s.firm %></p>
-                        <p class="person__note"><%= s.highlight %></p>
-                    </li>
+                    <%- include('partials/person', { s, img: s.eventPhoto || s.photo, w: 1600, h: 1067, note: s.highlight}) %>
 <% }) -%>
                 </ul>
             </div>
@@ -170,5 +165,6 @@
     <%- include('partials/site-footer') %>
 
     <script src="/js/form.js"></script>
+    <script src="/js/profiles.js"></script>
 </body>
 </html>
